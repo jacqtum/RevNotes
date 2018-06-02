@@ -46,3 +46,59 @@
 
 * Load the database.properties which contains the username, password, database connection, etc. 
 
+* Return conn.
+
+--> In HeroDAOImpl,
+
+* conn is returned from ConnFactory.
+
+* conn inside HeroDaoImpl is now equal to conn from ConnFactory.
+	-conn = cf.getConnection()
+	
+* Create String sql = {call INSERTSUPERHERO(?)"; 
+
+* Use CallableStatement to call a stored procedure.
+
+* call.setString(1, heroName); // 1 = heroName, which is then placed in the 1st question mark in INSERTSUPERHERO(?);
+
+* One Punch Man gets passed in with call.execute.
+
+
+--> In Driver,
+
+hdi.getHeroList() method is called.
+
+
+--> In HeroDAOImpl,
+	
+* heroList of type Hero is set to a new ArrayList of type Hero.
+
+* select * from superhero
+
+* save this into ResultSet rs.
+
+* Make Hero s = null.
+
+* add ResultSet data into heroList.
+
+* while(rs.next()),
+
+	- Create Hero by calling Hero constructor(int heroID, STring heroName)
+	- save into s = new Hero(rs.getInt(1), rs.getString(2));
+	
+	- 
+
+* Return heroList.
+
+-- In Driver, heroList.toString() is returned using @Override toString
+
+"Hero [heroID=] + heroID + "heroName=" + heroName + "]";
+
+
+
+
+
+
+
+
+

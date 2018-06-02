@@ -21,7 +21,7 @@ public class HeroDAOImpl implements HeroDAO {
 		Connection conn = cf.getConnection();
 		String sql = "{call INSERTSUPERHERO(?)";
 		
-		CallableStatement call = conn.prepareCall(sql);
+		CallableStatement call = conn.prepareCall(sql); // CallableStatement is used to call a stored procedure.
 		
 		call.setString(1, heroName);
 		
@@ -51,6 +51,8 @@ public class HeroDAOImpl implements HeroDAO {
 		
 		
 	}
+	
+	
 	
 	
 
