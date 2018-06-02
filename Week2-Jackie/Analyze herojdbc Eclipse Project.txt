@@ -9,7 +9,19 @@
 * create reference var cf of type ConnFactory.
 
 * Set cf = ConnFactory.getInstance();
-	- getInstance returns cf, after cf = new ConnFactory() of ConnFactory class.
+
+	
+	--> In ConnFactory class:
+	
+	- getInstance() method sets cf = new ConnFactory().
+	
+	- returns cf.
+	
+--> In HeroDaoImpl, 
+
+* cf = cf(from returned value of getInstance() method.)
+
+
 
 
 --> In Driver,
@@ -18,4 +30,17 @@
 
 
 --> In HeroDAOImpl,
-connFactory.
+
+* Passed in "OnePunchMan" in createHero("")
+
+* Create Connection conn = cf.getConnection();
+
+
+--> In ConnFactory,
+
+* Set Connection conn = null
+
+* Creation Properties prop = new Properties
+
+* Load the database.properties which contains the username, password, database connection, etc. 
+
