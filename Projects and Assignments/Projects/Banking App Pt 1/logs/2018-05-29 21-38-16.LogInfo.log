@@ -1,0 +1,21 @@
+2018-05-149 21:05:15 INFO  BankAppDriver:46 - usernameM: jack
+2018-05-149 21:05:15 INFO  BankAppDriver:57 - accountExists: true
+
+2018-05-149 21:05:15 INFO  BankAppDriver:115 - Username: jack
+2018-05-149 21:05:15 INFO  BankAppDriver:116 - access level: null
+2018-05-149 21:05:15 INFO  BankAppDriver:300 - Begin Deserialization - DeserializeCustomer(): 
+2018-05-149 21:05:15 INFO  BankAppDriver:303 - Customer reference is set to null. c = (cParamD = null)
+2018-05-149 21:05:140 INFO  BankAppDriver:314 - Check Object Read From .ser File - cParamD: 
+2018-05-149 21:05:140 INFO  BankAppDriver:315 - username: jack
+2018-05-149 21:05:140 INFO  BankAppDriver:316 - firstName: Jack
+2018-05-149 21:05:140 INFO  BankAppDriver:317 - lastName: Jill
+2018-05-149 21:05:140 INFO  BankAppDriver:318 - address1: 123 ABC St
+2018-05-149 21:05:140 INFO  BankAppDriver:319 - address2: Apt 1234
+2018-05-149 21:05:140 INFO  BankAppDriver:320 - city: Dallas
+2018-05-149 21:05:140 INFO  BankAppDriver:321 - state: TX
+2018-05-149 21:05:140 INFO  BankAppDriver:322 - phoneNumber: 1234567890
+2018-05-149 21:05:140 INFO  BankAppDriver:323 - email: bankadmin@gmail.com
+2018-05-149 21:05:140 INFO  BankAppDriver:324 - accessLevel: customer
+2018-05-149 21:05:140 INFO  BankAppDriver:333 - End Deserialization - DeserializeCustomer() 
+
+2018-05-149 21:05:140 INFO  BankAppDriver:357 - accessLvel: customer

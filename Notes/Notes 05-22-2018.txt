@@ -1,0 +1,223 @@
+05-22-2018 Notes
+
+Topics To Discuss Today:
+* Encapsulation
+* Scope
+* Control Satement
+* Array
+* Varargs
+* String API
+* Exceptions
+* Garbage Collections
+* Wrappers
+
+
+3 Types of Variables:
+	* Local Variables
+		- Property of a method.
+	* Instance Variables
+		- Property of a specific object
+	* Static Variables
+		- Property of a class shared by object of that class
+		- Can be called directly without creating an object.
+	* Instance Methods
+		- Behavior of a specific object
+	* Static methods
+		- Behavior relative to a class
+		- Can be called directly without creating an object.
+	
+
+Access Modifiers:
+	* public
+		- Access everywhere
+	* default/Package Private
+		- Access only within package
+		- Default assigned when no access modifier is assigned.
+	* private
+		- Access only in within class
+		- Used for fields, methods, constructors, and classes.
+	* protected
+		- Access within package and through inheritance.
+		- Only for fields, methods, and constructor, but not applied to class. No protected class.
+		- Subclass can inherit protect field/method/constructor of superclass.	
+
+
+Imports:
+	* Fully Qualitifed Class Name
+		import com.revature.beans.Person;
+	* Importing Only Static Members From A Class
+		import static com.revature.beans.Person;
+	
+
+	
+Scope:
+	* Variable Scope
+		- There is no Global Scope in Java.
+		- Everything belongs to a class.	
+	* Static or Class scope
+		- Accessible to all members of that class.
+	* Method "Local" scope
+		- Accessible within the method it was declared in.
+	* Block
+		- Accessible inside a control statement - Loop variables
+	* Instance Scope
+		- Inside particular object.
+		- Referred using "this" keyword.
+	* Curly Braces { }
+		- Curly braces define the scope.
+
+
+Shadowing:
+	* Shadowing refers to the practice in Java programming of using two variables with the same name within scopes that overlap.
+		- Example: public void setAge(int age){
+			this.age = age;
+		}
+
+
+Primitive & Reference
+	* Primitives are stored in the Stack
+	* Reference objects are stored in the Heap
+
+Primitive:
+* boolean - 1 bit
+* byte - 8 bits
+* short - 16 bits
+* char - 16 bits
+* int - 32 bits
+* float - 32 bits
+* long - 64 bits
+* double - 64 bits
+
+
+Numeric Types:
+* Narrowing:
+	- Reducing bit depth
+	
+* Widening
+	- Expanding bit depth
+	
+
+Wrappers:
+	* Wraps around primitive types
+	* Good for Utility methods
+	* Primtives	Wrappers
+	  int		Integer
+	  short		Short
+	  double	Double
+  
+  
+* Boxing is an expensive process. *
+ 
+ Auto-Boxing:
+* Implicit conversion from primitive to wrapper
+
+ Auto-Unboxing:
+ * Wrapper to primitive
+ 
+ Why Wrappers?
+* If an object is required.
+* Want to use class defined.
+* Constants or utility methods.
+* (Parsing methods, MAX_VALUE)
+
+
+Static vs Final:
+* Static:
+	- No static classes. 
+	- Only static variables and methods.
+* Final:
+	- Variable - Value can't be changed.
+	- Class can't be extended.
+	- Methods can't be overriden.
+	- String + Wrapper classes are Final.
+	- Pi is Final because it is a value that can't be changed. 
+	
+	
+Control Flow:
+	* IF, ELSE IF, & ELSE STATEMENT:
+		- Provides multiple paths of execution
+		-	if(age >= 21){
+				// do this if logic equates to true
+			}
+			else if(age >= 18){
+				// do this if first logic is not true and if second logic is true.
+			}
+			else{
+				// if previous logic statments aren't true, then do this.
+			}
+
+	* SWITCH CASE:
+		- Provides multiple paths of execution based on some value.
+		-	int x = 10;
+			switch(x){
+				case 10:
+					// do this if x = 10;
+					break; // break is required or else runs through rest of cases.
+				case 5:
+					// do this if x = 5.
+					break;
+				case 0:
+					//do this if x = 0;
+				default:
+					// do this if x does not equal other cases.
+					break;
+			}
+	* FOR LOOPS:
+		- For Loop Template:
+		-	for(counter; condition; incrementor){
+				// do this
+			}
+		- Example:
+		-	for(int i = 0; i < 5; i++){
+				// do something;
+				// can use continue and break;
+				// continue; will skip the rest of the statments after it in a loop and continues the loop
+				// break; will exit the loop it is in and not continue it.
+			}
+	* FOR EACH LOOP ("Enhanced For Loop"):
+		- 	for(x : someArrayOrCollection){
+				// do this
+			}
+		- int[] someArray = {1,2,3,4}
+			for(x : someArray){
+				System.out.println(x)
+			}
+		- Good for moving through a Collections
+		- More CPU efficient
+		- No problems with out Out-Of-Bounds
+			- Not size dependent
+		- Good for accessing the elements in a Collection
+		- Bad for adding/removing
+	* WHILE LOOP:
+		- Template:
+		- 	while(condition){
+				// do this
+			}
+	* DO-WHILE LOOP:
+		- Template:
+		-	do{
+				// do this, and then check while condition
+				// statments in do runs at least once.
+			} while(age > 21)
+	
+
+
+		
+Conditional Statements:
+	* Logical Operators: < > <= >= != ==
+	* == compares values of primtives only and compares reference for objects and not the value of the reference.
+	* AND (&&), OR (||), EQUALS (==)
+		- When using OR || Checks operands and doesn't evaluate second operand if the first operand is true.
+	* Bitwise AND (&), Bitwise OR (|)
+		- Checks both operands and evaluates.
+	
+
+
+	
+	
+
+
+
+
+
+	

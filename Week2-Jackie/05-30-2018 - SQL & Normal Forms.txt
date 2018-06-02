@@ -1,0 +1,513 @@
+05-30-2018 Notes
+
+
+Install Oracle SQL Developer (32/64 bit) w/o JDK:
+http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html
+
+Database
+* Collections of data
+* Related
+	- A relationship exists between A <--> B
+	* DB does not have to be relational.
+	* RDBMS - 
+	* ORDBMS -> Object-relational database management system
+	
+Dialects
+* Oracle
+* MySQL
+* MS SQL Server
+* SQLite
+* PostgreSQL aka Postgres -> ORDBMS
+
+	
+Amazon RDS -> Amazon Relational Database Services
+
+* Need to modularize your code to be able to work with multiple dialects.
+	- RDS Allows This!
+	
+* Distributed Architecture
+	- Information(Data) is saved separately from project.
+	- Useful if something happens to project, then data is safe.
+
+
+Previously:
+* Program would push/pull data into a file or files.
+[PROGRAM] <----> [FILE]
+
+Now:
+* Program would push/pull data into the Database. 
+[PROGRAM] <----> [DB]
+
+
+
+*Table has Rows and Columns:
+
+Customer Table:
+	Id(PK)	CustomerName	AccountID(FK)
+	1		Jackie			100
+	2		Jackie			200
+	
+* Rows are the actual entities
+	- There are 2 rows in the example above.
+
+* Columns are the identifiers
+	- There are 3 columns above.
+
+
+
+Primary Key: Unique identifier for each account
+Foreign Key: It is a primary key of another table that is used as an identifier in a different table. Foreign key links back to the other table.
+
+
+Account Table:
+	AccID(PK)	AcctName
+	100			Savings
+	200			Accounts
+
+
+
+Multiplicity aka Cardinality
+* Description or relationships between fields and tables.
+* 1 to 1, 1 to Many, Many to Many
+	- 1 to 1: Each Customer has its own Id or each Customer has its own ID.
+* 1 to Many
+	- A Customer has many Accounts.
+	- One can have many or even none.
+* Many to Many
+	- Classes to Students
+	
+
+Referential Integrity
+* Relationsihps should remain consistent when entities are changed.
+* All FKs must match the correct value.
+
+
+What is an entity in a database?
+* An entity is any object in the system that is modelled and stored information into.
+* Example: Employees, Students
+
+
+
+Types of Keys:
+* Primary Key (PK)
+	- A column(attribute) in a table that uniquely identifies rows in the table.
+	- Cannot be null.
+	- PK should not be changed.
+	
+* Composite Key (CK)
+	- A key that consists of more than one column(attribute) to uniquely idenitfy rows.
+
+	- Example:
+		- FName and LName is a composite key.
+		
+		(Composite Key)
+		FName	LName	Phone	Email
+		jack	jill	123		223@323.compiler
+* Natural Key (NK) aka Business Key.
+	- Formed of attributes that already exists in the real world.
+		
+* Surrogate Key (SK)
+	- Value generated soley for the purpose of being a Primary Key.
+	- Such as incrementing intgers set to auto increment
+	
+* Foreign Key (FK)
+	- A reference to another table.
+	- It does not have to be the primary key, but for normalization, it should be.
+	
+
+	
+Normalization:
+* Help keep data related
+* Prevent data modification related errors and inconsistencies
+* Removing what we don't need.
+* Keep what we need.
+* Simplify queries
+* Reduce Redunduncy
+	
+	
+	
+	
+Normalization Explanation:
+https://www.essentialsql.com/get-ready-to-learn-sql-database-normalization-explained-in-simple-english/
+	
+
+What is wrong with the table?
+* Putting customers in their own table
+* Placing sales and customer information in same table
+
+
+
+
+Data Duplication and Modification Anomalies:
+* Increases storage and decreases performance.
+* Difficult to maintenance
+
+* Insert Anomaly
+* Update Anomaly
+* Deletion Anomaly
+* Search and Sort Issues
+
+
+
+
+EXAMPLE:
+
+SalesStuffInfo table:
+	EmployeeID(PK)
+	SalesPerson
+	SalesOffice
+	OfficeNUmber
+	Customer1Name
+	Customer1City
+	Customer1PostalCode
+	Customer2Name
+	Customer2City
+	Customer2PostalCode
+	Customer3Name
+	Customer3City
+	Customer3PostalCode
+
+
+
+Three Form of Normalization:
+* 1st Normal Form
+	- Store information in a relational table.
+		- Stored in a table with rows, columns, and contains a PK.
+	- Each column contains atomic values, value cannot be further subdivided.
+		- Ex: "Chicago" is atomic whereas "Chicago; Los Angeles; New York" is not.
+	- No repeating groups of columns.
+	- In SalesSTuffInfo table, customers have repeating groups.
+		- Repeating groups are placed in their own table: Customer table.
+		
+		EXAMPLE IN 1ST NORMAL FORM:
+		SalesStuffInfo table:
+			EmployeeID(PK)
+			SalesPerson
+			SalesOffice
+			OfficeNUmber
+		
+		Customer table:
+			CustomerID (PK)
+			EmployeeID (FK)
+			CustomerName
+			CustomerCity
+			CustomerPostalCode
+	
+* 2nd Normal Form
+	- Requirement: The info is in first normal form and all non-key columns are dependent on the table's primary key.
+	- Queston to ask: “Does this column serve to describe what the primary key identifies?”
+		- If yes, keep in current table.
+		- If no, move to another table.
+	- In most current table, 
+	- SalesOffice and OfficeNumber do not depend on the EmployeeID.
+	- CustomerName, Customer City, CustomerPostalCode aren't dependent on the key EmployeeID
+	
+	EXAMPLE IN 2ND NORMAL FORM:
+		SalesStaffInfo table:
+			EmployeeID(PK)
+			SalesPerson
+			SalesOfficeID(FK)
+			
+		SalesOffice table:
+			SalesOfficeID (PK)
+			SalesOffice
+			OfficeNumber
+		
+		Customer table:
+			CustomerID (PK)
+			CustomerName
+			CustomerCity
+			CustomerPostalCode
+		
+		SalesStaffCustomer:
+			CustomerID (FK)
+			EmployeeID (FK)
+			
+	
+	- The SalesStaffCustomer table contains all keys, which is called an intersection table.
+			
+* 3rd Normal Form
+	- Requirement: Table is in 2nd Normal Form and all of columns are non-transitively dependent on the primary key.
+	
+	- What is transitive?
+		- A relationsihp is the same across the whole.
+		- When something is transitive, it applies from beginning to end or even middle to end.
+	
+		- Ex: if(a > && b > c){
+			System.out.println("Then a > c");
+		}
+	- What is dependence?
+		- An object has a dependence on another object when it relies upon it.
+			- Example: Age depends on DOB
+	
+	- What is transitive dependence?
+		- The column's values relies upon another column through a second intermediate column.
+		
+		
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+Look Up Tables:
+
+* Reduces amount of space you are using.
+* Example: Similar to Key-value. Using keys to search instead of value.
+* Using ID # to look up Status instead of using words such as "pending", "shipping", etc.
+
+	Lookup Table:
+	ID		Status
+	1		Pending
+	2		Shipping
+	3		Delivered
+	4		Cancelled
+	
+
+	
+
+
+	
+	
+
+Student Organizations:
+- OrganizationName
+- OrganizationID
+- Location
+- Meeting Times
+- Users(MemberNames)
+- Officers
+
+
+GROUP CONCLUSION: Normalization
+Lookup table for meeting times
+	* MeetingTimeID (PK)
+	* MeetingTime
+	
+Lookup table for locations
+	* LocationID (PK)
+	* Location
+
+Table for Officers and OrganizationID (CK)
+	* OrganizationID (PK)
+	* OrganizationName
+	* Officers
+	
+	
+Table for ID and User(MemberNames)
+	* OrganizationID (PK)
+	* User(MemberNames)
+	
+	
+
+QUESTIONS TO ANSWER:
+* If we want to lookup organization, we would need:
+	OrganizationID
+	OrganizationName
+	
+	
+	
+	
+	
+	
+	
+	
+What is the difference between varchar and varchar2?
+
+	VARCHAR										VARCHAR2
+	Nulls and empty strings are different.		Nulls and empty strings are the same thing.
+
+
+
+	
+	
+	
+	
+
+
+	
+STRUCTURED QUERY LANGUAGE (SQL)
+	- SQL is a way to communicate with a database.
+		- Sublanguages Of SQL:
+			- DATA DEFINITION LANGUAGE (DDL):
+				* Consists of SQL commands that can be used to define the databse schema.
+				* Used to create and modify the database.
+				* Creates structure of our data.
+				* Commands:
+					- CREATE TABLE
+					- ALTER TABLE
+						* Used to add, delete, or modify columns in an existing table.
+						* 	ALTER TABLE
+							ADD columnName datatype;
+						* 	ALTER TABLE
+							DROP COLUMN columnName;
+						* 	ALTER TABLE
+							MODIFY column_name datatype;
+					- DROP TABLE
+						* Drops the whole table.
+					- TRUNCATE TABLE
+						* Deletes data inside table, but not the table.
+
+			- DATA MANIPULATION LANGUAGE (DML):
+				* SQL commands that is used to manipulate data in database.
+				* Commands:
+					
+					- INSERT INTO
+						* 	INSERT INTO tableName(col1, col2, ...)
+							VALUES (val1, val2, val3);
+					- UPDATE
+						*	UPDATE tableName
+							SET col1 = val1, col2 = val2, col3 = val3
+							WHERE condition; -- WHERE clause is required
+					- DELETE
+						*	DELETE FROM tableName
+							WHERE condition; -- WHERE is required
+							
+			- DATA QUERY LANGUAGE (DQL):
+				* Commands used to retrieve data from the databases.
+				* Commands:
+					- SELECT
+						*	SELECT col1, col2, ...
+							FROM tableName;
+			
+			- DATA CONTROL LANGUAGE (DCL):
+				* SQL commands that works on rights, permissions, and other controls of the database systems.
+				* GRANT 
+					- Gives user's access privileges to database.
+				* REVOKE
+					- Withdraw the user's the access privileges given by using the GRANT command.
+					
+				* VIEW
+					- A view is a virtual table.
+					- A view can limit the user to only specific data in database.
+					- Normalization doesn't apply.
+					- It is alike a saved select statement.
+					- A view can pull data from multiple tables.
+					- 	CREATE VIEW viewName AS
+						SELECT col1, col2, ...
+						FROM tableName
+						WHERE condition;
+						
+			- TRANSACTION CONTROL LANGUAGE (TCL):
+				* SQL commands used to control transactions made against the database.
+				* Commands:
+					- COMMIT
+						- Commit is used for permanent changes.
+						- Cannot be rollback.
+						-	SQL> COMMIT;
+					- ROLLBACK
+						- Rollback is used to undo changes made by any command but only before a commit is done.
+						- Cannot roll forward.
+						- 	SQL> ROLLBACK;
+					- SAVEPOINT
+						- Creats points within groups of transaction in which to Rollback.
+						- Like a temporary storage.
+						- Ex:
+							(Savepoint1)----(Savepoint2)----(Savepoint3)
+						- If rollback into previous savepoint, future savepoints are gone.
+						- If release savepoint, savepoint is removed.
+						-	SAVEPOINT SAVEPOINT_NAME;
+						-	ROLLBACK TO SAVEPOINT_NAME;
+						-	RELEASE SAVEPOINT SAVEPOINT_NAME;
+						- After COMMIT, savepoints are gone.
+						
+					- SET TRANSACTION
+						- Places a name on a transaction.
+						- 	SET TRANSACTION[ READ WRITE | READ ONLY]
+						
+	- CONSTRAINT clause
+		- A constraint is a rule for which data must conform.
+		- CREATE TABLE and ALTER TABLE statements can use CONSTRAINTS.
+		- Levels:
+			* Column-level constraint
+			* Table-level constraint
+		- Common Constraints:
+			* NOT NULL
+			* PRIMARY KEY
+			* UNIQUE
+			* FOREIGN KEY
+			* CHECK
+				- Specifies rules for values in the column.
+				- Ex: CHECK (Age >= 18)
+		
+		- Alter table to add foreign key:
+			* EXAMPLE:
+				ALTER TABLE BEAR
+				ADD CONSTRAINT Fk_BEAR_CAVE
+				FOREIGN KEY (CAVE_ID) REFERENCES CAVE(CAVE_ID);
+				
+			* CAVE_ID IS A PRIMARY KEY IN THE CAVE table and is a FOREIGN KEY in the BEAR table.
+			
+		- Alter table to add a check:
+			* EXAMPLE:
+				ALTER TABLE BEAR
+				ADD CONSTRAINT CK_BEAR_WEIGHT_POSITIVE
+				CHECK (BEAR_WEIGHT > 0);
+				
+			* 
+		
+		
+
+
+
+
+-- Notes before QC:
+
+reflection: allows runtime discovery and usage of class members
+
+collections: accepts only objects
+
+JDK includes:
+VM
+JRE
+GC
+Compiler
+
+Virtual Machine State Thread
+TERMINATED
+BLOCKED
+WAITING 
+RUNNABLE
+
+Static methods can only be shadowed.
+
+try block does not need a catch block
+
+RuntimeException is an uncheckeed conception
+
+Order of compiler matching parameters to overloaded methods:
+1. exact match
+2. implicit casting
+3. boxing/unboxing
+4. capturing vargargs
+
+autoboxing: converts primitives to objects
+
+An unchecked exception is optional to have a try/catch block.
+
+Collection Interface
+Collections classes: 
+
+Generics enable types for classes and interfaces to be parameters when definint classes, interfaces, and methods.
+
+
+
+
+--
+
+
+
+
+
+
+
+
+
+
+

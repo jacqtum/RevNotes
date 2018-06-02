@@ -1,0 +1,19 @@
+2018-05-150 01:05:972 INFO  BankAppDriver:196 - Username: power
+2018-05-150 01:05:973 INFO  BankAppDriver:197 - access level: null
+2018-05-150 01:05:973 INFO  BankAppDriver:443 - Begin Deserialization - DeserializeCustomer(): 
+2018-05-150 01:05:973 INFO  BankAppDriver:446 - Customer reference is set to null. c = (cParamD = null)
+2018-05-150 01:05:98 INFO  BankAppDriver:457 - Check Object Read From .ser File - cParamD: 
+2018-05-150 01:05:98 INFO  BankAppDriver:458 - username: power
+2018-05-150 01:05:98 INFO  BankAppDriver:459 - firstName: power
+2018-05-150 01:05:98 INFO  BankAppDriver:460 - lastName: ade
+2018-05-150 01:05:98 INFO  BankAppDriver:461 - address1: 1
+2018-05-150 01:05:98 INFO  BankAppDriver:462 - address2: 23
+2018-05-150 01:05:98 INFO  BankAppDriver:463 - city: 4
+2018-05-150 01:05:98 INFO  BankAppDriver:464 - state: 5
+2018-05-150 01:05:98 INFO  BankAppDriver:465 - phoneNumber: 6
+2018-05-150 01:05:98 INFO  BankAppDriver:466 - email: 7
+2018-05-150 01:05:98 INFO  BankAppDriver:467 - accessLevel: customer
+2018-05-150 01:05:98 INFO  BankAppDriver:469 - secondJointAccUsername: gator
+2018-05-150 01:05:98 INFO  BankAppDriver:476 - End Deserialization - DeserializeCustomer() 
+
+2018-05-150 01:05:98 INFO  BankAppDriver:500 - accessLvel: customer

@@ -1,0 +1,230 @@
+Things to Discuss:
+
+Threads:
+* A process is a program that can have many threads.
+* A thread is a path of execution within a process.
+* Every thread has its own call stacks, but shares memory with other threads.
+* When you start a Java program, three threads are created.
+	- Main
+	- Garbage Collector
+	- Thread Scheduler
+		* Daemon Thread
+			- Low-priority background process.
+
+			
+			
+Creating a Thread Version 1:
+	* Extend a Thread
+		- Example:
+			public class MyThread extends Thread{
+				public void run(){
+					// Does something.
+				}
+			}
+			
+		- Call start() method, which is inherited by Thread.
+			* A Thread is a Runnable.
+
+	* Runnable interface:
+		- Example:
+			public class MyRunnable implements Runnable{
+				public void run(){
+					// Does something
+				}
+			}
+	
+	* Implement Runnable interfaces
+		- Example:
+			Thread t = new Thread(new Runnable());
+			t.start();
+			
+	
+
+		
+Creating a Thread Version 2 - Better Version:
+	* Implement Runnable interface
+	* Override run() method
+		- Example:
+			Runnable runner = new Runnable();
+			
+			Thread t = new Thread(runner)
+			
+			t.start();
+		
+		
+
+
+Synchronized:
+	* Ensures that only one thread can access a resource at a given time.
+		- Methods, variables, objects, code blocks
+		
+	* By synchronizing, you gain consistency, but lose speed.
+		- Lock and wait
+	
+	* To allow multiple threads to read, but not write, and synchronize writing:
+		- Create a normal reading method and a synchronized writing method.
+		
+	* When a Collection is thread-safe (Synchronized), its members are protected from being accessed by more than one thread at a time.
+	
+
+Thread-Safe:
+	* One thread at a time access.
+	
+
+Thread Methods:
+	* You can have multiple threads with the same priority.
+	
+
+
+	
+	
+-- More notes to fill --
+
+
+
+
+
+
+
+
+
+
+
+Design Patterns:
+* Singleton
+	- Ensures a class has only one instance and provide a global point of access to it.
+	- Makes use of the lazy loading design pattern, which creates an object only when it is needed.
+	- This improves performance since creating objects takes time.
+	
+	- Example:
+		public class Singleton{
+			private static Singleton instance;
+			
+			private Singleton(){
+			
+			}
+			
+			public static synchronized Singleton getInstance(){
+				if(instance == null){
+					instance = new Singleton();
+				}
+				return instance;
+			}
+			
+			public void doSomething(){
+			
+			}
+		}
+
+	- Iportant points:
+		* Implementation:
+			- A private constructor.
+			- A static private property of the self class.
+			
+* Factory
+	- Create an object without exposing the creation logic to the client.
+	- Uses a Factory method to return the appropriate object type from a list of classes that implement a common interface.
+	- For example: By passing in a String with that describes what object type you want as a paramer.
+	
+	
+Maven(Apache):
+* Java Build Tool (Like: Ant, Cradle)
+
+
+
+Baker(Producer)
+Bagel(Message)
+Customer(Consumer)
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+Week1/com.revature.threads:
+
+* ProducerConsumerMain.java 
+* Message.java
+* Consumer.java
+* Producer.java
+
+
+* Producer will produce a product.
+* Customer will consume product.
+* The string buffer does not print out right away, it prints it out whenever.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+** Side Notes **
+
+Collection Framework:
+
+	* java.util.*
+	
+	* Hierarchy of Collection Framework:
+	
+		<-- implements
+		<- extends
+		
+		* Interface extends interfaces.
+		* Classes can implement interfaces.
+
+		* Iterable(i) <- Collection(i) <- List(i), Queue(i), Set(i)
+		
+			* List(i) <-- ArrayList(c), LinkedList(c), Vector(c) <- Stack(c)
+		
+			* Queue(i) <- Deque(i) <-- ArrayDeque(c)
+						  Deque(i) <-- LinkedList(c)
+			  Queue(i) <-- PriorityQueue(c)
+			  
+			* Set(i) <- SortedSet(i) <-- (TreeSet)
+			  Set(i) <-- HashSet, LinkedHashSet
+	
+
+
+
+
+
+
+
+
+
+
+
+
+

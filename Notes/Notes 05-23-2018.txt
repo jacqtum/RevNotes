@@ -1,0 +1,202 @@
+Notes 05-23=2018
+
+Topics to Discuss:
+	* Array
+	* Varargs
+	* String API
+	* Exceptions
+	* Garbage Collection
+
+
+Strings:
+	* Strings are not char or Character.
+	* FQCN: java.lang.String
+	* String literal is 0 or more characters
+		- Example: 
+		- String str = "Roll Tide";
+	* Concatenate Strings:
+		- Example:
+		- "Roll " + "Tide" = "Roll Tide"
+	* Strings are immutable.
+		- Strings cannot be modified.
+	* Strings are stored in the String Pool.
+
+	
+String Pool:
+	* Collection of Unique String
+	* Literals are stored in the Heap memory.
+	* Some Strings with same values are re-used often.
+	* The compiler will search for the string literal is already in the String pool.
+		- It then creates a reference to it if it already exists.
+	* Example: String name = "Jackie"; String name2 = "Jackie";
+
+
+String API:
+	* Methods in String class for working with Strings.
+	* Thread Safe. 
+	* Each Thread will have access to that string and get it at the same time.
+
+
+
+String Builder:
+	* Mutable (Modifable) sequences of characters.
+	* Not thread safe.
+
+String Buffer:
+	* Mutable (Modifiable) 
+	* Thread safe.
+	* SLOW
+
+Comparison:
+	String:			StringBuilder:		StringBuffer:
+	 Immutable		 Mutable			 Mutable
+	 String Pool	 -					 -
+	 Thread Safe	 Not Thread Safe	 Thread Safe
+	 Fast			 Fast				 Slow
+ 
+ 
+Exceptions:
+* Things go wrong at runtime.
+* Different from syntax errors.
+
+* 		Throwable ------------------------------ Exception
+			|							   		/		  \
+		   Error					RuntimeException	CheckedException
+		  /		\						"Unchecked"				|
+	VM Error	Assertion Error							   IOException
+		|														|
+Stack Overflow Error								 FileNotFoundException
+
+
+Checked Exception:
+	* Checked by compiler
+	* Useful for interacting with other systems.
+	* Usually result from interactions with:
+		- users
+		- file systems
+		- databaes
+		- etc.
+	* Any code calling a method, which throws a Checked Exception must handle or throw the Exception.
+		- Example: FileNotFoundException
+	* Will not compile if a checked exception could be thrown and is not handled.
+
+
+Runtime / "Unchecked exception":
+	* Exeption could be thrown during the normal operation of the JVM.
+	* Also known as unhandled.
+	* Represents flaws in our logic.
+	* Example: ArrayIndexOutOfBounds
+	* Example, if we print out the the 10th element of an array, but there only 7 elements, it can throw an exception.
+
+
+Exceptions Handling:
+	* try/catch/finally
+	* Example:
+		try{
+			// example: read from file
+		}
+		catch(IOException | SQLException ex){
+			// Do something else.
+		}
+		finally{
+			// Do something else.
+			// Will always run whether or not an exception is caught.
+		}
+
+	* catch(FileNotFoundException) 	- Most specific
+	* catch(IOException) 			- Least specific
+
+
+	Throws:
+	* "throws" keyword
+	* Example: printMe(int[] a) throws ArrayIndexOutOfBoundsException
+				// prints out 3 elements
+		- doesn't solve the problem
+	* When overriding a method that throws something, you miust throw the same exception in the overriden method.
+
+
+
+
+
+Garbage Collection:
+	* Automatically garbage collected when objects go out of scope.
+	* Daemon Thread
+	* Low priority process
+	* Intermittently, removes dereference objects from memory.
+	* Cannot force garbage collection, but can request it.
+		- Example: System.gc();
+	* Can intervene with process of garbage collection
+		- Override java.lang.Object.finalize();
+		- Specify behavior at the time of garbage collection.
+		
+
+Finalize() Method:
+* Protected member of Object
+* return void
+* does nothing
+
+
+*	final						finally					finalize
+	- Keyword to denote 		Occurs regardless of	Garbage collection terms (see above)
+	an unchanging object 		try-catch results.
+	(variable, method, 
+	class, etc...)
+	
+	
+	- Class - can't be 									Specify what is done during garbage collection.
+		extended
+	- Method - can't be 
+		overriden
+	- Variable - value 
+		can't be changed.
+
+
+
+Method Overloading (By Priority):
+* Exact Match
+* Conversion
+	- Example: long to an int
+* Autoboxing
+	- Example: primitive -> object -> back to primitive
+* Varargs
+
+
+
+
+Interfaces - "Contract Based":
+	* Contract based means that you will supply the implementation details if using the interface.
+	* Special type of class that cannot be instantiated.
+	* Cannot have implementation details in methods.
+	* Way of mimicking multiple inheritance.
+		- Normally, classes cannot inherit from multiple classes.
+	* Class can implement multiple interfaces.
+	* All variables in interfaces are static and final.
+
+	
+Abstract Classes:
+	* Abstract classes cannot be instantiated.
+	* Must have 1 abstract method to be an abstract class.
+	* Can contain methods with implementation details.
+	* Abstract methods have no implementation.
+		- Example:
+			public abstract void someMethod();
+		
+CLASSES VS ABSTRACT CLASSES VS INTERFACES
+	*						CLASS	ABSTRACT CLASS 		Interfaces
+		-FIELD
+		Access Modifiers:	Any		Any					Public
+		Static: 			Both 	Both 				Static
+		Final: 				Both 	Both 				Finaly only!
+
+		-METHOD
+		Access Modifiers: 	Any 	Any 				Public(Java 9 private)
+		Static: 			Both 	Both 				Both
+		Final:				Both 	Both 				Normally
+		Abstract: 			No 		Both 				Implicity Abstrct/ Explicitly Default
+
+		-INHERIT
+		Class: 				1 		1 					0 to many (implements *Diamond Prolbem*)
+		Interface: 			No 		No 					0 to many(extends)
+
+
+

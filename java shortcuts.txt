@@ -1,0 +1,7 @@
+shortcuts:
+
+ctrl shift o -> import class
+
+when creating a class, can also create new package inside the class wizard menu.
+
+when creating class, can add interfaces using ADD button in the class wizard menu.

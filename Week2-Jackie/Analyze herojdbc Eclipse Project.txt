@@ -1,0 +1,21 @@
+
+
+--> In Driver:
+
+* Create new object HeroDaoImpl with reference var hdi.
+
+--> In new object, HeroDaoImpl:
+
+* create reference var cf of type ConnFactory.
+
+* Set cf = ConnFactory.getInstance();
+	- getInstance returns cf, after cf = new ConnFactory() of ConnFactory class.
+
+
+--> In Driver,
+* Call hdi.createHero(String-argument)
+* Send in "One Punch Man" in parameter
+
+
+--> In HeroDAOImpl,
+connFactory.

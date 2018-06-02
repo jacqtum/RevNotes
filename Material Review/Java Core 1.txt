@@ -1,0 +1,38 @@
+1.
+StringBuilder is:
+* mutable
+* default initial capacity is 16
+* not thread-safe
+
+2.
+equal() compares values and == compares memory references:
+* false
+* Note: They perform exactly the same, unless a class provides an overriden version of the equals() method that actually compares by value (e.g. String)
+
+3.
+Which of the following is not a virtual machine state of a thread?
+* START
+* Note: The following are a virtual machine state:
+	* WAITING
+	* BLOCKED
+	* TERMINATED
+	* RUNNABLE
+	
+4.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

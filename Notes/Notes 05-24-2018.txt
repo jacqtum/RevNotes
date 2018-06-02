@@ -1,0 +1,67 @@
+Notes 05-24=2018
+
+Topics To Discuss:
+
+* Generics
+* Collections
+* Lambda
+
+
+** Note on Shared Resources/Week 1 Day4.txt **
+** View JavaReview workspace -> src -> jadv -> GenericsEx
+
+
+
+
+Generics
+	*https://docs.oracle.com/javase/tutorial/java/generics/why.html
+	* https://www.journaldev.com/1663/java-generics-example-method-class-interface
+	
+	* Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods.
+	* A Java compiler applies strong type checking to generic code and issues errors if the code violates type safety. 
+	* Fixing compile-time errors is easier than fixing runtime errors, which can be difficult to find.
+	* Casting is not required.
+	* Example:
+		List<String> list = new ArrayList<String>();
+		list.add("Hello");
+		String s = list.get(0);
+			// list.get(0) does not require casting
+			
+	 * Enables implementation of generic algorithms work on collections of different types.
+	 * Customizable types.
+	 * Type safe.
+	 * Easy to read.
+	 * Multiple type parameters is allowed like in Map interface.
+	 * Example: HashMap<String, List<String>>();
+	
+	
+	* Java Generic Type Naming Convention
+		* Common type parameters:
+			* E - Element (used by Java Collections Framework)
+				* Like ArrayList, Set, etc.
+				
+				
+				
+
+				
+
+				
+				
+
+Scanner:
+* Retrieve input from console.
+* Example:
+	* public static Scanner sc = new Scanner(System.in);
+	* sc.nextLine();
+	* sc.close();
+
+
+
+
+
+
+
+
+
+
+

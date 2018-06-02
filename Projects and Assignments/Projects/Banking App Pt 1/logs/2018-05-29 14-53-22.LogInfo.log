@@ -1,0 +1,62 @@
+2018-05-149 14:05:711 INFO  BankAppDriver:45 - usernameM: rafael
+2018-05-149 14:05:727 INFO  BankAppDriver:56 - accountExists: false
+
+2018-05-149 14:05:727 INFO  BankAppDriver:25 - Begin Customer Creation: 
+2018-05-149 14:05:727 INFO  BankAppDriver:40 - CreateCustomer(): 
+2018-05-149 14:05:727 INFO  BankAppDriver:41 - username: rafael
+2018-05-149 14:05:727 INFO  BankAppDriver:42 - firstName: Bank
+2018-05-149 14:05:727 INFO  BankAppDriver:43 - lastName: Employee
+2018-05-149 14:05:727 INFO  BankAppDriver:44 - address1: 123 ABC St
+2018-05-149 14:05:727 INFO  BankAppDriver:45 - address2: Apt 1234
+2018-05-149 14:05:727 INFO  BankAppDriver:46 - city: Dallas
+2018-05-149 14:05:727 INFO  BankAppDriver:47 - state: TX
+2018-05-149 14:05:727 INFO  BankAppDriver:48 - phoneNumber: 1234567890
+2018-05-149 14:05:727 INFO  BankAppDriver:49 - email: bankadmin@gmail.com
+2018-05-149 14:05:743 INFO  BankAppDriver:50 - accessLve: customer
+2018-05-149 14:05:743 INFO  BankAppDriver:51 - End Customer Creation 
+
+2018-05-149 14:05:743 INFO  BankAppDriver:152 - Begin Serialization - SerializeCustomer(): 
+2018-05-149 14:05:774 INFO  BankAppDriver:166 - Check Object Written To .ser File - cParamS: 
+2018-05-149 14:05:774 INFO  BankAppDriver:167 - username: rafael
+2018-05-149 14:05:774 INFO  BankAppDriver:168 - firstName: Bank
+2018-05-149 14:05:774 INFO  BankAppDriver:169 - lastName: Employee
+2018-05-149 14:05:774 INFO  BankAppDriver:170 - address1: 123 ABC St
+2018-05-149 14:05:774 INFO  BankAppDriver:171 - address2: Apt 1234
+2018-05-149 14:05:774 INFO  BankAppDriver:172 - city: Dallas
+2018-05-149 14:05:774 INFO  BankAppDriver:173 - state: TX
+2018-05-149 14:05:774 INFO  BankAppDriver:174 - phoneNumber: 1234567890
+2018-05-149 14:05:774 INFO  BankAppDriver:175 - email: bankadmin@gmail.com
+2018-05-149 14:05:774 INFO  BankAppDriver:176 - accessLve: customer
+2018-05-149 14:05:774 INFO  BankAppDriver:188 - End Serialization - SerializeCustomer() 
+
+2018-05-149 14:05:774 INFO  BankAppDriver:64 - c.username created: rafael
+
+2018-05-149 14:05:774 INFO  BankAppDriver:23 - Begin Serialization - WriteAccount(): 
+2018-05-149 14:05:774 INFO  BankAppDriver:32 - Serialized data will be written in bankcust/account/accrafael.ser
+2018-05-149 14:05:790 INFO  BankAppDriver:40 - Check Variable of Type Double Written To .ser File - balance
+2018-05-149 14:05:790 INFO  BankAppDriver:41 - balance: 0.00
+2018-05-149 14:05:790 INFO  BankAppDriver:46 - End Serialization - WriteAccount() 
+
+2018-05-149 14:05:790 INFO  BankAppDriver:202 - Begin Deserialization - DeserializeCustomer(): 
+2018-05-149 14:05:790 INFO  BankAppDriver:205 - Customer reference is set to null. c = (cParamD = null)
+2018-05-149 14:05:915 INFO  BankAppDriver:216 - Check Object Read From .ser File - cParamD: 
+2018-05-149 14:05:915 INFO  BankAppDriver:217 - username: rafael
+2018-05-149 14:05:915 INFO  BankAppDriver:218 - firstName: Bank
+2018-05-149 14:05:915 INFO  BankAppDriver:219 - lastName: Employee
+2018-05-149 14:05:915 INFO  BankAppDriver:220 - address1: 123 ABC St
+2018-05-149 14:05:915 INFO  BankAppDriver:221 - address2: Apt 1234
+2018-05-149 14:05:915 INFO  BankAppDriver:222 - city: Dallas
+2018-05-149 14:05:915 INFO  BankAppDriver:223 - state: TX
+2018-05-149 14:05:915 INFO  BankAppDriver:224 - phoneNumber: 1234567890
+2018-05-149 14:05:915 INFO  BankAppDriver:225 - email: bankadmin@gmail.com
+2018-05-149 14:05:915 INFO  BankAppDriver:226 - accessLve: customer
+2018-05-149 14:05:915 INFO  BankAppDriver:235 - End Deserialization - DeserializeCustomer() 
+
+2018-05-149 14:05:915 INFO  BankAppDriver:259 - accessLve: customer
+2018-05-149 14:05:915 INFO  BankAppDriver:58 - Begin Deserialization - View Balance(): 
+2018-05-149 14:05:915 INFO  BankAppDriver:60 - Account reference is set to null. a = (custAcc = null) 
+2018-05-149 14:05:915 INFO  BankAppDriver:69 - Check Variable of Type Double Read From .ser File - balance
+2018-05-149 14:05:915 INFO  BankAppDriver:70 - balance: 0.00
+2018-05-149 14:05:915 INFO  BankAppDriver:85 - End Deserialization - View Balance() 
+
+2018-05-149 14:05:915 INFO  BankAppDriver:78 - jointAccount = false

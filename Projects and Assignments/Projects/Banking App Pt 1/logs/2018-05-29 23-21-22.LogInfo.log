@@ -1,0 +1,133 @@
+2018-05-149 23:05:644 INFO  BankAppDriver:25 - Begin Customer Creation: 
+2018-05-149 23:05:644 INFO  BankAppDriver:40 - CreateCustomer(): 
+2018-05-149 23:05:644 INFO  BankAppDriver:41 - username: register
+2018-05-149 23:05:644 INFO  BankAppDriver:42 - firstName: Jack
+2018-05-149 23:05:644 INFO  BankAppDriver:43 - lastName: Jill
+2018-05-149 23:05:644 INFO  BankAppDriver:44 - address1: 123 ABC St
+2018-05-149 23:05:660 INFO  BankAppDriver:45 - address2: Apt 1234
+2018-05-149 23:05:660 INFO  BankAppDriver:46 - city: Dallas
+2018-05-149 23:05:660 INFO  BankAppDriver:47 - state: TX
+2018-05-149 23:05:660 INFO  BankAppDriver:48 - phoneNumber: 1234567890
+2018-05-149 23:05:660 INFO  BankAppDriver:49 - email: jackjill@gmail.com
+2018-05-149 23:05:660 INFO  BankAppDriver:50 - accessLve: customer
+2018-05-149 23:05:660 INFO  BankAppDriver:51 - End Customer Creation 
+
+2018-05-149 23:05:660 INFO  BankAppDriver:339 - Begin Serialization - SerializeCustomer(): 
+2018-05-149 23:05:675 INFO  BankAppDriver:353 - Check Object Written To .ser File - cParamS: 
+2018-05-149 23:05:675 INFO  BankAppDriver:354 - username: register
+2018-05-149 23:05:675 INFO  BankAppDriver:355 - firstName: Jack
+2018-05-149 23:05:675 INFO  BankAppDriver:356 - lastName: Jill
+2018-05-149 23:05:675 INFO  BankAppDriver:357 - address1: 123 ABC St
+2018-05-149 23:05:675 INFO  BankAppDriver:358 - address2: Apt 1234
+2018-05-149 23:05:675 INFO  BankAppDriver:359 - city: Dallas
+2018-05-149 23:05:675 INFO  BankAppDriver:360 - state: TX
+2018-05-149 23:05:675 INFO  BankAppDriver:361 - phoneNumber: 1234567890
+2018-05-149 23:05:675 INFO  BankAppDriver:362 - email: jackjill@gmail.com
+2018-05-149 23:05:675 INFO  BankAppDriver:363 - accessLevel: customer
+2018-05-149 23:05:675 INFO  BankAppDriver:375 - End Serialization - SerializeCustomer() 
+
+2018-05-149 23:05:675 INFO  BankAppDriver:86 - c.username created: register
+
+2018-05-149 23:05:691 INFO  BankAppDriver:23 - Begin Serialization - WriteAccount(): 
+2018-05-149 23:05:692 INFO  BankAppDriver:32 - Serialized data will be written in bankcust/account/accregister.ser
+2018-05-149 23:05:693 INFO  BankAppDriver:40 - Check Variable of Type Double Written To .ser File - balance
+2018-05-149 23:05:693 INFO  BankAppDriver:41 - balance: 0.00
+2018-05-149 23:05:693 INFO  BankAppDriver:46 - End Serialization - WriteAccount() 
+
+2018-05-149 23:05:693 INFO  BankAppDriver:389 - Begin Deserialization - DeserializeCustomer(): 
+2018-05-149 23:05:693 INFO  BankAppDriver:392 - Customer reference is set to null. c = (cParamD = null)
+2018-05-149 23:05:771 INFO  BankAppDriver:403 - Check Object Read From .ser File - cParamD: 
+2018-05-149 23:05:771 INFO  BankAppDriver:404 - username: register
+2018-05-149 23:05:787 INFO  BankAppDriver:405 - firstName: Jack
+2018-05-149 23:05:787 INFO  BankAppDriver:406 - lastName: Jill
+2018-05-149 23:05:787 INFO  BankAppDriver:407 - address1: 123 ABC St
+2018-05-149 23:05:787 INFO  BankAppDriver:408 - address2: Apt 1234
+2018-05-149 23:05:787 INFO  BankAppDriver:409 - city: Dallas
+2018-05-149 23:05:787 INFO  BankAppDriver:410 - state: TX
+2018-05-149 23:05:787 INFO  BankAppDriver:411 - phoneNumber: 1234567890
+2018-05-149 23:05:787 INFO  BankAppDriver:412 - email: jackjill@gmail.com
+2018-05-149 23:05:787 INFO  BankAppDriver:413 - accessLevel: customer
+2018-05-149 23:05:787 INFO  BankAppDriver:422 - End Deserialization - DeserializeCustomer() 
+
+2018-05-149 23:05:787 INFO  BankAppDriver:446 - accessLvel: customer
+2018-05-149 23:05:787 INFO  BankAppDriver:58 - Begin Deserialization - View Balance(): 
+2018-05-149 23:05:787 INFO  BankAppDriver:60 - Account reference is set to null. a = (custAcc = null) 
+2018-05-149 23:05:787 INFO  BankAppDriver:69 - Check Variable of Type Double Read From .ser File - balance
+2018-05-149 23:05:787 INFO  BankAppDriver:70 - balance: 0.00
+2018-05-149 23:05:787 INFO  BankAppDriver:85 - End Deserialization - View Balance() 
+
+2018-05-149 23:05:787 INFO  BankAppDriver:100 - jointAccount = false
+2018-05-149 23:05:690 INFO  BankAppDriver:25 - Begin Customer Creation: 
+2018-05-149 23:05:690 INFO  BankAppDriver:40 - CreateCustomer(): 
+2018-05-149 23:05:690 INFO  BankAppDriver:41 - username: login
+2018-05-149 23:05:690 INFO  BankAppDriver:42 - firstName: Jack
+2018-05-149 23:05:690 INFO  BankAppDriver:43 - lastName: Jill
+2018-05-149 23:05:690 INFO  BankAppDriver:44 - address1: 123 ABC St
+2018-05-149 23:05:690 INFO  BankAppDriver:45 - address2: Apt 1234
+2018-05-149 23:05:690 INFO  BankAppDriver:46 - city: Dallas
+2018-05-149 23:05:690 INFO  BankAppDriver:47 - state: TX
+2018-05-149 23:05:690 INFO  BankAppDriver:48 - phoneNumber: 1234567890
+2018-05-149 23:05:690 INFO  BankAppDriver:49 - email: jackjill@gmail.com
+2018-05-149 23:05:690 INFO  BankAppDriver:50 - accessLve: customer
+2018-05-149 23:05:690 INFO  BankAppDriver:51 - End Customer Creation 
+
+2018-05-149 23:05:690 INFO  BankAppDriver:339 - Begin Serialization - SerializeCustomer(): 
+2018-05-149 23:05:690 INFO  BankAppDriver:353 - Check Object Written To .ser File - cParamS: 
+2018-05-149 23:05:690 INFO  BankAppDriver:354 - username: register
+2018-05-149 23:05:690 INFO  BankAppDriver:355 - firstName: Jack
+2018-05-149 23:05:690 INFO  BankAppDriver:356 - lastName: Jill
+2018-05-149 23:05:690 INFO  BankAppDriver:357 - address1: 123 ABC St
+2018-05-149 23:05:690 INFO  BankAppDriver:358 - address2: Apt 1234
+2018-05-149 23:05:690 INFO  BankAppDriver:359 - city: Dallas
+2018-05-149 23:05:690 INFO  BankAppDriver:360 - state: TX
+2018-05-149 23:05:690 INFO  BankAppDriver:361 - phoneNumber: 1234567890
+2018-05-149 23:05:690 INFO  BankAppDriver:362 - email: jackjill@gmail.com
+2018-05-149 23:05:690 INFO  BankAppDriver:363 - accessLevel: customer
+2018-05-149 23:05:690 INFO  BankAppDriver:365 - secondJointAccUsername: login
+2018-05-149 23:05:690 INFO  BankAppDriver:375 - End Serialization - SerializeCustomer() 
+
+2018-05-149 23:05:690 INFO  BankAppDriver:339 - Begin Serialization - SerializeCustomer(): 
+2018-05-149 23:05:701 INFO  BankAppDriver:353 - Check Object Written To .ser File - cParamS: 
+2018-05-149 23:05:702 INFO  BankAppDriver:354 - username: login
+2018-05-149 23:05:702 INFO  BankAppDriver:355 - firstName: Jack
+2018-05-149 23:05:702 INFO  BankAppDriver:356 - lastName: Jill
+2018-05-149 23:05:702 INFO  BankAppDriver:357 - address1: 123 ABC St
+2018-05-149 23:05:702 INFO  BankAppDriver:358 - address2: Apt 1234
+2018-05-149 23:05:702 INFO  BankAppDriver:359 - city: Dallas
+2018-05-149 23:05:702 INFO  BankAppDriver:360 - state: TX
+2018-05-149 23:05:702 INFO  BankAppDriver:361 - phoneNumber: 1234567890
+2018-05-149 23:05:702 INFO  BankAppDriver:362 - email: jackjill@gmail.com
+2018-05-149 23:05:702 INFO  BankAppDriver:363 - accessLevel: customer
+2018-05-149 23:05:702 INFO  BankAppDriver:365 - secondJointAccUsername: register
+2018-05-149 23:05:702 INFO  BankAppDriver:375 - End Serialization - SerializeCustomer() 
+
+2018-05-149 23:05:702 INFO  BankAppDriver:140 - d.username created: login
+2018-05-149 23:05:702 INFO  BankAppDriver:23 - Begin Serialization - WriteAccount(): 
+2018-05-149 23:05:702 INFO  BankAppDriver:32 - Serialized data will be written in bankcust/account/acclogin.ser
+2018-05-149 23:05:702 INFO  BankAppDriver:40 - Check Variable of Type Double Written To .ser File - balance
+2018-05-149 23:05:702 INFO  BankAppDriver:41 - balance: 0.00
+2018-05-149 23:05:702 INFO  BankAppDriver:46 - End Serialization - WriteAccount() 
+
+2018-05-149 23:05:702 INFO  BankAppDriver:389 - Begin Deserialization - DeserializeCustomer(): 
+2018-05-149 23:05:702 INFO  BankAppDriver:392 - Customer reference is set to null. c = (cParamD = null)
+2018-05-149 23:05:702 INFO  BankAppDriver:403 - Check Object Read From .ser File - cParamD: 
+2018-05-149 23:05:702 INFO  BankAppDriver:404 - username: login
+2018-05-149 23:05:702 INFO  BankAppDriver:405 - firstName: Jack
+2018-05-149 23:05:702 INFO  BankAppDriver:406 - lastName: Jill
+2018-05-149 23:05:702 INFO  BankAppDriver:407 - address1: 123 ABC St
+2018-05-149 23:05:702 INFO  BankAppDriver:408 - address2: Apt 1234
+2018-05-149 23:05:702 INFO  BankAppDriver:409 - city: Dallas
+2018-05-149 23:05:702 INFO  BankAppDriver:410 - state: TX
+2018-05-149 23:05:702 INFO  BankAppDriver:411 - phoneNumber: 1234567890
+2018-05-149 23:05:702 INFO  BankAppDriver:412 - email: jackjill@gmail.com
+2018-05-149 23:05:702 INFO  BankAppDriver:413 - accessLevel: customer
+2018-05-149 23:05:702 INFO  BankAppDriver:415 - secondJointAccUsername: register
+2018-05-149 23:05:702 INFO  BankAppDriver:422 - End Deserialization - DeserializeCustomer() 
+
+2018-05-149 23:05:702 INFO  BankAppDriver:446 - accessLvel: customer
+2018-05-149 23:05:702 INFO  BankAppDriver:58 - Begin Deserialization - View Balance(): 
+2018-05-149 23:05:702 INFO  BankAppDriver:60 - Account reference is set to null. a = (custAcc = null) 
+2018-05-149 23:05:702 INFO  BankAppDriver:69 - Check Variable of Type Double Read From .ser File - balance
+2018-05-149 23:05:702 INFO  BankAppDriver:70 - balance: 0.00
+2018-05-149 23:05:702 INFO  BankAppDriver:85 - End Deserialization - View Balance() 
+

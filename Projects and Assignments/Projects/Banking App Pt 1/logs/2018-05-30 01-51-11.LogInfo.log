@@ -1,0 +1,59 @@
+2018-05-150 01:05:367 INFO  BankAppDriver:27 - Begin Customer Creation: 
+2018-05-150 01:05:314 INFO  BankAppDriver:58 - CreateCustomer(): 
+2018-05-150 01:05:314 INFO  BankAppDriver:59 - username: Memorial
+2018-05-150 01:05:314 INFO  BankAppDriver:60 - firstName: Memorial
+2018-05-150 01:05:314 INFO  BankAppDriver:61 - lastName: Day
+2018-05-150 01:05:314 INFO  BankAppDriver:62 - address1: 1
+2018-05-150 01:05:314 INFO  BankAppDriver:63 - address2: 2
+2018-05-150 01:05:314 INFO  BankAppDriver:64 - city: 3
+2018-05-150 01:05:314 INFO  BankAppDriver:65 - state: 34
+2018-05-150 01:05:314 INFO  BankAppDriver:66 - phoneNumber: 5
+2018-05-150 01:05:314 INFO  BankAppDriver:67 - email: 6
+2018-05-150 01:05:314 INFO  BankAppDriver:68 - accessLve: customer
+2018-05-150 01:05:314 INFO  BankAppDriver:69 - End Customer Creation 
+
+2018-05-150 01:05:314 INFO  BankAppDriver:399 - Begin Serialization - SerializeCustomer(): 
+2018-05-150 01:05:345 INFO  BankAppDriver:413 - Check Object Written To .ser File - cParamS: 
+2018-05-150 01:05:345 INFO  BankAppDriver:414 - username: Memorial
+2018-05-150 01:05:345 INFO  BankAppDriver:415 - firstName: Memorial
+2018-05-150 01:05:345 INFO  BankAppDriver:416 - lastName: Day
+2018-05-150 01:05:345 INFO  BankAppDriver:417 - address1: 1
+2018-05-150 01:05:345 INFO  BankAppDriver:418 - address2: 2
+2018-05-150 01:05:345 INFO  BankAppDriver:419 - city: 3
+2018-05-150 01:05:345 INFO  BankAppDriver:420 - state: 34
+2018-05-150 01:05:345 INFO  BankAppDriver:421 - phoneNumber: 5
+2018-05-150 01:05:345 INFO  BankAppDriver:422 - email: 6
+2018-05-150 01:05:345 INFO  BankAppDriver:423 - accessLevel: customer
+2018-05-150 01:05:345 INFO  BankAppDriver:435 - End Serialization - SerializeCustomer() 
+
+2018-05-150 01:05:345 INFO  BankAppDriver:88 - c.username created: Memorial
+
+2018-05-150 01:05:356 INFO  BankAppDriver:23 - Begin Serialization - WriteAccount(): 
+2018-05-150 01:05:357 INFO  BankAppDriver:32 - Serialized data will be written in bankcust/account/accMemorial.ser
+2018-05-150 01:05:358 INFO  BankAppDriver:40 - Check Variable of Type Double Written To .ser File - balance
+2018-05-150 01:05:358 INFO  BankAppDriver:41 - balance: 0.00
+2018-05-150 01:05:358 INFO  BankAppDriver:46 - End Serialization - WriteAccount() 
+
+2018-05-150 01:05:358 INFO  BankAppDriver:449 - Begin Deserialization - DeserializeCustomer(): 
+2018-05-150 01:05:358 INFO  BankAppDriver:452 - Customer reference is set to null. c = (cParamD = null)
+2018-05-150 01:05:452 INFO  BankAppDriver:463 - Check Object Read From .ser File - cParamD: 
+2018-05-150 01:05:452 INFO  BankAppDriver:464 - username: Memorial
+2018-05-150 01:05:452 INFO  BankAppDriver:465 - firstName: Memorial
+2018-05-150 01:05:452 INFO  BankAppDriver:466 - lastName: Day
+2018-05-150 01:05:452 INFO  BankAppDriver:467 - address1: 1
+2018-05-150 01:05:452 INFO  BankAppDriver:468 - address2: 2
+2018-05-150 01:05:468 INFO  BankAppDriver:469 - city: 3
+2018-05-150 01:05:468 INFO  BankAppDriver:470 - state: 34
+2018-05-150 01:05:468 INFO  BankAppDriver:471 - phoneNumber: 5
+2018-05-150 01:05:468 INFO  BankAppDriver:472 - email: 6
+2018-05-150 01:05:468 INFO  BankAppDriver:473 - accessLevel: customer
+2018-05-150 01:05:468 INFO  BankAppDriver:482 - End Deserialization - DeserializeCustomer() 
+
+2018-05-150 01:05:468 INFO  BankAppDriver:506 - accessLvel: customer
+2018-05-150 01:05:468 INFO  BankAppDriver:58 - Begin Deserialization - View Balance(): 
+2018-05-150 01:05:468 INFO  BankAppDriver:60 - Account reference is set to null. a = (custAcc = null) 
+2018-05-150 01:05:468 INFO  BankAppDriver:69 - Check Variable of Type Double Read From .ser File - balance
+2018-05-150 01:05:468 INFO  BankAppDriver:70 - balance: 0.00
+2018-05-150 01:05:468 INFO  BankAppDriver:85 - End Deserialization - View Balance() 
+
+2018-05-150 01:05:468 INFO  BankAppDriver:102 - jointAccount = false

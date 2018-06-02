@@ -1,0 +1,160 @@
+____________________________________________________
+** Git **
+
+* Source Code Managment (SCM)
+* Version control
+
+Example:
+* Different version of a resume.
+* Jacqueline Resume 01-2018
+* Jacqueline Resume 05-2018
+
+Why do we need source code management (SCM)?
+* Backup and restore
+* Synchronization
+* Track changes
+* Branching & Merging
+**** Branching allows for creation of new features that are separate from the main production.
+**** Merging allows for changes made to be added to another branch.
+
+
+What is Git?
+* An SCM (source code management) tool.
+
+Key Terms:
+* Repository
+**** Public repo and private repo
+**** Resembles folder tree
+**** Store revision history
+
+* Remote
+**** Repo stored on the server.
+* Origin
+**** Default upstream repository.
+
+* Branch
+**** Parallel version of the repository.
+
+* Master
+**** Default development branch
+
+* Clone
+**** Copy of main Repo and all branches and receive updates from main repo.
+
+* Fork 
+**** Personal copy of main Repo but separate from main repo. Does not receive updates.
+
+* Merge
+**** Take changes from one branch to another another.
+**** A merge conflict may occur.
+
+* Pull Request
+**** Proposed changes submitted by a user and needs approval before being added. 
+
+
+
+
+cd /c/Users/green/OneDrive/Revature/GitHub/1805May21USF
+
+* Clone Remote Repository
+git clone https://github.com/1805May21USF/Batch-Source.git
+
+git status
+
+* Create new branch
+git checkout -b tummalaJ
+
+
+* Add new/modified files
+git add .
+
+* Save changes by commiting files after new/modified files have been added.
+git commit
+
+git log 
+
+git push origin tummalaJ
+
+
+
+
+
+____________________________________________________
+** Java **
+
+Why Java?
+* Platform Independent
+* Robust
+* Popular, Widespread
+* Object-oriented
+* Great Documentation
+* Write Once Run Anywhere
+
+
+What Makes Up Java?
+* Java Virtual Machine (JVM)
+	- Compiles bytecode to machine code that the system can understand.
+* Java Runtime Environment (JRE)
+	- JVM + Libraries
+	- Everything you need to "run" Java
+* Java Development Kit (JDK)
+	- JVM + JRE + Compiler
+	- Tools used to "develop" a Java application.
+
+What is OOP?
+* Object-Oriented Programming
+	- Based on objects and ability to reuse objects.
+
+What are objects?
+	- Objects have states and behaviors.
+	- States: fields, variables
+	- Behaviors: methods
+	
+What are the pillars of OOP?
+	- Inheritance
+		- Allows hierarchy of objects
+		- Superclass and subclass
+			- Animal class and Dog class
+		- No multiple inheritance of classes. No diamond.
+		- Multiple inheritance of interface okay.
+	- Encapsulation
+		- Wrap and protect data fields preventing access from outside the class using private.
+		- Must use setters and getters to access the files.
+			- Mutator / Accessor
+	- Polymorphism
+		- Ability to take on multiple forms.
+		- Method overloading
+			- Same method name with different parameters or different return type.
+		- Method overriding
+			- Subclass override superclass method of same name and same parameter.
+			- Can use custom implementation in subclass that differs from superclass implementation details.
+		- Paremetric Polymorphism aka Generics
+			- Ability of programming language to recognize an expression.
+			- Equates to a variable type.
+			- Required as an input
+	- Abstraction
+		- Sometimes omitted.
+		- Hiding implementation details.
+			- "Shows what it does and not how it does it."
+		- Example: toString() 
+		- Abstract keyword:
+			- Used to declare a class or method as abstract.
+			- Contains partial or empty implementation
+			
+			
+	
+____________________________________________________
+** Eclipse **
+
+* static don't need an instance / belongs to class
+* void doesn't return anything
+* String[] args: args to be utilized in method
+
+
+	
+
+	
+
+
+
+

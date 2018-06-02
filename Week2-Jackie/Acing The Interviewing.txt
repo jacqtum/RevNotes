@@ -1,0 +1,184 @@
+
+
+Acing the Interview
+
+1. Know the company and who you're interviewing with.
+2. Who will you be interviewing with and how long will you be interview with?
+3. Know your skills.
+4. Know everything on your resume.
+5. You will be asked what is your greatest strength and what are you weak at?
+6. Know the job description.
+
+* There isn't a perfect candidate.
+* Look at job description and learn/work on the skills.
+
+Look up Deloitte.
+Look up a client.
+Look up Salesforce.
+
+Look up a company and get information about the company.
+What technologies are the company working with?
+
+
+BODY LANGUAGE
+* Know your body language.
+* You never get a 2nd chance.
+* Human component.
+* Speak up and use positive words.
+* Eye contact is a good way to establish rapport with another human being.
+	* Don't overdo it. 3-5 seconds. Don't stare.
+	* Be natural.
+	* Don't look at their mouth.
+	* Don't be nervous.
+* Practice the perfect handshake.
+	* Extend hand.
+	* Break eye contact enough time to find the handshake.
+	* Give 3 or 4 handshake.
+	* Nice, firm handshake. Not too hard. Not too strong.
+* Survive the first 90 seconds to pass the first impression.
+* Get through the human nature part.
+* Be your best self.
+* Posture:
+	* Back is straight and slightly leaning forward.
+	* Not too forward. Too aggressive.
+	* Not too back. Too relaxed.
+* Distracting Behavior:
+	* Don't rub your legs or fidget due to nerves.
+	* No drumming.
+	* No tapping feet.
+* Open posture. 
+	* Face interviewer.
+	* Don't put hands in pockets.
+	* Don't put hands behind your back.
+	* Don't cross arms.
+	* Clear line of sight.
+* Stand until your interviewer arrives.
+	* First impression if you're sitting down makes you seem smaller.
+	* Stand and be ready for the handshake. 
+	* Be confident.
+* Personal Space
+	* Friends: 3-5 ft bubble
+	* Family: Under 3ft limit
+	* Acquaintances: 5-10ft
+	* Strangers: 8 ft away
+	* Get within 3-5 ft of the interview.
+* Smile!
+	* Relax.
+	* Watch a funny vid to help you smile before interview.
+	* Build happiness and confidence beforehand.
+	* Don't beat yourself up.
+	* Be happy that you have interview.
+* Research about body language to know how interviewer feels.
+	* Clearing throat and yawning can mean interviwer is feeling bored?
+	* Practice.
+
+DRESS CODE:
+* Business Professional
+	* Fancier the better, but not a tuxedo.
+* If they're casual, wear business casual.
+	* Even can get away with business professional possibly.
+* Black and Charcoal suit.
+* White shirt is always good.
+* No loud and flashy color.
+	* No piano ties.
+* Neat and clean.
+	* No threads.
+	* No lint.
+	* Look at what CEOs and what someone running for office is wearing.
+* Shower before your interview.
+* Don't wear too much perfume or cologne.
+* Tuck in your shirt.
+* Make sure tie is a good length.
+* Look up in Google.
+	* Business professional men
+	* Business professional women
+
+	
+GETTING FIBONNACI'D:
+* Always be ready for a coding challenge!
+* This is a coding job.
+* Ask questions about the coding problem.
+	* Ask for clarification.
+	* Should it return something?
+	* What should we pass in? Etc.
+* Talk through a brute-force solution.
+	* Talk about what you plan to do.
+* Write a bubble sort.
+* Write fibonacci.
+* Discuss how you would refactor and optimize.
+* Example for bubble sort. 
+	* Maybe, use a Collections.sort
+
+PROJECTS
+* Tell me about your project.
+* Discuss high-level with appropriate detail.
+* Always explain from front to back (vice versa).
+* Tell how you input, what it outputs, what frameworks, or database that you used.
+* Mention the keywords and buzzwords!
+* Questions like "How did you use <technology> in your project?
+	* Give me more in-depth details.
+	* Explain the role of the frame.
+	* Why did you use it instead of something else?
+	* Where does it fit in the project.
+	* Explain how you configured it.
+	* If you don't know specifics, know the general information and say what you know about the technology you used versus other technology.
+	
+PHONE AND SKYPE
+* Ask your interviewer if they can hear/see you.
+* Make sure your tech works hours ahead of time.
+* Do a practice run with a colleague.
+* Treat it like a face-to-face interview.
+	- Dress, body language, eye contact, etc.
+* Don't wear pajamas.
+* Wear business professional even if only on phone.
+* Make sure your background is not distracting.
+	* Don't be at the beach.
+	* Don't have something on your wall behind you.
+	* Don't be at the subway station.
+* Quickly recovers when technology fails.
+	* Make sure you have contact details. 
+	* Check your e-mail they sent you.
+	* Write down interviewer's name, phone number, and e-mail.
+	* You can call and apoologize for internet connection failures and tell them that you are trying to reestablish connection, but you can continue speaking on the phone.
+	
+QUESTIONS?
+* Best to have hands on your lap.
+	* Don't fold hands.
+	* Hand gestures are good.
+* Sit down and leaning slightly leaning forward.
+* Closing the interview. 
+	* Use the interviewer's name.
+	* After they answer last question, you can say:
+		"Great talking with you, [InterviewerName]".
+* If you don't know, you can say that you are not sure, but will look it up later.
+	* Try to only say once.
+* If you don't know the technology, but heard about it.
+	* You can say you haven't had the opportunity to work on it, but you have heard of it.
+* If you have no clue, you can ask the interviewer to explain to you, but depends on the openness of the interviwer.
+	* Will need to read the interviewer.
+* You will be interviewing people who will be your boss, lead, or even possibly coworkers.
+* Use first name if they give a name or call them by Mr/Ms. LastName. 
+* You can ask how to pronounce a name at the beginning if it's difficult to pronounce.
+* If you think the interview went well, give a nice and short thank you letter.
+* If you're taking notes, make sure to keep eye contact.
+	* 3-5 seconds eye contact.
+	* Make sure not to look around the room too much.
+* Introduction:
+	* Give your name.
+	* Give your title.
+	* Technologies you've worked with.
+	* You might not want to mention your school unless you want to Harvard or something like that.
+	* Don't talk about personal life.
+* When asking about some task you've done.
+	* Describe the task, what action you took, and the results of the action.
+	* Took about the positive and not the negative of the action you've takens.
+	
+
+
+
+
+
+	
+	
+	
+

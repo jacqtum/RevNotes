@@ -1,0 +1,334 @@
+05-31-2018
+
+https://docs.google.com/document/d/1sKfdR-N3nmfhF4AY43__uWo7p_sZzHP0TPaGPKBv7IA/edit?usp=sharing
+
+Functions:
+* Scalar - returns a single row for ever row of a queried table or r ow.
+* Aggregate - returns a single result or set on a group of rows/tables
+
+Query:
+* Operation that retrieves data from one or more tables or a view.
+* Query Format:
+	SELECT columnName  --required
+	FROM tableName	 -- required
+	WHERE [condition(s)]  - optional
+	GROUP BY [columnName]
+		-- Groups yours result set so far. Wide to narrow.
+		-- Aggregate
+	HAVING [condition]
+		-- Aggregate
+	ORDER BY [columnName]
+
+	
+	* WHERE vs HAVING
+		* Can't use aggregates with a WHERE clause
+		* Example of HAVING (This works) properly: 
+			SELECT Employees.LastName, COUNT(Orders.OrderID) AS NumberOfOrders
+			FROM (Orders
+			INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID)
+			GROUP BY LastName
+			HAVING COUNT(Orders.OrderID) > 10;
+			
+		* Example of WHERE using an aggregate (DOESN'T WORK!):
+			* SELECT Employees.LastName, COUNT(Orders.OrderID) AS 		NumberOfOrders
+			FROM (Orders
+			INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID)
+			WHERE COUNT(Orders.OrderID) > 10;
+			GROUP BY LastName
+			
+			
+			
+Subqueries:
+	* Subqueries are nested inside a query.
+	
+	* Example 1:
+		SELECT ProdName
+		FROM Product
+		WHERE ID IN 
+			(
+				SELECT ProductID
+				FROM OrderItem
+				WHERE Quantity > 100
+			)
+			
+	* Example 2:
+		SELECT FirstName, LastName, OrderCount = (SELECT COUNT(O.ID) FROM Order O WHERE O.CustomerID = C.ID)
+		FROM tableName
+		WHERE condition
+		
+	* Non-correlated
+		- The inner quercy can execute independently of the outer query.
+		
+	* Correlated
+		- The inner query is not independent.
+		
+
+Joins:
+	* Returns a result set by combining 2+ tables
+	
+	* Join Classification:
+		* Equi: =
+		* Theta: <, >, !=
+		
+	* Inner Join:
+		- Returns only rows that return are matching from both tables.
+		- 	Example:
+				SELECT * FROM tableName1 t1
+				JOIN tableName2 t2
+				ON t1.ID = t2.ID;
+	
+	* Outer Join:
+		- Result set contains entries from both, but without the matches.
+		- 	Example:
+				SELECT * FROM tableName1 t1
+				JOIN tableName2 t2
+				ON t1.ID = t2.ID;
+		
+	* Left Join:
+		- Result set returns the whole left table and only the matches from the right table.
+		
+	* Right Join:
+		- Result set returns the whole right table and only the matches from the left table.
+			
+	* Cross Join
+		- Result set returns a muliply joining of columns to produce all combos.
+		
+	* Self Join
+		- Table joined with itself
+		- Example:
+		
+			Student Table:
+				ID		Name	LabPartner(ID)
+				1		Anna		4
+				2		Betty		3
+				3		Cara		2
+				4		Diana		1
+				
+				SELECT A.Name Student, B.Name LabPartner
+				FROM Student A 
+				JOIN Student B
+				ON A.LabPartner = B.ID
+				
+				Result:
+					Student		LabPartner
+					Anna		Diana
+					Betty		Cara
+					Cara		Betty
+					Diana		Anna
+					
+	
+Set Operations:
+	* Used for COMPARING RESULT SETS with the same number of columns and same types of columns.
+	* Not for comparing tables.
+	
+	* UNION ALL
+		- Add 2 Results Sets to make one Result Set!
+		- Allows for duplicates.
+		
+		- Example Query that Retrieves the City from both tables:
+			SELECT CITY FROM CUSTOMERS
+			UNION Allows
+			SELECT CITY FROM SUPPLIERS
+			
+		- Example Result of UNION ALL, return cities:
+			CUSTOMERS		SUPPLIERS
+			Tampa			Tampa
+			Reston			Reston
+			New York City	Dallas
+			San Diego
+			
+	* UNION
+		- Returns distinct values from the 2 result sets.
+		- No duplicates.
+		
+	* INTERSECT
+		- Return rows only returned by both queries.
+		- Example: Both have Tampa and Reston.
+	
+	* MINUS
+		- Returns only unique rows returned by the first queries that are NOT returned by the second query.
+	
+
+Transactions
+	* Units of work done on a database that may include many operations (Database Manipulation Language (DML))
+	
+	* TRANSACTION CONTROL LANGUAGE (TCL)
+		- COMMIT
+		- ROLLBACK
+		- SAVEPOINT
+		
+	* ACID
+		- Atomocity
+			* Smallest logical unit that can be run.
+			* All or nothing.
+			* All operations must execute successfully or rollback.
+			* Bad atomicity can lose referential integrity.
+		
+		- Consistency
+			* Database is in a valid state according to existing structure and constraints after a commit.
+			* Columns, tables, keys for example should still be the same.
+			
+		- Isolation
+			* Concurrent transations should not affect each other.
+			* One transaction must complete before another may execute, to sharing resources.
+			* The system state during concurrent transactions is the same as if the transactions were SEQUENTIAL, happening one at a time.
+		
+		- Durability
+			* There is a backup if a problem occurs.
+			* Even if the database fails, the transaction will complete.
+			* All commits are final and cannot be rolled back even in system failure.
+			
+	
+
+Issues that may be faced...
+
+
+Transaction Phenomenon
+* Issues that occur with concurrent transactions.
+
+* DIRTY READ
+	- A bad database allows for dirty reads.
+	- Returns something from a column/table that has not been commited.
+	
+	- Example:
+	
+		* Session 1 - Begin transaction and modifies data.
+			- Ex: Update Name of person with ID 1, but not commited before Session 2 begins.
+					Previously: ID = 1, Name-value = "Anna"
+					After Change: ID = 1, Name-value = "Hanna"
+				
+		* Session 2 - Begins with Sessions 1's uncommited data.
+			- Ex: Session will see the uncommited data 
+				ID = 1, Name-value = "Anna"
+		
+		* If Session 1 rolls back before Session 2 completes transaction, then Session 2's data is now invalid.
+			- Ex: After Session 1 rollback:
+				ID = 1, Name-value: "Hanna"
+				
+			-Session 2 will have incorrect data.
+			
+NON-REPEATABLE READ
+	* Row is edited after being viewed.
+	
+
+PHANTOM READ
+	* Query that does not return the same result when read again in a transaction.
+	
+	* Example:
+		- Session 1:
+			* Begins a TX.
+			* Executes a query.
+			
+		- Session 2:
+			* Inserts data matching that query.
+			
+		- Session 3:
+			* Reruns the Query and finds something that wasn't there before.
+			* PHANTOM DATA has occured.
+			
+	
+
+
+ISOLATION LEVELS:
+	* Set up per database.
+	* Needs concurrent access to the database.
+	* Always assume thousands of people will be accessing your database concurrently.
+	
+	READ UNCOMMITED
+		* Terrible
+		* No locks
+		
+	READ COMMITTED
+		* Oracle default
+		* It allows only committed data to be read, eliminating the dirty read problem.
+		* Write Lock
+		
+	REAPEATABLE READ
+		* Write and Read Lock
+		
+	SERIALIZABLE
+		* Most secure, but very slow.
+		* Banks often use these, since their information needs to remain highly secure.
+		* Read, Write, and Range Lock.
+	
+
+
+SEQUENCES:
+* Stores and tracks a number that can be incremented/decremented.
+* Used for auto-incrementing primary keys.
+* Can grab the current or next value (nextVal)
+	
+
+VIEWS:
+* Virtual table returned by query.
+* Essentially a saved SELECT statement.
+* If view definition does not have column names, names will be used from query's Result Set.
+	
+	
+INDEX:
+* Apply to column of a table to speed up searches by enforcing a physical in-memory order of rows.
+* Searches are faster, but Insert/Delete statements are slowed down.
+* Speeds up searching, but can slow down inserting and deleting.
+* UNIQUE, PK, AND FK constraints are implicitly generated.
+* Cannot add additional indices to these columns.
+
+TRIGGERS:
+* Event listener for a database.
+* Insert/Update/Delete on a specific table.
+* Gets values of an operation and change them.
+	- Before
+	- After
+
+* Example:
+	CREATE TRIGGER [name]
+	BEFORE INSERT ON [tableName]
+	FOR EACH ROW
+	BEGIN
+	SELECT MySeq.NEXTVAL INTO:NEW.C_ID FROM DUAL;
+	END;
+	
+	* Explanation of example:
+		- For each row that will be inserted, apply this logic, and select the next value of your sequence.
+		- Then insert it into your C_ID from the DUAL table.
+		- The trigger makes it happen automatically.
+		- FOR EACH is rquired to read and maniuplate row data.
+		- Inside triggers, you can call functions and stored procedures, but cannot cal other triggers.
+		
+		
+FUNCTIONS:
+* Functions are a block of code we can execute.
+* Must return 1 and 1 one value!
+* You van have 0+ parameters.
+* No transactions.
+* No data manipulation, but you can use SELECT statements (DQL).
+* Can call other functions.
+* Cannot call stored procedures.
+		
+* Example:
+	CREATE OR REPLACE FUNCTION [name] ([paramter list] VarName VarType,)
+	RETURN [VarType] IS
+	BEGIN
+	--logic;
+	RETURN ...;
+	END;
+	/ -- This forward slash is a delimeter. Prevents from going to next block.
+	
+
+STORED PROCEDURES:
+* Does not return a value.
+* Cannot return a value.
+* Support multiple IN, OUT, AND IN/OUT PARAMETERS.
+* Can call another Stored Procedure.
+* Transactions are good.
+* DML (Data Manipulation Language) is okay.
+* DDL (Data Definition Language) is NOT okay.
+
+* Example:
+	CREATE PROCEDURE [name] [parameter] AS [variable declarations]
+	BEGIN
+	--LOGIC
+	COMMIT;
+	END;
+	
+	
+

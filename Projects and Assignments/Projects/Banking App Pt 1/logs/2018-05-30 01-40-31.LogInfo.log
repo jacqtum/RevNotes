@@ -1,0 +1,4 @@
+2018-05-150 01:05:696 INFO  BankAppDriver:196 - Username: wake
+2018-05-150 01:05:698 INFO  BankAppDriver:197 - access level: null
+2018-05-150 01:05:698 INFO  BankAppDriver:446 - Begin Deserialization - DeserializeCustomer(): 
+2018-05-150 01:05:698 INFO  BankAppDriver:449 - Customer reference is set to null. c = (cParamD = null)

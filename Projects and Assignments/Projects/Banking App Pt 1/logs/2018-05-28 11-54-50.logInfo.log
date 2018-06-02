@@ -1,0 +1,43 @@
+2018-05-148 11:05:424 INFO  BankAppDriver:39 - usernameM: jtumma1
+2018-05-148 11:05:429 INFO  BankAppDriver:45 - accountExists: true
+2018-05-148 11:05:430 INFO  BankAppDriver:103 - Username: jtumma1
+2018-05-148 11:05:430 INFO  BankAppDriver:180 - Begin Deserialization - DeserializeCustomer(): 
+2018-05-148 11:05:431 INFO  BankAppDriver:183 - Customer reference is set to null. c = (cParamD = null)
+2018-05-148 11:05:560 INFO  BankAppDriver:194 - Check Object Read From .ser File - cParamD: 
+2018-05-148 11:05:561 INFO  BankAppDriver:195 - username: jtumma1
+2018-05-148 11:05:562 INFO  BankAppDriver:196 - firstName: Janeta
+2018-05-148 11:05:562 INFO  BankAppDriver:197 - lastName: Maneta
+2018-05-148 11:05:562 INFO  BankAppDriver:198 - address1: 123 ABC St
+2018-05-148 11:05:563 INFO  BankAppDriver:199 - address2: Apt 1234
+2018-05-148 11:05:563 INFO  BankAppDriver:200 - city: Dallas
+2018-05-148 11:05:563 INFO  BankAppDriver:201 - state: TX
+2018-05-148 11:05:564 INFO  BankAppDriver:202 - phoneNumber: 1234567890
+2018-05-148 11:05:564 INFO  BankAppDriver:203 - email: jacqutum@gmail.com
+2018-05-148 11:05:564 INFO  BankAppDriver:205 - secondJointAccUsername: ktumma1
+2018-05-148 11:05:567 INFO  BankAppDriver:212 - End Deserialization - DeserializeCustomer() 
+2018-05-148 11:05:568 INFO  BankAppDriver:58 - Begin Deserialization - View Balance(): 
+2018-05-148 11:05:569 INFO  BankAppDriver:60 - Account reference is set to null. a = (custAcc = null) 
+2018-05-148 11:05:573 INFO  BankAppDriver:69 - Check Variable of Type Double Read From .ser File - balance
+2018-05-148 11:05:573 INFO  BankAppDriver:70 - balance: 0.0
+2018-05-148 11:05:578 INFO  BankAppDriver:89 - Begin Deposit(): 
+2018-05-148 11:05:579 INFO  BankAppDriver:93 - Deposit Amount: 5.0
+2018-05-148 11:05:580 INFO  BankAppDriver:103 - Before Depositing, Balance = 0.0
+2018-05-148 11:05:580 INFO  BankAppDriver:109 - After Depositing, Balance = 5.0
+2018-05-148 11:05:580 INFO  BankAppDriver:23 - Begin Serialization - WriteAccount(): 
+2018-05-148 11:05:582 INFO  BankAppDriver:32 - Serialized data will be written in bankcust/account/accjtumma1.ser
+2018-05-148 11:05:584 INFO  BankAppDriver:40 - Check Variable of Type Double Written To .ser File - balance
+2018-05-148 11:05:585 INFO  BankAppDriver:41 - balance: 5.0
+2018-05-148 11:05:585 INFO  BankAppDriver:46 - End Serialization - WriteAccount() 
+2018-05-148 11:05:585 INFO  BankAppDriver:58 - Begin Deserialization - View Balance(): 
+2018-05-148 11:05:586 INFO  BankAppDriver:60 - Account reference is set to null. a = (custAcc = null) 
+2018-05-148 11:05:587 INFO  BankAppDriver:69 - Check Variable of Type Double Read From .ser File - balance
+2018-05-148 11:05:587 INFO  BankAppDriver:70 - balance: 5.0
+2018-05-148 11:05:588 INFO  BankAppDriver:132 - Begin Deposit(): 
+2018-05-148 11:05:588 INFO  BankAppDriver:136 - Withdraw Amount: 1.0
+2018-05-148 11:05:589 INFO  BankAppDriver:146 - Before Withdrawing, Balance = 5.0
+2018-05-148 11:05:590 INFO  BankAppDriver:152 - After Withdrawing, Balance = 4.0
+2018-05-148 11:05:590 INFO  BankAppDriver:23 - Begin Serialization - WriteAccount(): 
+2018-05-148 11:05:592 INFO  BankAppDriver:32 - Serialized data will be written in bankcust/account/accjtumma1.ser
+2018-05-148 11:05:592 INFO  BankAppDriver:40 - Check Variable of Type Double Written To .ser File - balance
+2018-05-148 11:05:593 INFO  BankAppDriver:41 - balance: 4.0
+2018-05-148 11:05:593 INFO  BankAppDriver:46 - End Serialization - WriteAccount() 

@@ -1,0 +1,56 @@
+06-01-2018 
+
+WHAT ARE CURSORS GOOD FOR?
+* Cursors are good for passing in a result set to a stored procedure.
+* Cursors are good for formatting output.
+
+
+PROCEDURAL LANGUAGE/STRUCTURED QUERY LANGUAGE (PL/SQL)
+
+* Oracle creates a memory area, called the context area, for processing a SQL statement.
+* The context area contains all information needed for processing statement.
+	- For Example: the # of rows processed, etc.
+* A cursor is a pointer to the context area.
+	
+Cursors
+* A cursor is a view stored in a local variable.
+* Pointer to a section of a Table/Result Set.
+* Must be opened to use.
+* It can be looped through.
+* Must be closed.
+* Every SQL statment generates a cursor.
+	- Allows PROCEDURAL LANGUAGE/STRUCTURED QUERY LANGUAGE (PL/SQL) to insteract with SQL.
+* A cursor holds the rows returned by a SQL statement.	
+	- This area held by the cursor is called the ACTIVE SET.
+* A cursor can be named.
+* There are 2 types of cursors:
+	- Implicit Cursors
+	- Explicit Cursors
+
+IMPLICIT CURSORS
+* Automatically created by Oracle whenever a SQL statement is executed, when there is no explicit cursor for the statment.
+* Programmers cannot control the implicit cursors and the information on it.
+* Select - DQL
+* DML (INSERT, UPDATE, DELETE)
+	- Whenever a DML statement is issues, an implicit cursor is associated with this statement.
+	- For INSERT operations, the cursor holds the data that needs to be inserted.
+	- For UPDATE and DELETE operations, the cursor identifies the rows that would be affected.
+* System Reference
+* Can make custom cursors
+* Cursor initially created for ResultSets.
+* Most recent implicit cursor, SQL cursor, has attributes such as:
+	- %FOUND, %ISOPEN, %NOTFOUND, %ROWCOUNT, %BULK_ROWCOUNT, %BULK_EXCEPTIONS
+
+EXPLICIT CURSORS
+* 	CUR S = SELECT * FROM POKEMON
+	SELECT ID FROM S; -- S is the name of the Cursor.
+* Good way to point the output.
+* Cursors can be used as parameters.
+	- Example: Pass a Result Set to a Stored Procedure
+* Explicit cursor includes the following steps.
+	1. Declare the cursor for initializing the memory.
+	2. Open the cursor for allocating the memory.
+	3. Fetching the cursor for retrieving the data.
+	4. Closing the cursor to release the allocated memory.
+	
+	

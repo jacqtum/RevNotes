@@ -1,0 +1,27 @@
+2018-05-149 16:05:465 INFO  BankAppDriver:46 - usernameM: jack
+2018-05-149 16:05:481 INFO  BankAppDriver:57 - accountExists: true
+
+2018-05-149 16:05:481 INFO  BankAppDriver:115 - Username: jack
+2018-05-149 16:05:481 INFO  BankAppDriver:116 - access level: null
+2018-05-149 16:05:481 INFO  BankAppDriver:271 - Begin Deserialization - DeserializeCustomer(): 
+2018-05-149 16:05:481 INFO  BankAppDriver:274 - Customer reference is set to null. c = (cParamD = null)
+2018-05-149 16:05:622 INFO  BankAppDriver:285 - Check Object Read From .ser File - cParamD: 
+2018-05-149 16:05:622 INFO  BankAppDriver:286 - username: jack
+2018-05-149 16:05:622 INFO  BankAppDriver:287 - firstName: Jack
+2018-05-149 16:05:622 INFO  BankAppDriver:288 - lastName: Jill
+2018-05-149 16:05:622 INFO  BankAppDriver:289 - address1: 123 ABC St
+2018-05-149 16:05:622 INFO  BankAppDriver:290 - address2: Apt 1234
+2018-05-149 16:05:622 INFO  BankAppDriver:291 - city: Dallas
+2018-05-149 16:05:622 INFO  BankAppDriver:292 - state: TX
+2018-05-149 16:05:622 INFO  BankAppDriver:293 - phoneNumber: 1234567890
+2018-05-149 16:05:622 INFO  BankAppDriver:294 - email: bankadmin@gmail.com
+2018-05-149 16:05:637 INFO  BankAppDriver:295 - accessLevel: customer
+2018-05-149 16:05:637 INFO  BankAppDriver:304 - End Deserialization - DeserializeCustomer() 
+
+2018-05-149 16:05:637 INFO  BankAppDriver:328 - accessLvel: customer
+2018-05-149 16:05:697 INFO  BankAppDriver:58 - Begin Deserialization - View Balance(): 
+2018-05-149 16:05:697 INFO  BankAppDriver:60 - Account reference is set to null. a = (custAcc = null) 
+2018-05-149 16:05:707 INFO  BankAppDriver:69 - Check Variable of Type Double Read From .ser File - balance
+2018-05-149 16:05:707 INFO  BankAppDriver:70 - balance: 30.00
+2018-05-149 16:05:707 INFO  BankAppDriver:85 - End Deserialization - View Balance() 
+

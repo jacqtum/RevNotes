@@ -1,0 +1,5 @@
+2018-05-149 15:05:300 INFO  BankAppDriver:45 - usernameM: rafael
+2018-05-149 15:05:300 INFO  BankAppDriver:56 - accountExists: true
+
+2018-05-149 15:05:300 INFO  BankAppDriver:114 - Username: rafael
+2018-05-149 15:05:300 INFO  BankAppDriver:115 - access level: null
