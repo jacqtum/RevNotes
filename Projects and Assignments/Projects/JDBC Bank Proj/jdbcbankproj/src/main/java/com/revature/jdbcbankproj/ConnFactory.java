@@ -1,4 +1,4 @@
-package com.revature.jdbcbank;
+package com.revature.jdbcbankproj;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -9,8 +9,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class ConnFactory {
-	
-	private static ConnFactory cf = new ConnFactory();
+private static ConnFactory cf = new ConnFactory();
 	
 	private ConnFactory() {
 		super(); //implicit...here for best practice
