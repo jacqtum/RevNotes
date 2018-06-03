@@ -62,17 +62,20 @@ public class MainDriver
     	 
     	 int topMenuScan;
     	 
-    	 boolean topMenuControl = true;
-    	 boolean topMenuControl1 = true;
-    	 boolean topMenuControl2 = true;
+    	 boolean topMenuControl;
+    	 boolean topMenuControl1;
+    	 boolean topMenuControl2;
     	 
     	 // TOP MENU
+    	 topMenuControl  =true;
+    	 
     	 while(topMenuControl == true) {
     		 log.info("Inside TOP Menu while loop");
     		 System.out.println("BANK MENU");
         	 System.out.println("\n1 Register\n2 Login\n");
         	 System.out.println("Enter number to continue or enter 0 to exit.\nNumber: ");
         	 Scanner scan = new Scanner(System.in);
+        	 topMenuScan = 0;
         	 topMenuScan = scan.nextInt();
         	 log.info("topMenuScan == " + topMenuScan);
         	 
@@ -85,15 +88,23 @@ public class MainDriver
         	 // REGISTRATION
         	 else if(topMenuScan == 1) {
         		 log.info("Inside topMenuScan == 1");
+        		 topMenuControl1 = true;
         		 while(topMenuControl1 == true) {
         			 log.info("Inside topMenuControl1");
             		 System.out.println("REGISTER PAGE");
-            		 
+            		 System.out.println("Enter EXIT to go back.");
             		 //REGISTRATION PROCESS
             		 Users u = new Users();
             		 
             		 System.out.println("Username: ");
             		 String userNam = scan.next();
+            		 
+            		 // Check if exit
+            		 
+            		 if(userNam.equalsIgnoreCase("exit")){
+            			 break;
+            		 }
+            		 // check if exit.
             		 // Check username
             		 boolean userNameExists;
             		 userNameExists = u.CheckUsername(userNam);
@@ -109,10 +120,11 @@ public class MainDriver
             			 
             			 // Continue User Registration
             			 u.CreateUsers(userNam);
+            			// Exit while loop topMenuControl1
+                		 topMenuControl1 = false;
             		 }
             		 
-            		 // Exit while loop topMenuControl1
-            		 topMenuControl1 = false;
+            		 
         		 }
         		 
         		 
@@ -120,7 +132,7 @@ public class MainDriver
         		 // After Registration Process, go to TOP MENU
         		 System.out.println("Registration Complete. Returning to BANK MENU.");
         		 try {
-					Thread.sleep(5000);
+					Thread.sleep(3000);
         		 } catch (InterruptedException e) {
 					e.printStackTrace();
         		 }
@@ -130,7 +142,7 @@ public class MainDriver
         	 else if(topMenuScan == 2) {
         		 log.info("Inside topMenuScan == 2");
         		 System.out.println("LOGIN PAGE");
-        		 
+        		 topMenuControl2 = true;
         		 while(topMenuControl2 == true) {
         			 log.info("Inside topMenuControl2");
         			 
@@ -146,7 +158,7 @@ public class MainDriver
         		 // After Login Process, go to TOP MENU
         		 System.out.println("Returning to BANK MENU.");
         		 try {
-					Thread.sleep(5000);
+					Thread.sleep(3000);
         		 } catch (InterruptedException e) {
 					e.printStackTrace();
 				}

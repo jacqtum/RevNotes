@@ -5,10 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Users {
@@ -98,13 +94,13 @@ public class Users {
 		System.out.println("Date Of Birth (YYYY-MM-DD): ");
 		this.DOB = scanCU.next();
 		System.out.println("DOB: " + this.DOB);
-
+		
 		
 		PreparedStatement stmt;
 		
 		Connection conn = MainDriver.cf.getConnection();
 		try {
-			stmt = MainDriver.conn.prepareStatement("INSERT INTO USERS VALUES (SEQ_CREATE_USER_ID.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, SYSDATE)");
+			stmt = conn.prepareStatement("INSERT INTO USERS VALUES (SEQ_CREATE_USER_ID.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, SYSDATE)");
 			
 			stmt.setString(1, this.username);
 			stmt.setString(2, this.fname);

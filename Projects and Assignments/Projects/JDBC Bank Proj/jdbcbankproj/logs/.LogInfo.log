@@ -1,13 +1,10 @@
-2018-06-154 15:06:598 INFO  MainDriver:42 - In main(): 
+2018-06-154 17:06:41 INFO  MainDriver:42 - In main(): 
 
-2018-06-154 15:06:598 INFO  MainDriver:71 - Inside TOP Menu while loop
-2018-06-154 15:06:269 INFO  MainDriver:77 - topMenuScan == 1
-2018-06-154 15:06:269 INFO  MainDriver:87 - Inside topMenuScan == 1
-2018-06-154 15:06:269 INFO  MainDriver:89 - Inside topMenuControl1
-2018-06-154 15:06:686 INFO  MainDriver:89 - Inside topMenuControl1
-2018-06-154 15:06:278 INFO  MainDriver:82 - In CreateUsers(): 
-2018-06-154 15:06:269 INFO  MainDriver:71 - Inside TOP Menu while loop
-2018-06-154 15:06:29 INFO  MainDriver:77 - topMenuScan == 0
-2018-06-154 15:06:29 INFO  MainDriver:81 - Inside topMenuScan == 0
-2018-06-154 15:06:29 INFO  MainDriver:172 - Outside the TOP MENU
-2018-06-154 15:06:32 INFO  MainDriver:186 - Closing Connection conn
+2018-06-154 17:06:57 INFO  MainDriver:73 - Inside TOP Menu while loop
+2018-06-154 17:06:882 INFO  MainDriver:80 - topMenuScan == 1
+2018-06-154 17:06:882 INFO  MainDriver:90 - Inside topMenuScan == 1
+2018-06-154 17:06:882 INFO  MainDriver:93 - Inside topMenuControl1
+2018-06-154 17:06:114 INFO  MainDriver:73 - Inside TOP Menu while loop
+2018-06-154 17:06:961 INFO  MainDriver:80 - topMenuScan == 1
+2018-06-154 17:06:961 INFO  MainDriver:90 - Inside topMenuScan == 1
+2018-06-154 17:06:961 INFO  MainDriver:93 - Inside topMenuControl1
