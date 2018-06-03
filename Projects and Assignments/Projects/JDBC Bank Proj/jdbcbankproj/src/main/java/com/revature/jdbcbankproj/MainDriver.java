@@ -82,7 +82,7 @@ public class MainDriver
         	 // EXIT PROGRAM
         	 if(topMenuScan == 0) {
         		 log.info("Inside topMenuScan == 0");
-        		 System.out.println("Thank You. Goodbye.");
+        		 System.out.println("Thank You. Goodbye. EXITING PROGRAM.");
         		 topMenuControl = false;
         	 }
         	 // REGISTRATION
@@ -104,7 +104,7 @@ public class MainDriver
             		 if(userNam.equalsIgnoreCase("exit")){
             			 break;
             		 }
-            		 // check if exit.
+            		 
             		 // Check username
             		 boolean userNameExists;
             		 userNameExists = u.CheckUsername(userNam);
@@ -146,11 +146,116 @@ public class MainDriver
         		 while(topMenuControl2 == true) {
         			 log.info("Inside topMenuControl2");
         			 
-        			//LOGIN PROCESS
+        			 //LOGIN PROCESS
+        			 Users u = new Users();
+        			 System.out.println("Enter EXIT to return");
+        			 
+        			// CHECK USERNAME AND PASSWORD
+        			 System.out.println("Username: ");
+        			 String userNL = scan.next();
+        			 
+        			 // Check if EXIT
+        			 if(userNL.equalsIgnoreCase("exit")){
+            			 break;
+            		 }
+        			 
+        			 System.out.println("Username: " + userNL);
+        			 
+        			 System.out.println("Password: "); 
+        			 String userPL = scan.next();
+        			 
+        			 // Check if EXIT
+        			 if(userPL.equalsIgnoreCase("exit")){
+            			 break;
+            		 }
+        			 System.out.println("Password: " + userPL);
         			 
         			 
-        			 //Exit while loop TopMenuControl2
-        			 topMenuControl2 = false;
+        			 boolean userNamePassExists;
+        			 userNamePassExists = u.CheckUsernameAndPass(userNL, userPL);
+        			 
+        			
+        			 // If username and doesn't exist, re-enter info. 
+            		 if(userNamePassExists == false) {
+            			 continue;
+            		 }
+        			 // If username and pass exists, show LOGIN_TRUE MENU
+            		 // LOGIN_TRUE MENU:
+            		 else{
+            			 // 1. CREATE ACCOUNT
+            			 // 2. VIEW ACCOUNT
+            			 // 3. DELETE ACCOUNT
+            			 // 4. DEPOSIT
+            			 // 5. WITHDRAW
+            			 // 6. TRANSFER
+            			 // 7. LOGOUT
+            			 boolean bankOptions = true;
+            			 
+            			 while(bankOptions == true) {
+            				 System.out.println("BANK OPTIONS PAGE:");
+                			 System.out.println("1. CREATE ACCOUNT");
+                			 System.out.println("2. VIEW ACCOUNT");
+                			 System.out.println("3. DELETE ACCOUNT");
+                			 System.out.println("4. DEPOSIT");
+                			 System.out.println("5. WITHDRAW");
+                			 System.out.println("6. TRANSFER");
+                			 System.out.println("7. LOGOUT");
+                			 System.out.println("Enter number: ");
+                			 int options = scan.nextInt();
+                			 System.out.println("Selected: " + options);
+                			 
+                			 if(options == 1) {
+                				// 1. CREATE ACCOUNT
+                			 }
+                			 else if(options == 2) {
+                				// 2. VIEW ACCOUNT 
+                			 }
+            			 	 else if(options == 3) {
+            			 		// 3. DELETE ACCOUNT
+                			 }
+            			 	 else if(options == 4) {
+            			 		// 4. DEPOSIT
+            			 	 }
+            			 	 else if(options == 5) {
+            			 		// 5. WITHDRAW
+            			 	 }
+            			 	 else if(options == 6) {
+            			 		// 6. TRANSFER
+            			 	 }
+            			 	 else if(options == 7) {
+            			 		// 7. LOGOUT
+            			 		System.out.println("Thank You. Goodbye. EXITING BANK OPTIONS PAGE.");
+            	        		bankOptions = false;
+            			 	 }
+            			 	 else {
+            			 		 //INVALID CHOICE
+            			 		 // If user does not choose any 
+            			 		 System.out.println("Please enter a valid number. Returning to BANK OPTIONS PAGE.");
+            	        		 
+            	        		 // Wait 3 seconds before going back to BANK OPTIONS PAGE
+            	        		 try {
+            						Thread.sleep(3000);
+            					} catch (InterruptedException e) {
+            						e.printStackTrace();
+            					}
+            			 	 }
+                			 
+            			 }
+            			 
+
+
+            			 
+            			 
+            			 
+            			 
+            			 
+            			 
+            			 
+            			 //Exit while loop TopMenuControl2
+            			 topMenuControl2 = false;
+            		 }
+            		
+        			 
         		 }
         		 
         		 

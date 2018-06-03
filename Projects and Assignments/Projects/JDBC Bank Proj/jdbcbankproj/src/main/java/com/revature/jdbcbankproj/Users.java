@@ -26,17 +26,22 @@ public class Users {
 		// Check if Username exists.
 		this.username = usern;
 		boolean usern_exists = false;
+		PreparedStatement stmt;
+		Connection conn = MainDriver.cf.getConnection();
 		try {
-			Statement stmt = MainDriver.conn.createStatement();
-			String sql_CheckUsername = "SELECT USERNAME FROM USERS WHERE USERNAME = '" + this.username + "'";
-			ResultSet rs = stmt.executeQuery(sql_CheckUsername);
+			stmt = conn.prepareStatement("SELECT USERNAME FROM USERS WHERE USERNAME = ?");
+			stmt.setString(1, this.username);
 			
-			if(rs.next()) {
-				System.out.println("Username " + rs.getString(1) + " exists.");
+			MainDriver.log.info(stmt.toString());
+			
+			int cu = stmt.executeUpdate();
+			
+			if(cu > 0) {
+				System.out.println("User " + this.username + " exists.");
 				usern_exists = true;
 			}
 			else {
-				System.out.println("Username " + this.username + " does not exist.");
+				System.out.println("User " + this.username + " does not exist.");
 				usern_exists = false;
 			}
 		} catch (SQLException e) {
@@ -69,8 +74,41 @@ public class Users {
 		return false;
 	}
 	
-	public void CheckUsernameAndPass() {
+	public boolean CheckUsernameAndPass(String usern, String passw) {
+		// Check if Username and password exists.
+		this.username = usern;
+		this.passwd = passw;
+		boolean usern_pass_exists = false;
+		PreparedStatement stmt;
+		Connection conn = MainDriver.cf.getConnection();
+		try {
+			stmt = conn.prepareStatement("SELECT USERNAME FROM USERS WHERE USERNAME = ? AND USER_PASWD = ?");
+			stmt.setString(1, this.username);
+			stmt.setString(2, this.passwd);
+			
+			MainDriver.log.info(stmt.toString());
+			
+			int cu = stmt.executeUpdate();
+			
+			if(cu > 0) {
+				System.out.println("User " + this.username + " exists.");
+				usern_pass_exists = true;
+			}
+			else {
+				System.out.println("User " + this.username + " and password combo does not exist.");
+				usern_pass_exists = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
+		if(usern_pass_exists == true) {
+			return true;
+		}
+		else {
+			return false;
+		}
+				
 	}
 	
 	
@@ -110,7 +148,7 @@ public class Users {
 			stmt.setInt(6, 2);
 			stmt.setInt(7, 1);
 			
-			
+			MainDriver.log.info(stmt.toString());
 			
 			int cu = stmt.executeUpdate();
 			
