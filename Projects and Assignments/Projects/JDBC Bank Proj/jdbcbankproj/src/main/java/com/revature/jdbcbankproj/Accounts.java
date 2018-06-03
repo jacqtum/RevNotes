@@ -9,11 +9,15 @@ public class Accounts {
 	String accountcreateddate;
 	int accountstatusid;
 	
-	public static void CreateAccount() {
+	public void CreateAccount(int userid) {
 		
 	}
 	
-	public static void CheckAccountStatus() {
+	public void CheckAccountStatus(int accountNum) {
+		
+	}
+	
+	public void CheckAccountBalance(int accountNum) {
 		
 	}
 }
