@@ -192,6 +192,18 @@ public class MainDriver
             			 boolean bankOptions = true;
             			 
             			 while(bankOptions == true) {
+            				 int userid_BOP;
+            				// System.out.println("userNl: " + userNL + "\nuserPL: " + userPL);
+            				 userid_BOP = u.GetUserID(userNL, userPL);
+            				 
+            				 // Set fields of User u.
+            				 u.SetUser(userid_BOP);
+            				 
+            				 
+            				// System.out.println("User ID: " + userid_BOP );
+            				 
+            				 System.out.println("\n\n\nWelcome, " + u.fname + " " + u.lname);
+            				 
             				 System.out.println("BANK OPTIONS PAGE:");
                 			 System.out.println("1. CREATE ACCOUNT");
                 			 System.out.println("2. VIEW ACCOUNT");
@@ -203,6 +215,9 @@ public class MainDriver
                 			 System.out.println("Enter number: ");
                 			 int options = scan.nextInt();
                 			 System.out.println("Selected: " + options);
+                			 
+                			 
+                			 
                 			 
                 			 if(options == 1) {
                 				// 1. CREATE ACCOUNT

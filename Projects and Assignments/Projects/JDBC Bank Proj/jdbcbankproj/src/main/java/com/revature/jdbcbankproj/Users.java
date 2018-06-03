@@ -15,12 +15,70 @@ public class Users {
 	String lname;
 	String passwd;
 	String DOB;
-	String usertypeid;
+	int usertypeid;
 	String createddate;
 	int userstatusid;
 	
 	
+	public int GetUserID(String usern, String passw) {
+		// Retrieve UserID
+		
+		int userid_GetUserID = 0;
+		Statement stmt;
+		Connection conn = MainDriver.cf.getConnection();
+		
+		try {
+			stmt = conn.createStatement();
+			//System.out.println("usern: " + usern);
+			//System.out.println("passw: " + passw);
+			String sqlString = "SELECT USER_ID FROM USERS WHERE USERNAME = '" + usern + "' AND USER_PASWD = '" + passw + "'";
+			//System.out.println(sqlString);
+			
+			ResultSet result = stmt.executeQuery(sqlString);
+			
+			while(result.next()) {
+				System.out.println("USER ID: " + result.getInt("USER_ID"));
+				userid_GetUserID = result.getInt("USER_ID");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return userid_GetUserID;
+	}
 	
+	public void SetUser(int user_id) {
+		
+		Statement stmt;
+		Connection conn = MainDriver.cf.getConnection();
+		
+		try {
+			stmt = conn.createStatement();
+			String sqlString = String.format("SELECT * FROM USERS WHERE USER_ID = " + user_id);
+			ResultSet result = stmt.executeQuery(sqlString);
+			
+			while(result.next()) {
+				
+				this.userid = result.getInt("USER_ID");
+				this.username = result.getString("USERNAME");
+				this.fname = result.getString("USER_FNAME");
+				this.lname = result.getString("USER_LNAME");
+				this.userstatusid = result.getInt("USER_STATUS_ID");
+				this.usertypeid = result.getInt("USER_TYPE_ID");
+				
+				//System.out.println("USER ID: " + this.userid);
+				//System.out.println("FNAME: " + this.fname);
+				//System.out.println("LNAME: " + this.lname);
+				//System.out.println("USER STATUS: " + this.userstatusid);
+				//System.out.println("USER TYPE: " + this.usertypeid);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 	
 	public boolean CheckUsername(String usern) {
 		// Check if Username exists.
@@ -67,6 +125,7 @@ public class Users {
 	
 	public boolean CheckUserStatus(String usern) {
 		// Check status of user
+		
 		
 		// If status is "CLOSED", return false
 		
