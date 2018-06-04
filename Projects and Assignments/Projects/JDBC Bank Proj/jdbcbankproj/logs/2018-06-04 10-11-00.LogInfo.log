@@ -1,0 +1,33 @@
+2018-06-155 10:06:209 INFO  MainDriver:41 - In main(): 
+
+2018-06-155 10:06:212 INFO  MainDriver:72 - Inside TOP Menu while loop
+2018-06-155 10:06:124 INFO  MainDriver:79 - topMenuScan == 2
+2018-06-155 10:06:124 INFO  MainDriver:139 - Inside topMenuScan == 2
+2018-06-155 10:06:125 INFO  MainDriver:143 - Inside topMenuControl2
+2018-06-155 10:06:04 INFO  MainDriver:155 - oracle.jdbc.driver.OraclePreparedStatementWrapper@6f195bc3
+2018-06-155 10:06:05 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:496 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:482 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:06 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:597 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:275 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:114 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:603 INFO  MainDriver:142 - In Deposit(): 
+2018-06-155 10:06:05 INFO  MainDriver:153 - oracle.jdbc.driver.OraclePreparedStatementWrapper@71248c21
+2018-06-155 10:06:50 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:544 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:338 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:894 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:104 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:827 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:314 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:770 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:265 INFO  MainDriver:142 - In Deposit(): 
+2018-06-155 10:06:668 INFO  MainDriver:153 - oracle.jdbc.driver.OraclePreparedStatementWrapper@6385cb26
+2018-06-155 10:06:713 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:203 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:714 INFO  MainDriver:72 - Inside TOP Menu while loop
+2018-06-155 10:06:630 INFO  MainDriver:79 - topMenuScan == 0
+2018-06-155 10:06:631 INFO  MainDriver:83 - Inside topMenuScan == 0
+2018-06-155 10:06:631 INFO  MainDriver:498 - Outside the TOP MENU
+2018-06-155 10:06:631 INFO  MainDriver:512 - Closing Connection conn

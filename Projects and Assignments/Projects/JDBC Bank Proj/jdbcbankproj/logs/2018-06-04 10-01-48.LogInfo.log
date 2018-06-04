@@ -1,0 +1,36 @@
+2018-06-155 10:06:819 INFO  MainDriver:41 - In main(): 
+
+2018-06-155 10:06:823 INFO  MainDriver:72 - Inside TOP Menu while loop
+2018-06-155 10:06:710 INFO  MainDriver:79 - topMenuScan == 1
+2018-06-155 10:06:710 INFO  MainDriver:89 - Inside topMenuScan == 1
+2018-06-155 10:06:711 INFO  MainDriver:92 - Inside topMenuControl1
+2018-06-155 10:06:933 INFO  MainDriver:97 - oracle.jdbc.driver.OraclePreparedStatementWrapper@6f195bc3
+2018-06-155 10:06:528 INFO  MainDriver:184 - In CreateUsers(): 
+2018-06-155 10:06:576 INFO  MainDriver:219 - oracle.jdbc.driver.OraclePreparedStatementWrapper@80ec1f8
+2018-06-155 10:06:620 INFO  MainDriver:72 - Inside TOP Menu while loop
+2018-06-155 10:06:21 INFO  MainDriver:79 - topMenuScan == 2
+2018-06-155 10:06:22 INFO  MainDriver:139 - Inside topMenuScan == 2
+2018-06-155 10:06:22 INFO  MainDriver:143 - Inside topMenuControl2
+2018-06-155 10:06:669 INFO  MainDriver:155 - oracle.jdbc.driver.OraclePreparedStatementWrapper@6a396c1e
+2018-06-155 10:06:420 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:926 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:365 INFO  MainDriver:20 - In CreateAccount()
+2018-06-155 10:06:149 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:607 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:217 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:663 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:890 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:385 INFO  MainDriver:142 - In Deposit(): 
+2018-06-155 10:06:800 INFO  MainDriver:153 - oracle.jdbc.driver.OraclePreparedStatementWrapper@49070868
+2018-06-155 10:06:845 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:293 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:239 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:706 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:414 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:548 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 10:06:66 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 10:06:426 INFO  MainDriver:72 - Inside TOP Menu while loop
+2018-06-155 10:06:482 INFO  MainDriver:79 - topMenuScan == 0
+2018-06-155 10:06:482 INFO  MainDriver:83 - Inside topMenuScan == 0
+2018-06-155 10:06:483 INFO  MainDriver:487 - Outside the TOP MENU
+2018-06-155 10:06:483 INFO  MainDriver:501 - Closing Connection conn
