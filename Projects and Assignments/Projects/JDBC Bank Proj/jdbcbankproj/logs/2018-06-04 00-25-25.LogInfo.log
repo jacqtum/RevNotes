@@ -1,0 +1,7 @@
+2018-06-155 00:06:946 INFO  MainDriver:41 - In main(): 
+
+2018-06-155 00:06:961 INFO  MainDriver:72 - Inside TOP Menu while loop
+2018-06-155 00:06:627 INFO  MainDriver:79 - topMenuScan == 0
+2018-06-155 00:06:627 INFO  MainDriver:83 - Inside topMenuScan == 0
+2018-06-155 00:06:627 INFO  MainDriver:404 - Outside the TOP MENU
+2018-06-155 00:06:627 INFO  MainDriver:418 - Closing Connection conn

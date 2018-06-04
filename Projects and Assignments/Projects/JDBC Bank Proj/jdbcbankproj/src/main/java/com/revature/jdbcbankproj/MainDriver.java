@@ -18,8 +18,6 @@ import org.apache.log4j.Logger;
 public class MainDriver 
 {
 	// Add log4j
-	static Logger log = Logger.getLogger(MainDriver.class.getName());
-	
 	static{
         
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
@@ -27,6 +25,7 @@ public class MainDriver
         
     }
 	
+	static Logger log = Logger.getLogger(MainDriver.class.getName());
 	
 	
 	
@@ -67,13 +66,13 @@ public class MainDriver
     	 boolean topMenuControl2;
     	 
     	 // TOP MENU
-    	 topMenuControl  =true;
+    	 topMenuControl = true;
     	 
     	 while(topMenuControl == true) {
     		 log.info("Inside TOP Menu while loop");
     		 System.out.println("BANK MENU");
-        	 System.out.println("\n1 Register\n2 Login\n");
-        	 System.out.println("Enter number to continue or enter 0 to exit.\nNumber: ");
+        	 System.out.println("\n1 Register\n2 Login\n\n0 Exit\n");
+        	 System.out.println("Enter number to continue: ");
         	 Scanner scan = new Scanner(System.in);
         	 topMenuScan = 0;
         	 topMenuScan = scan.nextInt();
@@ -246,6 +245,9 @@ public class MainDriver
                 			 else if(options == 2) {
                 				boolean accountCont = true;
                 				a.SetAccount(u.userid);
+                				
+                				a.ViewAccount();
+                				
                 				while(accountCont == true) {
                 					
                 					
@@ -268,12 +270,63 @@ public class MainDriver
                 						System.out.println("Enter 0 to return to BANK OPTIONS MENU");
                 					}
                 				}
-                				
-                				
-                				
+  
                 			 }
+                			// 3. DELETE ACCOUNT
             			 	 else if(options == 3) {
-            			 		// 3. DELETE ACCOUNT
+            			 		
+            			 		boolean delAccBool = true;
+            			 		
+            			 		while(delAccBool == true) {
+            			 			a.SetAccount(u.userid);
+                    				
+                    				a.ViewAccount();
+                    				
+                    				int accountNumDel = 1234;
+                    				System.out.println("Enter 0 to exit.");
+                			 		System.out.print("Enter account number to delete:");
+                			 		
+                			 		Scanner scanAccDel = new Scanner(System.in);
+                			 		
+                			 		accountNumDel = scanAccDel.nextInt();
+                			 		
+                			 		System.out.println("Account Number to delete: " + accountNumDel);
+                			 		
+                			 		if(accountNumDel == 0) {
+                			 			System.out.println("Exiting.");
+                			 			delAccBool = false;
+                			 		}
+                			 		else {
+                			 			// Check if account exists and balance is 0 and then delete.
+                			 			a.SetAccount(u.userid);
+                        				
+                			 			boolean accNumExists = false;
+                			 			int accNumExistsAt = -1;
+                			 			
+                			 			for(int i = 0; i < a.accountid.size(); i++) {
+                			 				if(a.accountid.get(i).equals(accountNumDel)) {
+                			 					accNumExists = true;
+                			 					accNumExistsAt = i;
+                			 				}
+                			 			}
+                			 			
+                			 			// If account number exists and has a balance of 0, delete.
+                			 			if(accNumExists == true && a.accountbalance.get(accNumExistsAt).equals(0.0)) {
+                			 				a.DeleteAccount(accountNumDel, u.userid);
+                			 				a.SetAccount(u.userid);
+                			 				a.ViewAccount();
+                			 				delAccBool = false;
+                			 			}
+                			 		}
+            			 		}
+        			 		 	
+            			 		try {
+            			 			System.out.println("Returning to BANK OPTIONS MENU.");
+									Thread.sleep(3000);
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
                 			 }
             			 	 else if(options == 4) {
             			 		// 4. DEPOSIT
