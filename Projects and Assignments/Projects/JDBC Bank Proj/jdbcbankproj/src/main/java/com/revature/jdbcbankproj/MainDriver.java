@@ -584,14 +584,33 @@ public class MainDriver {
 									
 									
 									System.out.println("User created.");
+									
 								}
 								// 3 Update Account
 								else if(superUserInt == 3) {
-									
+									System.out.println("This will feature will be implented soon.");
 								}
 								// 4 Delete Account
 								else if(superUserInt == 4) {
+									Users uSuper3 = new Users();
+									Accounts accSuper3 = new Accounts();
+									int accountNumber;
+									int userID;
+									Scanner scanSU3 = new Scanner(System.in);
 									
+									
+									System.out.println("Enter Account Number and UserID to Delete.");
+									System.out.println("Account Number: ");
+									accountNumber = scanSU3.nextInt();
+									System.out.println("Account Number Entered: " + accountNumber);
+									
+									
+									System.out.println("User ID: ");
+									userID = scanSU3.nextInt();
+									System.out.println("User ID Entered: " + userID);
+									
+									
+									accSuper3.DeleteAccount(accountNumber, userID);
 								}
 								// 5 Delete User
 								else if(superUserInt == 5) {

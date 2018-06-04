@@ -251,7 +251,8 @@ public class Users {
 			
 			while(result.next()) {
 				System.out.print("User ID: " + result.getInt("USER_ID") + " ");
-				System.out.print("Account ID: " + result.getInt("BANK_ACCOUNT_BALANCE") + " ");
+				System.out.print("Account ID: " + result.getInt("BANK_ACCOUNT_ID") + " ");
+				System.out.print("Balance: " + result.getDouble("BANK_ACCOUNT_BALANCE") + " ");
 				System.out.print("First Name: " + result.getString("USER_FNAME") + " ");
 				System.out.print("Last Name: " + result.getString("USER_LNAME") + " ");
 				System.out.print("Account Status: " + result.getString("BANK_ACCOUNT_STATUS") + " ");
