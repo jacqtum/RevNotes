@@ -125,9 +125,6 @@ public class MainDriver
             		 
             		 
         		 }
-        		 
-        		 
-
         		 // After Registration Process, go to TOP MENU
         		 System.out.println("Registration Complete. Returning to BANK MENU.");
         		 try {
@@ -328,11 +325,97 @@ public class MainDriver
 									e.printStackTrace();
 								}
                 			 }
+                			// 4. DEPOSIT
             			 	 else if(options == 4) {
-            			 		// 4. DEPOSIT
+            			 		 a.SetAccount(u.userid);
+            			 		 a.ViewAccount();
+            			 		 System.out.println("Enter amount to deposit: ");
+            			 		 Scanner scanDep = new Scanner(System.in);
+            			 		 double dep = 0.00;
+            			 		 dep = scanDep.nextDouble();
+            			 		 System.out.println("Deposit Amount Entered: " + dep);
+            			 		 
+            			 		 System.out.println("Enter account number to deposit to.");
+            			 		 
+            			 		 int accountNum = 0;
+            			 		 Scanner scanAcc = new Scanner(System.in);
+            			 		 accountNum = scanAcc.nextInt();
+            			 		 System.out.println("Account Number Entered: " + accountNum);
+            			 		 
+            			 		 
+            			 		 boolean accNumExists = false;
+        			 			
+            			 		a.SetAccount(u.userid);
+            			 		
+            			 		 for(int i = 0; i < a.accountid.size(); i++) {
+            			 			 if(a.accountid.get(i).equals(accountNum)) {
+        			 					accNumExists = true;
+        			 					System.out.println("Account number exists.");
+            			 			 }
+            			 		 }
+        			 			
+            			 		 // If account number exists, deposit
+            			 		 if(accNumExists == true) {
+            			 			System.out.println("Begin depsoit.");
+            			 			a.Deposit(accountNum, u.userid, dep);
+        			 				a.SetAccount(u.userid);
+        			 				a.ViewAccount();
+        			 				
+        			 			}
+            			 		
+            			 		try {
+            			 			System.out.println("Returning to BANK OPTIONS MENU.");
+									Thread.sleep(3000);
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
             			 	 }
-            			 	 else if(options == 5) {
-            			 		// 5. WITHDRAW
+                			// 5. WITHDRAW
+                			 else if(options == 5) {
+                				 a.SetAccount(u.userid);
+	           			 		 a.ViewAccount();
+	           			 		 System.out.println("Enter amount to withdraw: ");
+	           			 		 Scanner scanWith= new Scanner(System.in);
+	           			 		 double with = 0.00;
+	           			 		 with = scanWith.nextDouble();
+	           			 		 System.out.println("Withdrawal Amount Entered: " + with);
+	           			 		 
+	           			 		 System.out.println("Enter account number to withdraw from.");
+	           			 		 
+	           			 		 int accountNum = 0;
+	           			 		 Scanner scanAcc = new Scanner(System.in);
+	           			 		 accountNum = scanAcc.nextInt();
+	           			 		 System.out.println("Account Number Entered: " + accountNum);
+	           			 		 
+	           			 		 
+	           			 		 boolean accNumExists = false;
+	       			 			
+	           			 		a.SetAccount(u.userid);
+	           			 		
+	           			 		 for(int i = 0; i < a.accountid.size(); i++) {
+	           			 			 if(a.accountid.get(i).equals(accountNum)) {
+	       			 					accNumExists = true;
+	       			 					System.out.println("Account number exists.");
+	           			 			 }
+	           			 		 }
+	       			 			
+	           			 		 // If account number exists, withdraw
+	           			 		 if(accNumExists == true) {
+	           			 			System.out.println("Begin withdrawal.");
+	           			 			a.Withdraw(accountNum, u.userid, with);
+	       			 				a.SetAccount(u.userid);
+	       			 				a.ViewAccount();
+	       			 				
+	       			 			}
+           			 		 
+	           			 		try {
+	           			 			System.out.println("Returning to BANK OPTIONS MENU.");
+										Thread.sleep(3000);
+									} catch (InterruptedException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
             			 	 }
             			 	 else if(options == 6) {
             			 		// 6. TRANSFER

@@ -131,4 +131,67 @@ public class Accounts {
 		
 
 	}
+	
+	public void Deposit(int accountNum, int userid, double depAmount) {
+		MainDriver.log.info("In Deposit(): ");
+		PreparedStatement stmt;
+		Connection conn = MainDriver.cf.getConnection();
+		String sqlString = "UPDATE BANKACCOUNT SET BANK_ACCOUNT_BALANCE = (SELECT BANK_ACCOUNT_BALANCE FROM BANKACCOUNT WHERE BANK_ACCOUNT_ID = ?) + ? WHERE USER_ID = ? AND BANK_ACCOUNT_ID = ? AND BANK_ACCOUNT_STATUS_ID = 1";
+		try {
+			stmt = conn.prepareStatement(sqlString);
+			stmt.setInt(1, accountNum);
+			stmt.setDouble(2, depAmount);
+			stmt.setInt(3, userid);
+			stmt.setInt(4, accountNum);
+			
+			MainDriver.log.info(stmt.toString());
+			
+			int cu = stmt.executeUpdate();
+			
+			if(cu > 0) {
+				System.out.println("Deposit successful.");
+			}
+			else {
+				System.out.println("Failed to depsoit.");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+	}
+	
+	public void Withdraw(int accountNum, int userid, double depAmount) {
+		MainDriver.log.info("In Withdraw(): ");
+		PreparedStatement stmt;
+		Connection conn = MainDriver.cf.getConnection();
+		String sqlString = "UPDATE BANKACCOUNT SET BANK_ACCOUNT_BALANCE = (SELECT BANK_ACCOUNT_BALANCE FROM BANKACCOUNT WHERE BANK_ACCOUNT_ID = ?) - ? WHERE USER_ID = ? AND BANK_ACCOUNT_ID = ? AND BANK_ACCOUNT_STATUS_ID = 1";
+		try {
+			stmt = conn.prepareStatement(sqlString);
+			stmt.setInt(1, accountNum);
+			stmt.setDouble(2, depAmount);
+			stmt.setInt(3, userid);
+			stmt.setInt(4, accountNum);
+			
+			MainDriver.log.info(stmt.toString());
+			
+			int cu = stmt.executeUpdate();
+			
+			if(cu > 0) {
+				System.out.println("Withdrawal successful.");
+			}
+			else {
+				System.out.println("Failed to withdraw.");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
 }
+
+
+
