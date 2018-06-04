@@ -232,9 +232,8 @@ public class MainDriver
                 			 
                 			 Accounts a = new Accounts();
                 			 
-                			 
+                			 // 1. CREATE ACCOUNT
                 			 if(options == 1) {
-                				// 1. CREATE ACCOUNT
                 				 //System.out.println("u.userid: " + u.userid);
                 				 a.CreateAccount(u.userid);
                 				 try {
@@ -243,8 +242,35 @@ public class MainDriver
 									e.printStackTrace();
 								}
                 			 }
+                			 // 2. VIEW ACCOUNT 
                 			 else if(options == 2) {
-                				// 2. VIEW ACCOUNT 
+                				boolean accountCont = true;
+                				a.SetAccount(u.userid);
+                				while(accountCont == true) {
+                					
+                					
+                					System.out.println("Enter 0 to return to BANK OPTIONS MENU");
+                					System.out.print("Enter number: ");
+                					Scanner scanAccountCont = new Scanner(System.in);
+                					int scanAccountInt = scanAccountCont.nextInt();
+                					
+                					if(scanAccountInt == 0) {
+                						try {
+                							System.out.println("Returning to BANK OPTIONS MENU.");
+        									Thread.sleep(2000);
+        									accountCont = false;
+        									
+        								} catch (InterruptedException e) {
+        									e.printStackTrace();
+        								}
+                					}
+                					else {
+                						System.out.println("Enter 0 to return to BANK OPTIONS MENU");
+                					}
+                				}
+                				
+                				
+                				
                 			 }
             			 	 else if(options == 3) {
             			 		// 3. DELETE ACCOUNT
@@ -270,7 +296,7 @@ public class MainDriver
             	        		 
             	        		 // Wait 3 seconds before going back to BANK OPTIONS PAGE
             	        		 try {
-            						Thread.sleep(3000);
+            						Thread.sleep(2000);
             					} catch (InterruptedException e) {
             						e.printStackTrace();
             					}
