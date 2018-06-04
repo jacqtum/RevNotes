@@ -614,6 +614,15 @@ public class MainDriver {
 								}
 								// 5 Delete User
 								else if(superUserInt == 5) {
+									Users sU5 = new Users();
+									Scanner scanSU5 = new Scanner(System.in);
+									int userIDSU5;
+									
+									System.out.println("Enter User ID to delete.");
+									userIDSU5 = scanSU5.nextInt();
+									System.out.println("User ID entered: " + userIDSU5);
+									
+									sU5.DeleteUser(userIDSU5);
 									
 								}
 								else {

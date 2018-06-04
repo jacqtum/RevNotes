@@ -1,5 +1,6 @@
 package com.revature.jdbcbankproj;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -270,13 +271,27 @@ public class Users {
 		}
 		
 		
-		
-/*
-SELECT U.USER_ID, US.USER_STATUS, U.USER_FNAME, U.USER_LNAME, BA.BANK_ACCOUNT_ID, BA.BANK_ACCOUNT_BALANCE
-FROM USERS U
-JOIN BANKACCOUNT BA ON U.USER_ID = BA.USER_ID
-JOIN USER_STATUS US ON U.USER_STATUS_ID = US.USER_STATUS_ID
-WHERE U.USER_FNAME = firstNam AND U.USER_LNAME = lastNam;
-*/
 	}
+	
+	
+	public void DeleteUser(int userId) {
+		
+		String getSPCloseUser = "{call CLOSEUSER(?)";
+		Connection conn = MainDriver.cf.getConnection();
+		try {
+			CallableStatement stmt = conn.prepareCall(getSPCloseUser);
+			stmt.setInt(1, userId);
+			
+			stmt.executeUpdate();
+			if(stmt != null) {
+				stmt.close();
+			}
+			
+			System.out.println("User Deleted.");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
 }
