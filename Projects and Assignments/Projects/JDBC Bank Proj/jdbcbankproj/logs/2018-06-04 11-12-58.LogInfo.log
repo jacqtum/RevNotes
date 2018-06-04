@@ -1,0 +1,19 @@
+2018-06-155 11:06:681 INFO  MainDriver:41 - In main(): 
+
+2018-06-155 11:06:681 INFO  MainDriver:72 - Inside TOP Menu while loop
+2018-06-155 11:06:209 INFO  MainDriver:79 - topMenuScan == 2
+2018-06-155 11:06:209 INFO  MainDriver:139 - Inside topMenuScan == 2
+2018-06-155 11:06:224 INFO  MainDriver:143 - Inside topMenuControl2
+2018-06-155 11:06:477 INFO  MainDriver:155 - oracle.jdbc.driver.OraclePreparedStatementWrapper@6f195bc3
+2018-06-155 11:06:265 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 11:06:782 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 11:06:146 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 11:06:646 INFO  MainDriver:175 - In Withdraw(): 
+2018-06-155 11:06:100 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 11:06:692 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 11:06:827 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 11:06:408 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 11:06:917 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 11:06:435 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-155 11:06:64 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-155 11:06:582 INFO  MainDriver:96 - In ViewAccount(): 
