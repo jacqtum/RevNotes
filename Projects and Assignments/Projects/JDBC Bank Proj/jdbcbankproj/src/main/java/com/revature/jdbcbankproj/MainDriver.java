@@ -182,6 +182,24 @@ public class MainDriver
         			 // If username and pass exists, show LOGIN_TRUE MENU
             		 // LOGIN_TRUE MENU:
             		 else{
+            			 int userid_BOP;
+         				// System.out.println("userNl: " + userNL + "\nuserPL: " + userPL);
+         				 userid_BOP = u.GetUserID(userNL, userPL);
+         				 
+         				 // Set fields of User u.
+         				 u.SetUser(userid_BOP);
+         				 
+         				 
+            			 // Check if User status is open or closed
+         				 //System.out.println("USER STATUS: " + u.userstatusid);
+            			 if(u.userstatusid == 2) {
+            				 // If USER is closed, exit
+            				 System.out.println("USER account is not active.");
+            				 break;
+            				 
+            				 
+            			 }
+            			 
             			 // 1. CREATE ACCOUNT
             			 // 2. VIEW ACCOUNT
             			 // 3. DELETE ACCOUNT
@@ -192,12 +210,7 @@ public class MainDriver
             			 boolean bankOptions = true;
             			 
             			 while(bankOptions == true) {
-            				 int userid_BOP;
-            				// System.out.println("userNl: " + userNL + "\nuserPL: " + userPL);
-            				 userid_BOP = u.GetUserID(userNL, userPL);
             				 
-            				 // Set fields of User u.
-            				 u.SetUser(userid_BOP);
             				 
             				 
             				// System.out.println("User ID: " + userid_BOP );
@@ -217,10 +230,18 @@ public class MainDriver
                 			 System.out.println("Selected: " + options);
                 			 
                 			 
+                			 Accounts a = new Accounts();
                 			 
                 			 
                 			 if(options == 1) {
                 				// 1. CREATE ACCOUNT
+                				 //System.out.println("u.userid: " + u.userid);
+                				 a.CreateAccount(u.userid);
+                				 try {
+									Thread.sleep(3000);
+								} catch (InterruptedException e) {
+									e.printStackTrace();
+								}
                 			 }
                 			 else if(options == 2) {
                 				// 2. VIEW ACCOUNT 

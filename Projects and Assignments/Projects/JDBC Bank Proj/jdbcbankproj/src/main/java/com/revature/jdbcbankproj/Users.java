@@ -37,7 +37,7 @@ public class Users {
 			ResultSet result = stmt.executeQuery(sqlString);
 			
 			while(result.next()) {
-				System.out.println("USER ID: " + result.getInt("USER_ID"));
+				//System.out.println("USER ID: " + result.getInt("USER_ID"));
 				userid_GetUserID = result.getInt("USER_ID");
 			}
 		} catch (SQLException e) {
