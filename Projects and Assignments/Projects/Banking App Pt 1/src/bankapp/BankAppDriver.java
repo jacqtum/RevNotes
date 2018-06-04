@@ -29,6 +29,7 @@ public class BankAppDriver {
 		
 		// Initialize bools
 		boolean accountExists = false;
+		
 		boolean jointAccount = false;
 		
 		

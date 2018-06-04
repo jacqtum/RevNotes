@@ -1,0 +1,20 @@
+2018-06-155 14:06:356 INFO  MainDriver:37 - In main(): 
+
+2018-06-155 14:06:356 INFO  MainDriver:58 - Inside TOP Menu while loop
+2018-06-155 14:06:717 INFO  MainDriver:65 - topMenuScan == 2
+2018-06-155 14:06:717 INFO  MainDriver:124 - Inside topMenuScan == 2
+2018-06-155 14:06:717 INFO  MainDriver:128 - Inside topMenuControl2
+2018-06-155 14:06:350 INFO  MainDriver:147 - oracle.jdbc.driver.OraclePreparedStatementWrapper@6f195bc3
+2018-06-155 14:06:475 INFO  MainDriver:128 - Inside topMenuControl2
+2018-06-155 14:06:919 INFO  MainDriver:147 - oracle.jdbc.driver.OraclePreparedStatementWrapper@25359ed8
+2018-06-155 14:06:966 INFO  MainDriver:128 - Inside topMenuControl2
+2018-06-155 14:06:458 INFO  MainDriver:147 - oracle.jdbc.driver.OraclePreparedStatementWrapper@80ec1f8
+2018-06-155 14:06:490 INFO  MainDriver:128 - Inside topMenuControl2
+2018-06-155 14:06:903 INFO  MainDriver:147 - oracle.jdbc.driver.OraclePreparedStatementWrapper@6a396c1e
+2018-06-155 14:06:934 INFO  MainDriver:128 - Inside topMenuControl2
+2018-06-155 14:06:481 INFO  MainDriver:147 - oracle.jdbc.driver.OraclePreparedStatementWrapper@12405818
+2018-06-155 14:06:544 INFO  MainDriver:128 - Inside topMenuControl2
+2018-06-155 14:06:934 INFO  MainDriver:147 - oracle.jdbc.driver.OraclePreparedStatementWrapper@10b48321
+2018-06-155 14:06:981 INFO  MainDriver:128 - Inside topMenuControl2
+2018-06-155 14:06:403 INFO  MainDriver:147 - oracle.jdbc.driver.OraclePreparedStatementWrapper@6166e06f
+2018-06-155 14:06:434 INFO  MainDriver:128 - Inside topMenuControl2
