@@ -1,0 +1,23 @@
+
+06-05-2018
+
+SOFTWARE DEVELOPMENT LIFE CYCLE (SDLC)
+* Framework that define tasks performed at each step of the software development process.
+* Structure followed by the development team in software organization.
+* Consists of "detailed" plan describing how to:
+	- Develop
+	- Maintain
+	- Replace software
+	
+
+PLANNING
+* Requirement gathering/analysis
+* Scope document
+
+IMPLEMENTATION
+* Writing code
+
+TESTING
+* Finding bugs
+* Validation
+
