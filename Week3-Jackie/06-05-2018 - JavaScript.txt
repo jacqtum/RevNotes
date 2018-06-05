@@ -1,0 +1,300 @@
+06-05-2018
+
+JAVASCRIPT
+
+* JavaScript is INTERPRETED. 
+* JavaScript is NOT COMPILED.
+* JavaScript and Java are not the same.
+* Loosely typed.
+	- Variable TYPES are ASSIGNED at RUNTIME.
+* Errors are silent.
+
+
+
+JAVA VS JAVASCRIPT
+
+	JAVA					JAVASCRIPT
+	int a = 7;				var a = 7;
+	String b = "Hello";		b = "Hello";
+
+
+* JavaScript was 1st lambda based language.
+	- Has procedural elements.
+	
+* JavaScript is OOP in a weird way.
+
+* Objects are generic containers of property-value pairs.
+
+* Objects can contain other objects.
+
+FUNCTIONS
+* JS functions can be called before they are declared due to "hoisting".
+	- JS default behavior of moving declarations to top of current scope.
+	
+* Functions are value
+	- Can set var x to be a function.
+		* 	var x = myFunction(4,3);
+			function myFunction(a,b){
+				return a * b;
+			}
+	- ANONYMOUS FUNCTIONS
+		* Functions WITHOUT a NAME.
+		* Functions stored in variables do not need a name.
+		* Invoked using variable name.
+		* Example:
+			var x = function(a,b){ returns a * b};
+			var z = x(4,3);
+	- Can be passed as method arguments.
+	
+	- Callback functions happen a lot.
+	
+	- SELF-INVOKING FUNCTIONS
+		* Started authomatically without being called.
+		* Starts automatically if expression is followed by ().
+		* You cannot self-invoke a function declaration.
+		* You have to add parentheses around function to indicate that it is a function expression.
+		
+		* Example:
+			(function () {
+				var x = "Hello!!"; 	// I will invoke myself
+			})();
+
+	
+	- FUNCTIONS ARE OBJECTS
+	
+		* Example 1:
+			function myFunction(a,b){
+				return arguments.length;
+			}
+			
+		* Example 2:
+			function myFunction(a,b){
+				return a * b;
+			}
+			var txt = myFunction.toString();
+			
+			
+			
+	
+* Protopyal Inheritance.
+	- Objects inherit from other objects.
+	- Every object has a property called "proto"
+	- Functions are also objects.
+	- Allows us to do lambda.
+	
+* Use <script> to include JS in our HTML file
+	- Example:
+		<script src="myJS.js">   </script>
+		
+		
+
+DATATYPES
+
+* NUMBER
+	- 64 bit floatation point
+	- Not accurate
+	
+* STRINGS
+	- No string pools.
+	- 0+ characters
+	- No separate character typed
+	- Single or double quotes
+	- Compares values with ===
+	
+	- === compares two values of same type.
+	- == compares two values and if not same type, then coerces to be same type.
+		* == not so good.
+	
+	- Use .length to find length of string.
+		* Example: 
+			var a = "hello";
+			a.length	// returns 5
+	- Use String(value) to give String of value.
+	
+* BOOLEANS
+	- TRUE / FALSE
+	- "Truthy * Falsy"
+	- Truthy:
+		* True
+		* EVERYTHING THAT ISN'T FALSY.
+		* Can be an object.
+	- Falsy:
+		* False
+		* 0
+		* Undefined
+		* Null
+		* "" -> empty string
+		* NaN -> not a number
+
+* OBJECTS
+
+* UNDEFINED
+	- var a;
+	
+	
+
+	
+* Functions are objects!
+* Cannot be overloaded.
+* Inherit from objects.
+* Can be passed or stored.
+* Can store name-value pairs (attributes).
+
+
+3 INVOCATION FORM
+
+* Function Form
+	- func()
+	- "this" refers to global object.
+	- In a browser, it is the "window".
+	
+* Constructor Form
+	- new Func()
+	- "this" refers to object being created
+	
+* Method
+	- Some Object.funct9)
+	- "this" would refer to some object
+	
+	
+
+SCOPES
+* Function Scope
+	- Things delcared in a function
+	- Use var keyword
+	- If we do not use var, we will create an implicit global variable
+	- Accessible only inside the function.
+	
+* Global Scope
+	- Declared outside of a function
+	- Accessible anywhere
+	- Generally, we want to stay away from globals, but just depends on what you're using it for.
+	
+	
+Shadowing
+* Multiple variables with the same name but different scopes.
+* JS will use the most recently declared.
+	- MAY CAUSE PROBLEMS!
+* 
+
+* In Java, shadowing is when overriding a static method.
+	- Not called overriding.
+	
+	
+	
+	
+CREATE HTML IN VISUAL STUDIO
+CREATE JAVASCRIPT IN VISUAL STUDIO
+
+CTRL + SHIFT + I TO INSPECT PAGE IN CHROME BROWSER.
+
+
+	
+
+HOISTING:
+* JS moves declarations by default to the top.
+* It does not move initializations.
+
+* You can initialize first and declare variable anywhere.
+* Example:
+	x = 5; 
+	console.log("x: " + x); // Output: x: 5
+	console.log("y: " + y); // Output: y: undefined
+	var x; 
+	var y;
+	y = 7;
+
+	/*
+	 * 
+	 * Variables x and y will be hoisted to the top.
+	 * x has been initialized at the top.
+	 * If we print out x, we will get a value of 5.
+	 * But if we print out y, we will get a value of undefined,
+	 *  since y was not initialized before hand.
+	 * /
+
+	
+	
+	CLOSURE:
+		* A function within a function.
+		* Must do something with the inner function.
+		* Closures store a reference, not the actual value.
+		ADVANTAGES:
+			* Bind variables to an execution context.
+			* Prevents variable tampering.
+		* Imitating a private variable.
+		* JS doesn't have a way to create private variables, so this is an alternative.
+		
+		* Example:
+			Function showName(fName, lName){
+				var nameIntro = "Your name is";
+				
+				function makeFullName(){
+					return nameIntro + " " + fName + " " + lName;
+				}
+				
+				return makeFullName();
+			}
+			showName("Michael","Jackson");
+		
+		* DISADVANTAGES
+			* Don't use closures with looping.
+			* Difficult to identify where something went wrong.
+			* Ex: throwing stuff into a tornado and then trying to find an error.
+			* Negatively affects performance.
+			
+		* Inner function has access to outer function variable.
+		* Inner function has access to its own inner scope.
+		* Inner function has access to global variables.
+		
+	IIFE
+	* Immediately Invoked Function Expression
+	* Example:
+		
+		(function () {
+			//logic here
+		})();
+	* It is like an anonymous function that is invoked with () that is attached to it.
+	
+	* If it is assigned to a variable, then it is not immediately invoked.
+	* The function saves the return value into the variable.
+	
+	
+	
+	
+	
+
+	
+JAVASCRIPT OBJECT NOTATION (JSON)
+* https://www.w3schools.com/js/js_json.asp
+* Language-agnositc
+	- Not tied to a language.
+* Something that is written in JSON is not always a JavaSCript object.
+* Key-value pair inisde curly braces.
+	- Example:
+		{
+			Key: Value
+			Key: Value
+			Key: {Key: Value}
+		}
+		- The last one's Value is {Key: Value}
+* Object's KEYS MUST BE STRING
+* Call JSON.parse
+	- Convert JSON to a JavaScript Object
+* JSON Example:
+	{
+		"employees":[
+			{"firstName":"John", "lastName:": "Does"},
+			{"firstName":"Anna", "lastName":"Smith}
+		]
+	}
+* JSON "objects" will show up in JS as Strings.
+* Useful for RESTful Web Services.
+	RESTful Web Services uses REST Architecture based Web Services.
+	- Everything is a resource in REST Architecture.
+	- REST
+		* Representational State Transfer
+			-web standards using HTTP Protocol for data communication.
+	https://www.tutorialspoint.com/restful/restful_introduction.htm
+	
+	

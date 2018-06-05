@@ -1,0 +1,195 @@
+
+06-05-2018 
+
+
+SOFTWARE DEVELOPMENT LIFE CYCLE (SDLC)
+* Framework that define tasks performed at each step of the software development process.
+* Structure followed by the development team in software organization.
+* Consists of "detailed" plan describing how to:
+	- Develop
+	- Maintain
+	- Replace software
+	
+
+PLANNING
+* Requirement gathering/analysis
+* Scope document
+
+IMPLEMENTATION
+* Writing code
+
+TESTING
+* Finding bugs
+* Validation
+
+DOCUMENTATION
+* Document all things!
+* All steps in the project is documented for:
+	- future reference 
+	- improvement of software development process
+* Design Documentation:
+	- Application Programming Interface (API)
+
+DEPLOYMENT:
+* Usable by customer/client.
+
+MAINTENANCE:
+* Change request.
+* Feature request.
+
+
+
+
+SOFTWARE DEVELOPMENT MODELS:
+
+BIG BANG
+* Chaos. Everything happens at once.
+* No formal development process.
+* Works for SMALL PROJECTS in SMALL TEAMS.
+* Very high management overhead.
+	- A lot of micromanagement.
+* All decisions are made in the moment.
+
+
+WATERFALL MODEL
+* One step at a time.
+* Involves finishing each phase completely before next one.
+* After each phase, it is reviewed to see if project is on track.
+* Hard to go back and makes changes.
+* Planned ahead of time.
+* Works wells for large project with  large teams and well defined end.
+	- Useful for government contracts.
+
+
+ITERATIVE MODEL
+* Iterative process starts with a simple implementation of a small set of software requirements.
+* Then, iteratively enhances the evolving version until ready for deployment.
+*  			     -- Build 1 --> Design/Development --> Testing --> Implement
+			   /
+   Requirements -- Build 2 --> Design/Development --> Testing --> Implement
+			   \
+			    -- Build 3 --> Design/Development --> Testing --> Implement
+			   
+* Major requirements must be defined and functionalities/requested enhancements may involve in time.
+* Great for feedbacks.
+* Moderate overhead.
+* Testing is more complex.
+* Have to make sure that new modules do not break existing modules.
+* Some high-risk features.
+	- Example: Having a major security flaw and requiring change.
+	
+
+			   			   
+
+AGILE MODEL - 'more of a lifestyle'
+* Martin Fowler wrote the Agile Manifesto.
+	* Big player in the world of microservices.
+* Break up requirements into smaller, modular chunks called USER STORIES.
+* Agile is a combo of iterative and incremental model with process adaptibality, customer satisfaction, and rapid delivery of software product.
+* Good USER STORIES are independent to each other.
+* Product owner holds team accountable.
+* STORIES go through different stages.
+	- BACKLOG
+	- IN PROGRESS
+	- TESTING
+	- CODE REVIEW
+	- DONE
+	- RELEASED
+	
+
+AGILE MODEL EXAMPLE:
+
+IDEAS
+	\
+	ITERATION 1:
+	 * Planning
+	 * Requirement Analysis
+	 * Designing
+	 * Building
+	 * Testing
+			\
+		  REVIEW AND ADJUST
+				\
+			ITERATION 2:
+			 * Planning
+			 * Requirement Analysis
+			 * Designing
+			 * Building
+			 * Testing
+					\
+				  REVIEW AND ADJUST
+						\
+					ITERATION 2:
+					 * Planning
+					 * Requirement Analysis
+					 * Designing
+					 * Building
+					 * Testing
+							\
+						FIRST TIME TO GET REAL FEEDBACK
+									\
+								FINAL SOFTWARE
+
+
+SCRUM:
+* "hustling/getting together" from Rugby sport.
+* SCRUM is an implementation of AGILE.
+* Break up work into SPRINTS.
+	- SPRINTS last up to 2-4 weeks.
+* Scrum Master decides how many points, what USER STORIES to do for a Sprint.
+	- Based on prior project throughput.
+* Sprint Planning
+* Sprint Retrospection
+	- Meeting to see what went well, what went bad.
+	
+	
+SCRUM MASTER
+* Does logistics work
+* Makes sure user stories are being tracked.
+
+
+
+USER STORIES
+* Project requirements are turned into user stories. 
+* Example:
+	- As a customer, I can log into my account.
+	- As an employee, I can approve pending accounts.
+	- As an admin, I can view all of my customer's information.
+	- As a player, I can load some file.
+* Stories are broken up into tasks.
+
+
+
+STORY POINTS	
+* Each user story is given a value baased on difficulty or time needed to complete it.
+* Usually use obscure values.
+	- Fibonacci numbers
+	- Shirt sizes
+* Must be voted on by whole team what values each user story will have.
+* Keep track of 
+
+	
+
+USER STORY POINTS EXAMPLE:
+
+SMALL
+MEDIUM
+LARGE
+EXTRA LARGE
+
+
+ASSIGNING A USER STORY:
+* What is the complexity or time needed for this? S/M/L/XL complexity?
+	- As a customer, I can log into my account
+	
+* We will vote over and over and listen to opinions until decided.
+	- Programming customer's ability to login if code is broken, or security issues with logging can be more complex to fix.
+
+
+SCRUM BOARD
+
+STORY		WORK IN PROGRESS	`DONE
+
+
+
+
