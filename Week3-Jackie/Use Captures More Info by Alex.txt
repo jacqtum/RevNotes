@@ -1,0 +1,26 @@
+
+FROM ALEX IN SLACK:
+
+Alexpattoncs [3:50 PM]
+Here you go guys. Run this on any website to see what happens when an eventhandler is fired. It plots it out and prints out the order they run.
+
+setupClickReports = function(node ,depth, useCapture){
+   node.childNodes.forEach(element => {
+       element.addEventListener("click",function(){
+           toPrint="";
+           for (var i = 0; i<depth; i++){
+               toPrint += "    ";
+           }
+           toPrint+= element.nodeName ;
+           toPrint+= " With useCapture= " + useCapture;
+           console.log(toPrint);
+       }, useCapture);
+       
+       setupClickReports(element, depth+1, useCapture);
+
+   });
+}
+
+setupClickReports(document.body, 0, false);
+setupClickReports(document.body, 0, true);
+

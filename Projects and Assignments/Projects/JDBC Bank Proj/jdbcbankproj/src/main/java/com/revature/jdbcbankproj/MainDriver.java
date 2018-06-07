@@ -79,7 +79,7 @@ public class MainDriver {
 				topMenuControl1 = true;
 				while (topMenuControl1 == true) {
 					log.info("Inside topMenuControl1");
-					System.out.println("REGISTER PAGE");
+					System.out.println("REGISTER PAGE\n\n");
 					System.out.println("Enter EXIT to go back.");
 					// REGISTRATION PROCESS
 					Users u = new Users();
@@ -99,12 +99,12 @@ public class MainDriver {
 
 					// If username exists, ask for new username. Go back to topMenuControl1.
 					if (userNameExists == true) {
-						System.out.println("Username " + userNam + " exists. Please enter a new username.");
+						System.out.println("\nUsername " + userNam + " exists. Please enter a new username.\n");
 						continue;
 					}
 					// If username doesn't exist, Registration Process Continues.
 					else {
-						System.out.println("Username " + userNam + " is avaialable. ");
+						System.out.println("\nUsername " + userNam + " is avaialable. ");
 
 						// Continue User Registration
 						u.CreateUsers(userNam);

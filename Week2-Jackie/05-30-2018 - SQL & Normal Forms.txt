@@ -335,7 +335,7 @@ What is the difference between varchar and varchar2?
 STRUCTURED QUERY LANGUAGE (SQL)
 	- SQL is a way to communicate with a database.
 		- Sublanguages Of SQL:
-			- DATA DEFINITION LANGUAGE (DDL):
+			- DATA DEFINITION LANGUAGE (DDL) cannot be rolled back from:
 				* Consists of SQL commands that can be used to define the databse schema.
 				* Used to create and modify the database.
 				* Creates structure of our data.
@@ -354,7 +354,7 @@ STRUCTURED QUERY LANGUAGE (SQL)
 					- TRUNCATE TABLE
 						* Deletes data inside table, but not the table.
 
-			- DATA MANIPULATION LANGUAGE (DML):
+			- DATA MANIPULATION LANGUAGE (DML) can be rolled back from:
 				* SQL commands that is used to manipulate data in database.
 				* Commands:
 					
@@ -435,6 +435,7 @@ STRUCTURED QUERY LANGUAGE (SQL)
 			* CHECK
 				- Specifies rules for values in the column.
 				- Ex: CHECK (Age >= 18)
+			* DEFAULT
 		
 		- Alter table to add foreign key:
 			* EXAMPLE:

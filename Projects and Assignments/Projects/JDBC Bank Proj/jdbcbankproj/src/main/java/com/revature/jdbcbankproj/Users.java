@@ -238,10 +238,10 @@ public class Users {
 			int cu = stmt.executeUpdate();
 			
 			if(cu > 0) {
-				System.out.println("User has been created.");
+				System.out.println("\nUser has been created.\n");
 			}
 			else {
-				System.out.println("Failed to create user.");
+				System.out.println("\nFailed to create user.\n");
 			}
 			
 			stmt.close();

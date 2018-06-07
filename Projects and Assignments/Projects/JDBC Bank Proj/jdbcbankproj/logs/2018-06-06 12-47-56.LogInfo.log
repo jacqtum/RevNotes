@@ -1,0 +1,74 @@
+2018-06-157 12:06:968 INFO  MainDriver:36 - In main(): 
+
+2018-06-157 12:06:972 INFO  MainDriver:57 - Inside TOP Menu while loop
+2018-06-157 12:06:433 INFO  MainDriver:68 - topMenuScan == 1
+2018-06-157 12:06:433 INFO  MainDriver:78 - Inside topMenuScan == 1
+2018-06-157 12:06:433 INFO  MainDriver:81 - Inside topMenuControl1
+2018-06-157 12:06:70 INFO  MainDriver:118 - oracle.jdbc.driver.OraclePreparedStatementWrapper@cb51256
+2018-06-157 12:06:267 INFO  MainDriver:81 - Inside topMenuControl1
+2018-06-157 12:06:249 INFO  MainDriver:118 - oracle.jdbc.driver.OraclePreparedStatementWrapper@6b1274d2
+2018-06-157 12:06:395 INFO  MainDriver:197 - In CreateUsers(): 
+2018-06-157 12:06:806 INFO  MainDriver:236 - oracle.jdbc.driver.OraclePreparedStatementWrapper@5d20e46
+2018-06-157 12:06:855 INFO  MainDriver:57 - Inside TOP Menu while loop
+2018-06-157 12:06:611 INFO  MainDriver:68 - topMenuScan == 2
+2018-06-157 12:06:615 INFO  MainDriver:127 - Inside topMenuScan == 2
+2018-06-157 12:06:615 INFO  MainDriver:131 - Inside topMenuControl2
+2018-06-157 12:06:92 INFO  MainDriver:168 - oracle.jdbc.driver.OraclePreparedStatementWrapper@3d36e4cd
+2018-06-157 12:06:106 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:984 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:347 INFO  MainDriver:20 - In CreateAccount()
+2018-06-157 12:06:65 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:930 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:489 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:65 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:785 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:242 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:590 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:275 INFO  MainDriver:146 - In Deposit(): 
+2018-06-157 12:06:688 INFO  MainDriver:157 - oracle.jdbc.driver.OraclePreparedStatementWrapper@4d49af10
+2018-06-157 12:06:801 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:748 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:279 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:42 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:695 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:206 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:482 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:286 INFO  MainDriver:179 - In Withdraw(): 
+2018-06-157 12:06:737 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:440 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:188 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:667 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:465 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:344 INFO  MainDriver:179 - In Withdraw(): 
+2018-06-157 12:06:788 INFO  MainDriver:223 - oracle.jdbc.driver.OraclePreparedStatementWrapper@3b2c72c2
+2018-06-157 12:06:837 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:730 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:664 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:329 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:252 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:845 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:503 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:242 INFO  MainDriver:20 - In CreateAccount()
+2018-06-157 12:06:867 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:317 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:383 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:182 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:555 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:232 INFO  MainDriver:116 - In DeleteAccount(): 
+2018-06-157 12:06:00 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:507 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:970 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:739 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:785 INFO  MainDriver:57 - Inside TOP Menu while loop
+2018-06-157 12:06:41 INFO  MainDriver:68 - topMenuScan == 2
+2018-06-157 12:06:41 INFO  MainDriver:127 - Inside topMenuScan == 2
+2018-06-157 12:06:41 INFO  MainDriver:131 - Inside topMenuControl2
+2018-06-157 12:06:43 INFO  MainDriver:168 - oracle.jdbc.driver.OraclePreparedStatementWrapper@29ba4338
+2018-06-157 12:06:847 INFO  MainDriver:56 - In SetAccount(): 
+2018-06-157 12:06:975 INFO  MainDriver:96 - In ViewAccount(): 
+2018-06-157 12:06:811 INFO  MainDriver:116 - In DeleteAccount(): 
+2018-06-157 12:06:383 INFO  MainDriver:57 - Inside TOP Menu while loop
+2018-06-157 12:06:822 INFO  MainDriver:68 - topMenuScan == 0
+2018-06-157 12:06:822 INFO  MainDriver:72 - Inside topMenuScan == 0
+2018-06-157 12:06:822 INFO  MainDriver:898 - Outside the TOP MENU
+2018-06-157 12:06:822 INFO  MainDriver:902 - Closing Connection conn

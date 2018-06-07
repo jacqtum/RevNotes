@@ -1,0 +1,6 @@
+2018-06-157 11:06:679 INFO  MainDriver:36 - In main(): 
+
+2018-06-157 11:06:683 INFO  MainDriver:57 - Inside TOP Menu while loop
+2018-06-157 11:06:58 INFO  MainDriver:68 - topMenuScan == 1
+2018-06-157 11:06:59 INFO  MainDriver:78 - Inside topMenuScan == 1
+2018-06-157 11:06:59 INFO  MainDriver:81 - Inside topMenuControl1
