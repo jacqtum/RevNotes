@@ -26,7 +26,7 @@ console.log("homework.fibonacci(0) = " + homework.fibonacci(0));
 console.log("homework.fibonacci(1) = " + homework.fibonacci(1));
 console.log("homework.fibonacci(10) = " + homework.fibonacci(10));
 
-
+/* ------------------------------------------------------------------------------- */
 // 2. 
 console.log("2. Sort array of integers");
 
@@ -36,6 +36,7 @@ homework.sort = function (array) {
     var i = 0;
     var j;
     var count = 0;
+    var message = "";
 
     // count is total times elements have been compared and not switched.
     // if all compared and not switched, then all in order.
@@ -72,14 +73,18 @@ homework.sort = function (array) {
         max++;
     } while (count != (array.length-1)); // 
 
-    console.log(array);
+    var k;
+    for (k = 0; k < array.length; k++) {
+        message += array[k] + " ";
+    }
 
+    console.log(message);
 };
 // f([2,4,5,1,3,1]) = [1,1,2,3,4,5]
 console.log("homework.sort([2, 4, 5, 1, 3, 1]) = ");
-console.log(homework.sort([2, 4, 5, 1, 3, 1]));
+homework.sort([2, 4, 5, 1, 3, 1]);
 console.log("homework.sort([5, 7, 9, 3, 1]) = ");
-console.log(homework.sort([5, 7, 9, 3, 1]));
+homework.sort([5, 7, 9, 3, 1])
 
 // Break-Down of f([2,4,5,1,3,1]):
 // Compare current element with next element
@@ -116,17 +121,47 @@ console.log(homework.sort([5, 7, 9, 3, 1]));
 
 
 
-///*
+/* ------------------------------------------------------------------------------- */
 // 3. Return the factorial of n
 
-// f(0) = 1
-// f(1) = 1
-// f(3) = 6
-//*/
-//homework.factorial = function (n) {
+homework.factor = function (n) {
+    var i;
+    var total = 1;
 
-//};
+    for (i = n; i > 0; i--) {
+        // i = 3; i > 0; i--, total = 1*3 = 3
+        // i = 2; i > 0; 
+        //console.log("i: " + i);
+       // console.log("n: " + n);
+        total = total * i;
+        //console.log("total: " + total);
+    }
+    console.log(total);
+};
 
+console.log("homework.factor(5): ");
+homework.factor(5);
+console.log("homework.factor(4): ");
+homework.factor(4);
+console.log("homework.factor(3): ");
+homework.factor(3);
+console.log("homework.factor(2): ");
+homework.factor(2);
+console.log("homework.factor(1): ");
+homework.factor(1);
+
+// factorial breakdown: 4! 3! 2! 1!
+/*
+    5! = 5 * 4 * 3 * 2 * 1 = 120
+    4! = 4 * 3 * 2 * 1     = 24
+    3! = 3 * 2 * 1         = 6
+    2! = 2 * 1             = 2
+    1!                     = 1   
+*/
+
+
+
+///*
 ///*
 // 4. Rotate left
 

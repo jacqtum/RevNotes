@@ -1,0 +1,50 @@
+
+06-06-2018
+
+ASYNCHRONOUS JAVASCRIPT AND JSON (BEcause not Using XML) (AJAX)
+
+* https://www.w3schools.com/xml/ajax_intro.asp
+
+* Ajax is not a programming language.
+
+* HTTP request from your browser to your HTML DOM.
+
+* Asynchronous means not existing or happening at the same time.
+
+* We don't want each of our HTTP REQUESTS waiting for each other to complete.
+
+* We can refresh certain elements without having to reload the page.
+	- The element already exists, but it does not show unless an event or interactionoccurs.
+
+* AJAX uses a combination of:
+	- A browser built-in XMLHttpRequest object (to request data from a web server).
+	- JavaSCript and HTML DOM (to display or use the data)
+
+Front End
+	-Event: 
+		- Ex: Clicking a button
+		- Grabs information and prepare the object
+		- Send HTTP Request.
+			- Send it to whatever processes the response and update the page.
+
+AJAX WorkFlow
+1. CREATE / OPEN the XMLHttpRequest() -> XHR Object
+2. DEFINE onreadystatechange Function
+3. Open our request XHR.open(HTTP method, url, true/false)
+	* Example HTTP method: GET
+	* For asynchronous, use TRUE
+4. Send Request (w/ Request body if needed)
+	* xhr.send()
+	* If it's a POST, send with request body.
+
+Examples of Usage:
+* Database transactions.
+	- Want to occur after one event.
+		- Entering amount of money will occur before sending information to the database.
+
+PROS OF AJAX
+* Update a web page without reloading the page.
+* Request data from a server - after the page has loaded.
+* Receive data from a server - after the page has loaded.
+* Send data to a server - in the background
+
