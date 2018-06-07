@@ -161,24 +161,37 @@ homework.factor(1);
 
 
 
-///*
-///*
+
 // 4. Rotate left
+console.log("4. Rotate left");
 
 // Given array, rotate left n times and return array
 
-// f([1,2,3,4,5], 1) = [2,3,4,5,1]
-// f([1,2,3,4,5], 6) = [2,3,4,5,1]
+// f([1,2,3,4,5], 1) = [2,3,4,5,1] 
+    //...moved firstNum from index 1 to last index
+    //...moved each number to the left once.
+
+// f([1,2,3,4,5], 6) = [2,3,4,5,1] 
+    // ...moved firstNum to the end, then to left until front is reached.
+    // then once more to the end to make a total 6 moves.
+
 // f([1,2,3,4,5], 3) = [4,5,1,2,3]
+    // ...moved firstNum to the end and then moved 2 more times to the left.
+    // this makes the total moves of 3.
 
-//*/
-//homework.rotateLeft = function (array, n) {
+homework.rotateLeft = function (array, n) {
+    // array = [1,2,3,4,5]
+    // n = 2
+    
+    //index 1 goes backwards 2
 
-//};
+};
+console.log("homework.rotateLeft(array, n): ");
+console.log(homework.rotateLeft([1,2,3,4,5], 1));
 
-///*
+
 // 5. Balanced Brackets
-
+console.log("5. Balanced Brackets");
 // A bracket is any one of the following: (, ), {, }, [, or ]
 
 // The following are balanced brackets:
@@ -196,10 +209,61 @@ homework.factor(1);
 // Return true if balanced
 // Return false if not balanced
 //*/
-//homework.balancedBrackets = function (bracketsString) {
 
-//};
+homework.balancedBrackets = function (bracketString) {
+    //console.log(bracketString);
+    var arr = [];
+    // convert string to an array using split() method.
+    arr = bracketString.split("");
+    //console.log(arr);
+
+    var brackLength = bracketString.length;
+    console.log("length: " + brackLength);
+    //console.log("length % 2: " + (brackLength % 2));
+    //console.log((brackLength % 2 === 0));
+    if ((brackLength % 2) === 0) {
+        //console.log("Inside if: ");
+        // Divide length by 2
+        // Ex: if length is 6. Half is 3. 3 iterations.
+        // Compare 1st and 6th.
+        // Compare 2nd and 5th.
+        // Compare 3rd and 4th.
+        var i;
+        var j;
+        var partner;
+        for (i = 0, j = brackLength - 1; i < brackLength / 2; i++ , j--) {
+            if (arr[i] === "[") {
+                partner = "]";
+            }
+            else if (arr[i] === "{") {
+                partner = "}";
+            }
+            else if (arr[i] === "(") {
+                partner = ")";
+            }
+            else {
+                console.log("You are not a bracket.");
+            }
+            console.log(arr[i]);
+            console.log(arr[j]);
+            //console.log(arr[j] == partner);
+        }
+        console.log("true");
+    }
+    else {
+        console.log("false");
+    }
+};
+console.log("homework.balancedBrackets('{}'): ");
+homework.balancedBrackets("{}");
+console.log("homework.balancedBrackets('{[]}'): ");
+homework.balancedBrackets("{[]}");
+console.log("homework.balancedBrackets('()'): ");
+homework.balancedBrackets("()");
+console.log("homework.balancedBrackets('{[}'): ");
+homework.balancedBrackets("{[}");
+console.log("homework.balancedBrackets('()()'):");
+homework.balancedBrackets("()()");
 
 
-//YOUR SOLUTIONS, NOT STACKOVERFLOW’S;)
 

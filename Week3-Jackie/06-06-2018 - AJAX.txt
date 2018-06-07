@@ -48,3 +48,144 @@ PROS OF AJAX
 * Receive data from a server - after the page has loaded.
 * Send data to a server - in the background
 
+
+
+HTTP
+GET
+http://google.com?name=bob&age=8
+
+	* Query String:
+		* name=bob&age=8 
+	
+	* Using GET, the URL can be bookmarked.
+
+
+POST REQUEST	
+	
+* What happens if we send a POST request.
+	* The Query String will not be there.
+
+* For POST Request, we send data in the Request Body:
+	* username=beamia&password=1234w0x1z2
+
+* DIAGRAM
+(  ) ---------URL------------------------------
+[PC]									       \
+												\
+	Client										Web Server
+	------										----------
+	[Web Browser	<----HTTP Response --->		[Hardware & Software]
+	* Understand &			[Header]
+	Renders HTML & 		 [HTML Payload]
+	Knows HTTP]
+	
+	
+* Wants to do busines logic in a stateless system.
+* "Find and forget".
+
+
+
+
+SERVLET
+* Java's solution to the stateless issue.
+
+* Special class that services HTTP request for a server or a container.
+
+* Servlet API: 
+	- Javax.servlet
+	- Javax.http
+	
+* Extend HTTPServlet
+
+* Configure in the Web.xml aka Deployment Descriptor.
+
+* Life Cycle is manageed by "web container" (Servlet Container).
+
+
+SERVLET HIERARCHY
+* Servlet Interface
+	- Generic Servlet (abstract class)
+		* HTTP Servlet (abstract class and contains Life cycle methods.)
+			- YourServlet - In which, you override methods you need.
+			
+
+SERVLET LIFE CYCLE
+* Handled by web container
+* 3 methods called by web container
+
+	1. init()
+		* invoked only when the servlet is first loaded into memory.
+		* called once usually at the first request.
+		* may e overrident for set up purposes.
+	2. Service()
+		* This is called to process HTTP request EACH TIME.
+		* DO NOT OVERRIDE.
+		* Calls appropriate method.
+	3. destroy()
+		* Called when server shuts down.
+		* Can override to clean up resources (i.e. File I/O).
+	
+	Constructor
+		* DO NOT OVERRIDE. DO NOT TOUCH.
+
+
+Deployment Descriptor
+* General config file for servlets.
+	- Web.xml
+
+* Located in Web-Inf folder
+	- An XML file.
+	- Front controller
+	- Describes what is avaialble in the container.
+	- Contains mappings between incoming requests and available resources.
+
+* We need 3 things to register for each servelet.
+	
+	1. Servlet-Name  -> What we call this servlet.
+	2. Servlet-Class	-> Fully qualified class name.
+	3. URL-mappings		-> How we access the servlet. Ex: /home
+	
+
+Web.xml FORMAT:
+
+	<web-app>
+		<servlet>
+			<servlet-name>Example</servlet-name>
+			<servlet-class>com.revature.Example</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+			<servlet-name>Example</servlet-name>
+			<url-pattern>/home</url-pattern>
+		</servlet-mapping>
+	
+
+* Example we want to have properties of a particular servlet.
+* We can throw these documents into our servlet.
+
+	Ex:
+	<servlet>
+		<servlet-name>Example</servlet-name>
+		
+		<servlet-class>com.revature.Example</servlet-class>
+		
+		<!--Servlet Config for 1 Servlet -->
+		<init-param>
+			<param-name>someName</param-name>
+			<param-value>someValue</param-value>
+		</init-param>
+	</servlet>
+
+* Let's say we want to have a servlet for all our servlet infos.
+	<servlet>
+		<servlet-name>Example</servlet-name>
+			
+		<servlet-class>com.revature.Example</servlet-class>
+		
+		<context-param>
+			<param-name>someName</param-name>
+			<param-value>someValue</param-value>
+		</context-param>
+	</servlet>
+	
+	
