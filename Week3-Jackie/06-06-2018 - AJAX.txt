@@ -188,4 +188,16 @@ Web.xml FORMAT:
 		</context-param>
 	</servlet>
 	
+
+INSIDE SERVLET CODE:
 	
+	String str = getServletConfig().getInitParameter("Something");)
+	String str1 = getServletContext()).getInitParameter("Woo");
+	
+	
+	
+** For next class meeting. **
+
+Will see more.
+
+Learn to configure tomcat.
