@@ -319,6 +319,33 @@
          * When user selects a skill, create an alert with a message similar to:
          * "Are you sure CSS is one of your skills?"
          * NOTE: no alert should appear when user deselects a skill.
+         */
+
+        (function quest7() {
+            console.log("\n7. Skills Event");
+            
+            var q7 = document.getElementsByTagName("select");
+
+            console.log(q7);
+            console.log(q7.length);
+
+            //console.log(q7.children.length);
+
+            
+            
+            for (var k = 0; k < q7.length; k++) {
+                console.log(q7[0].getAttribute("name"));
+            }
+            
+        })();
+        
+           
+
+            
+            
+       
+
+        /* 8. Favorite Color Event
          * NOTE: Write unobtrusive Javascript
          * NOTE: This is regarding the favoriteColor radio buttons.
          * When a user selects a color, create an alert with a message similar to:
@@ -341,12 +368,82 @@
          * Show the current time in this element in this format: 9:05:23 AM
          * The time should be accurate to the second without having to reload the page.
          */
+        console.log("\n10. Current Time");
+
+        var q10 = document.getElementById("currentTime");
+
+        window.addEventListener('load', quest10());
+
+        function quest10() {
+            
+            
+            var d = new Date();
+
+            var hour = d.getHours();
+            var hourConvert;
+            var night;
+            var minute = d.getMinutes();
+            var second = d.getSeconds();
+
+            // converts hour from 24 hours to 12 hours format
+            if (hour > 12) {
+                hourConvert = hour - 12;
+                night = true;
+            }
+
+            // makes minute to 2 digits if single digit
+            if (minute < 10) {
+                minute = "0" + minute;
+            }
+
+            // makes second to 2 digits if single digit
+            if (second < 10) {
+                second = "0" + second;
+            }
+
+            // if night, then add PM
+            if (night === true) {
+                q10.innerHTML = hourConvert + ":" + minute + ":" + second + " PM";
+            }
+            //if morning, add AM
+            else {
+                q10.innerHTML = hour + ":" + minute + + ":" + second + " AM";
+            }
+            // This will call the quest10 function to repeatedly run
+            setTimeout(quest10);
+        }
 
         /*  11. Delay
          *  Regarding this element:
          *  <p id="helloWorld">Hello, World!</p>
          *  Three seconds after a user clicks on this element, change the text to a random color.
          */
+
+        (function quest11() {
+            console.log("\11. Delay");
+
+            var q11 = document.getElementById("helloWorld");
+
+            // Add event listener that when helloWorld is clicked, startChange function is called
+            q11.addEventListener("click", startChange, false)
+
+            // when startChange function is called, it will wait 3 seconds before calling changeColor function
+            function startChange() {
+                setTimeout(changeColor, 3000);
+            }
+
+            // this will change the text color to a random color
+            function changeColor() {
+                // get random numbers from 0-255 for rgb colors: rgb(0,0,0) to rgb(255,255,255);
+                var ranNum1 = Math.random() * 255;
+                var ranNum2 = Math.random() * 255;
+                var ranNum3 = Math.random() * 255;
+
+                var x = q11.style.color = "rgb(" + ranNum1 + ", " + ranNum2 + ", " + ranNum3 + ")";
+                //console.log(x);
+            }
+        })();
+        
 
         /* 12. Walk the DOM
          * Define function walkTheDOM(node, func)
