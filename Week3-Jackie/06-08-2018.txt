@@ -1,0 +1,98 @@
+06-08-2018
+
+Make sure names are descriptive.
+
+
+
+
+SERVLETS.																doGet
+
+[BROWSER]----------[SERVER](attached: web container)	[SERVLETSA]	---	[DAOIMPL]----[DATABASE]
+html										|				[SERVLETSB]---/
+css									[DEPLOYMENT DESCRIPTOR]	/					[BEANS]
+js
+
+
+
+
+IN ECLIPSE:
+* Use Eclipse for JAVA EE.
+
+* Inside other src folder:
+	* src -> main -> webapp -> WEB-INF -> web.xml
+	
+WEB-INF directory:
+* is a part of the directory strcutre that contains Web application
+	
+
+* Need to include a dependency in our pom.xml file.
+
+	<dependencies>
+     <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+	</dependencies>
+	
+	
+* What happens when we Update Maven Project?
+	- It will download and add dependencies to our project.
+	<servlet>
+		<servlet-name>MyFirstServlet</servlet-name>
+		<servlet-class>com.revature.servlet.MyFirstServlet></servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>MyFirstServlet</servlet-name>
+		
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	
+POSTMAN:
+* localhost:8080/ServletDemo
+
+
+
+
+RedirectForwardExample:
+* Group Id: com.revature
+* Artifact Id: RedirectForwardExample
+* Packaging: war
+
+* Right-click: Maven -> Update Project
+
+* Right-click: Java EE -> Generate Deployment Descriptor.
+
+* Right-click: Maven -> Update Project
+
+Right-click src->main->java -> Create Other: Servlet
+	* Java package: com.revature.servlet
+	* Class Name: LoginServlet
+
+Next->
+	* Url mappings: Edit -> /login
+	
+Add dependency to pom.xml:
+
+<dependencies>
+     <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+ </dependencies>
+
+
+ * Right-click Server. Add RedirectForwardExample. Remove ServletDemo.
+ 
+http://localhost:8080/RedirectForwardExample/login.html

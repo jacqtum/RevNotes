@@ -30,7 +30,8 @@ Front End
 AJAX WorkFlow
 1. CREATE / OPEN the XMLHttpRequest() -> XHR Object
 2. DEFINE onreadystatechange Function
-3. Open our request XHR.open(HTTP method, url, true/false)
+3. Open our request:
+	* XHR.open(HTTP method, url, true/false)
 	* Example HTTP method: GET
 	* For asynchronous, use TRUE
 4. Send Request (w/ Request body if needed)
@@ -114,16 +115,19 @@ SERVLET LIFE CYCLE
 * 3 methods called by web container
 
 	1. init()
+		* initializes the servlet.
 		* invoked only when the servlet is first loaded into memory.
 		* called once usually at the first request.
-		* may e overrident for set up purposes.
+		* may be overriden for set up purposes.
 	2. Service()
-		* This is called to process HTTP request EACH TIME.
+		* This is called EVERY TIME to process HTTP request.
 		* DO NOT OVERRIDE.
 		* Calls appropriate method.
+		
 	3. destroy()
 		* Called when server shuts down.
 		* Can override to clean up resources (i.e. File I/O).
+		* In a real-world scenario, you should leave it open so clients/customers will have continous access to your application.
 	
 	Constructor
 		* DO NOT OVERRIDE. DO NOT TOUCH.
@@ -169,7 +173,7 @@ Web.xml FORMAT:
 		
 		<servlet-class>com.revature.Example</servlet-class>
 		
-		<!--Servlet Config for 1 Servlet -->
+		<!--Servlet Config for 1 Servlet is only specific for this and not for others.-->
 		<init-param>
 			<param-name>someName</param-name>
 			<param-value>someValue</param-value>
@@ -201,3 +205,7 @@ INSIDE SERVLET CODE:
 Will see more.
 
 Learn to configure tomcat.
+
+
+
+

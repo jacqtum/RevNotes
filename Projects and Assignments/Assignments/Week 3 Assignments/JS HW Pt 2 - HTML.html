@@ -1,114 +1,144 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="ISO-8859-1">
-<title>DOM</title>
+    <meta charset="ISO-8859-1">
+    <title>DOM</title>
 </head>
+
 <body>
     <div>
-   	 <div>
-   		 <h3>
-   			 Sum: <span id="sum"></span>
-   		 </h3>
-   		 <h5 id="currentTime"></h5>
-   	 </div>
-   	 <div>
-   		 <h1>
-   			 United <span data-customAttr="USA">States</span> of America (<span>USA</span>)
-   		 </h1>
-   		 <div>
-   			 <a>Click Here</a><a>Click Here</a><a>Click Here</a><a>Click Here</a><a>Click
-   				 Here</a>
-   		 </div>
-   		 <a>Click Here</a> <a>Click <span>Here1</span></a> <a>Click Here</a>
-   		 <div>
-   			 <select name="colors">
-   				 <option value="green">Green</option>
-   				 <option value="blue">Blue</option>
-   				 <option value="red" selected="selected">Red</option>
-   				 <option value="purple">Purple</option>
-   				 <option value="yellow" selected="selected">Yellow</option>
-   			 </select>
-   		 </div>
-   	 </div>
-   	 <p id="helloWorld">Hello, World!</p>
-   	 <div>
-   		 <table>
-   			 <tr>
-   				 <th>Name</th>
-   				 <th>Department</th>
-   			 </tr>
-   			 <tr>
-   				 <td class="empName">John</td>
-   				 <td>Sales</td>
-   			 </tr>
-   			 <tr>
-   				 <td class="empName">Amy</td>
-   				 <td>Finance</td>
-   			 </tr>
-   			 <tr>
-   				 <td class="empName">Austin</td>
-   				 <td>Sales</td>
-   			 </tr>
-   			 <tr>
-   				 <td class="empName">Katie</td>
-   				 <td>Marketing</td>
-   			 </tr>
-   			 <tr>
-   				 <td class="empName" data-customAttr="court">Courtney</td>
-   				 <td>Sales</td>
-   			 </tr>
-   			 <tr>
-   				 <td class="empName">Scout</td>
-   				 <td>Sales</td>
-   			 </tr>
-   		 </table>
-   	 </div>
-   	 <form id="firstForm">
-   		 <a>Click <span>Here2</span></a> <input type="text"
-   			 data-customAttr="7" /><br /> <input type="text" data-customAttr="24" /><br />
-   		 <input type="radio" name="favoriteAnimal" value="dog" />Dog<br /> <input
-   			 type="radio" name="favoriteColor" value="blue" />Blue<br /> <input
-   			 id="num1" class="nums" type="text" /><br /> <input type="radio"
-   			 name="favoriteAnimal" value="cat" />Cat<br /> <input type="radio"
-   			 name="favoriteColor" value="red" />Red<br /> <input type="radio"
-   			 name="favoriteAnimal" value="horse" />Horse<br /> <input
-   			 type="radio" name="favoriteAnimal" value="dolphin" />Dolphin<br /> <a>Click
-   			 <span>Here</span>
-   		 </a><br /> <input type="radio" name="favoriteAnimal" value="eagle" />Eagle<br />
-   		 <input type="radio" name="favoriteColor" value="green" />Green<br />
-   		 <input type="radio" name="favoriteColor" value="orange" />Orange<br />
-   		 <select name="hobbies">
-   			 <option value="photography">Photography</option>
-   			 <option value="football" selected="selected">Football</option>
-   			 <option value="kayaking" selected="selected">Kayaking</option>
-   			 <option value="hiking">Hiking</option>
-   			 <option value="programming" selected="selected">Programming</option>
-   		 </select> <input id="num2" class="nums" type="text" /> <select name="skills">
-   			 <option value="java">Java</option>
-   			 <option value="net">.NET</option>
-   			 <option value="dom" selected="selected">DOM</option>
-   			 <option value="html">HTML</option>
-   			 <option value="css">CSS</option>
-   			 <option value="javascript" selected="selected">Javascript</option>
-   		 </select>
-   	 </form>
+        <div>
+            <h3>
+                Sum: <span id="sum"></span>
+            </h3>
+            <h5 id="currentTime"></h5>
+        </div>
+        <div>
+            <h1>
+                United <span data-customAttr="USA">States</span> of America (<span>USA</span>)
+            </h1>
+            <div>
+                <a>Click Here</a><a>Click Here</a><a>Click Here</a><a>Click Here</a><a>
+                    Click
+                    Here
+                </a>
+            </div>
+            <a>Click Here</a> <a>Click <span>Here1</span></a> <a>Click Here</a>
+            <div>
+                <select name="colors">
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="red" selected="selected">Red</option>
+                    <option value="purple">Purple</option>
+                    <option value="yellow" selected="selected">Yellow</option>
+                </select>
+            </div>
+        </div>
+        <p id="helloWorld">Hello, World!</p>
+        <div>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                </tr>
+                <tr>
+                    <td class="empName">John</td>
+                    <td>Sales</td>
+                </tr>
+                <tr>
+                    <td class="empName">Amy</td>
+                    <td>Finance</td>
+                </tr>
+                <tr>
+                    <td class="empName">Austin</td>
+                    <td>Sales</td>
+                </tr>
+                <tr>
+                    <td class="empName">Katie</td>
+                    <td>Marketing</td>
+                </tr>
+                <tr>
+                    <td class="empName" data-customAttr="court">Courtney</td>
+                    <td>Sales</td>
+                </tr>
+                <tr>
+                    <td class="empName">Scout</td>
+                    <td>Sales</td>
+                </tr>
+            </table>
+        </div>
+        <form id="firstForm">
+            <a>Click <span>Here2</span></a>
+            <input type="text" data-customAttr="7" />
+            <br />
+            <input type="text" data-customAttr="24" />
+            <br />
+            <input type="radio" name="favoriteAnimal" value="dog" />Dog
+            <br />
+            <input type="radio" name="favoriteColor" value="blue" />Blue
+            <br />
+            <input id="num1" class="nums" type="text" />
+            <br />
+            <input type="radio" name="favoriteAnimal" value="cat" />Cat
+            <br />
+            <input type="radio" name="favoriteColor" value="red" />Red
+            <br />
+            <input type="radio" name="favoriteAnimal" value="horse" />Horse
+            <br />
+            <input type="radio" name="favoriteAnimal" value="dolphin" />Dolphin
+            <br /> <a>
+                Click
+                <span>Here</span>
+            </a>
+            <br />
+            <input type="radio" name="favoriteAnimal" value="eagle" />Eagle
+            <br />
+            <input type="radio" name="favoriteColor" value="green" />Green
+            <br />
+            <input type="radio" name="favoriteColor" value="orange" />Orange
+            <br />
+            <select name="hobbies">
+                <option value="photography">Photography</option>
+                <option value="football" selected="selected">Football</option>
+                <option value="kayaking" selected="selected">Kayaking</option>
+                <option value="hiking">Hiking</option>
+                <option value="programming" selected="selected">Programming</option>
+            </select>
+            <input id="num2" class="nums" type="text" />
+            <select name="skills">
+                <option value="java">Java</option>
+                <option value="net">.NET</option>
+                <option value="dom" selected="selected">DOM</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript" selected="selected">Javascript</option>
+            </select>
+        </form>
     </div>
     <a>Click Here</a>
     <a>Click <span data-customAttr="500">Here3</span></a>
     <a>Click Here</a>
     <script type="text/javascript">
-   	    /* 1. USA
-               * 
-           Define the html element that contains "USA".
-           Print that element's contents.
-        */
+
+        /* 1. USA
+         * Define the html element that contains "USA".
+         * Print that element's contents.
+         */
+
         console.log("\n1. USA");
+
         var q1 = document.getElementsByTagName("span");
-         
+
         //console.log(q1.length);
+
+        // loop through span
         for (var a = 0; a < q1.length; a++) {
+
+            //if content of td = "USA"
             if (q1[a].innerHTML === "USA") {
+
+                // print content
                 console.log(q1[a].innerHTML);
             }
         }
@@ -117,21 +147,27 @@
          * Define function getPeopleInSales()
          * Print the names of all the people in the sales department
          */
+
         console.log("\n2. Sales");
+
         var q2 = document.getElementsByTagName("td");
 
         function getPeopleInSales() {
+            // loop through td 
             for (var b = 0; b < q2.length; b++) {
+
+                // if element has a next sibling
                 if (q2[b].nextElementSibling) {
+
+                    // if next sibling content is "Sales"
                     if (q2[b].nextElementSibling.innerHTML === "Sales") {
+
+                        // print content
                         console.log(q2[b].innerHTML);
-                       
                     }
                 }
-                
             }
         }
-
         getPeopleInSales();
 
         /* 3. Click Here
@@ -142,120 +178,130 @@
 
         console.log("\n3. Click Here");
         var q3 = document.getElementsByTagName("a");
-
-        console.log(q3);
+        //console.log(q3);
         for (var c = 0; c < q3.length; c++) {
-            console.log(q3[c].childNodes);
-            
+            // if a has children
+            if (q3[c].childElementCount != 0) {
+                //console.log(c);
+                //console.log("this a has a child");
+
+                //loop through children
+                for (var d = 0; d < q3[c].children.length; d++) {
+                    //console.log(q3[c].children[d].tagName);
+                    if (q3[c].children[d].tagName === "SPAN") {
+                        // print content of the span element
+                        console.log(q3[c].children[d].innerHTML);
+                    }
+                }
+            }
         }
-       
-         /* 4. Hobbies
-          * Define function getSkills()
-          * Find all checked options in the 'skills' select element.
-          * Print the value and the contents.
-          */
 
+        /* 4. Hobbies
+         * Define function getSkills()
+         * Find all checked options in the 'skills' select element.
+         * Print the value and the contents.
+         */
 
-        /*
-         * 5. Custom Attribute
+        console.log("\n4. Hobbies");
 
-            Define function getCustomAttribute()
+        function getSkills() {
+            // get select tag
+            var q4 = document.getElementsByTagName("select");
+            //console.log(q4);
 
-            Find all elements with "data-customAttr" attribute
+            for (var e = 0; e < q4.length; e++) {
+                
+                if (q4[e].getAttribute("name") == "skills") {
+                    
+                    //console.log(q4[e].getAttribute("name"));
+                    
+                    // get children
+                    for (var f = 0; f < q4[e].children.length; f++) {
+                        //console.log("child");
+                        //console.log(q4[e].children[f]);
+                        //console.log(q4[e].children[f].getAttribute("selected"));
+                        if (q4[e].children[f].getAttribute("selected") === "selected") {
+                            //console.log("selected");
+                            //print value of element and content that is selected
+                            console.log("Value: " + q4[e].children[f].getAttribute("value"));
+                            console.log("Content: " + q4[e].children[f].innerHTML);
+                        }
+                    }
+                }
+            }
+        }
 
-            Print the value of the attribute.
+        getSkills();
 
-            Print the element that has the attribute.
+        /* 5. Custom Attribute
+         * Define function getCustomAttribute()
+         * Find all elements with "data-customAttr" attribute
+         * Print the value of the attribute.
+         * Print the element that has the attribute.
+         */
 
+        console.log("\n5. Custom Attribute");
 
-            6. Sum Event
+        function getCustomAttribute() {
 
-            NOTE: Write unobtrusive Javascript
+        }
 
-            Regarding these elements:
+        getCustomAttribute;
 
-            <input id="num1" class="nums" type="text"/>
+        /* 6. Sum Event
+         * NOTE: Write unobtrusive Javascript
+         * Regarding these elements:
+         * <input id="num1" class="nums" type="text"/>
+         * <input id="num2" class="nums" type="text"/>
+         * <h3>Sum: span id="sum"></span></h3>
+         * Define onchange event handler.
+         * Add <input> element values.
+         * Put the sum in the <span> element.
+         * If values cannot be added, put "Cannot add" in the <span> element
+         */
 
-            <input id="num2" class="nums" type="text"/>
+        /* 7. Skills Event
+         * NOTE: Write unobtrusive Javascript
+         * When user selects a skill, create an alert with a message similar to:
+         * "Are you sure CSS is one of your skills?"
+         * NOTE: no alert should appear when user deselects a skill.
+         * NOTE: Write unobtrusive Javascript
+         * NOTE: This is regarding the favoriteColor radio buttons.
+         * When a user selects a color, create an alert with a message similar to:
+         * "So you like green more than blue now?"
+         * In this example, green is the new value and blue is the old value.
+         * Make the background color (of all favoriteColor radio buttons)
+         * the newly selected favoriteColor
+         */
 
-            <h3>Sum: span id="sum"></span></h3>
+        /* 9. Show/Hide Event
+         * NOTE: Write unobtrusive Javascript
+         * When user hovers over an employees name:
+         * Hide the name if shown.
+         * Show the name if hidden.
+         */
 
+        /* 10. Current Time
+         * Regarding this element:
+         * <h5 id="currentTime"></h5>
+         * Show the current time in this element in this format: 9:05:23 AM
+         * The time should be accurate to the second without having to reload the page.
+         */
 
-            Define onchange event handler.
+        /*  11. Delay
+         *  Regarding this element:
+         *  <p id="helloWorld">Hello, World!</p>
+         *  Three seconds after a user clicks on this element, change the text to a random color.
+         */
 
-            Add <input> element values.
+        /* 12. Walk the DOM
+         * Define function walkTheDOM(node, func)
+         * This function should traverse every node in the DOM.
+         * Use recursion.
+         * On each node, call func(node).
+         */
 
-            Put the sum in the <span> element.
-
-            If values cannot be added, put "Cannot add" in the <span> element
-
-
-            7. Skills Event
-
-            NOTE: Write unobtrusive Javascript
-
-            When user selects a skill, create an alert with a message similar to:
-
-            "Are you sure CSS is one of your skills?"
-
-            NOTE: no alert should appear when user deselects a skill.
-
-
-            8. Favorite Color Event
-
-            NOTE: Write unobtrusive Javascript
-
-            NOTE: This is regarding the favoriteColor radio buttons.
-
-            When a user selects a color, create an alert with a message similar to:
-
-            "So you like green more than blue now?"
-
-            In this example, green is the new value and blue is the old value.
-
-            Make the background color (of all favoriteColor radio buttons)
-            the newly selected favoriteColor
-
-
-            9. Show/Hide Event
-
-            NOTE: Write unobtrusive Javascript
-
-            When user hovers over an employees name:
-
-            Hide the name if shown.
-	            Show the name if hidden.
-
-
-            10. Current Time
-
-            Regarding this element:
-	            <h5 id="currentTime"></h5>
-
-            Show the current time in this element in this format: 9:05:23 AM
-
-            The time should be accurate to the second without having to reload the page.
-
-
-            11. Delay
-            Regarding this element:
-
-            <p id="helloWorld">Hello, World!</p>
-
-            Three seconds after a user clicks on this element, change the text to a random color.
-
-            12. Walk the DOM
-
-            Define function walkTheDOM(node, func)
-
-            This function should traverse every node in the DOM.
-            Use recursion.
-
-            On each node, call func(node).
-            */
     </script>
 </body>
+
 </html>
-
-
-

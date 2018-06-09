@@ -1,0 +1,50 @@
+
+COOL FACTS:
+
+Did you know that browsers have a debugger for JavaScript.
+
+The keyword shift removes the first element of the array and returns the element.
+
+CSS stands for Cascading Style Sheets.
+
+<style> </style> defines inline-styles.
+
+<br> for line break.
+
+<a href="url"></a>
+
+<img src="">
+
+<input type = "text">
+
+Linking is not a methodology used for linking css, but REFERENCING it.
+
+
+
+JavaScript is Important on the Test!
+
+STUDY JAVASCRIPT!
+
+
+Generic servlet implements servlet.
+https://www.javatpoint.com/GenericServlet-class
+RESEARCH GENERICSERVLET!
+
+
+How many cookies can browser store?
+RESEARCH COOKIES!
+
+
+
+ENTHUWARE FOUNDATION TESTS! DUE NEXT MONDAY! SEND THROUGH SLACK!
+
+HOMEWORK! MONDAY!
+
+1 ON 1 INCLUDES INTERVIEW AND JAVA/HTML/CSS/JS/SERVLETS QUESTIONS ON MONDAY!
+
+QUALITY CONTROL IS ON TUESDAY 11-12.
+
+PROJECT 1 IS DUE ON NEXT THURSDAY.
+
+PROJECT PRESENTATIONS IS DUE ON NEXT FRIDAY.
+
