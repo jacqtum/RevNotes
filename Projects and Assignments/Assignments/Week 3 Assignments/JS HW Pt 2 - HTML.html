@@ -274,6 +274,46 @@
          * If values cannot be added, put "Cannot add" in the <span> element
          */
 
+        // self-invoking function
+        (function quest6() {
+            console.log("\n6. Sum Event");
+
+            var q6 = document.getElementsByClassName("nums");
+            //console.log(q6);
+            var q6_1 = document.getElementById("sum");
+            //console.log(q6_1);
+            
+            //var count = 0;
+
+            function putSum() {
+                // clear sum so new each time and not concatenated previous vals
+                var sum = "";
+                
+                for (var i = 0; i < q6.length; i++) {
+
+                    // add values from both and save to sum
+                    sum = sum.concat(q6[i].value);
+                }
+
+                // Change content of element with id "sum" to added values 
+                q6_1.innerHTML = sum;
+
+                //count++;
+                //console.log(count);
+            }
+
+            // add event listener to each element with class "nums"
+            for (var h = 0; h < q6.length; h++) {
+
+                // add event listener
+                q6[h].addEventListener("change", putSum, false);
+
+            }
+        })();
+        
+        
+
+
         /* 7. Skills Event
          * NOTE: Write unobtrusive Javascript
          * When user selects a skill, create an alert with a message similar to:
