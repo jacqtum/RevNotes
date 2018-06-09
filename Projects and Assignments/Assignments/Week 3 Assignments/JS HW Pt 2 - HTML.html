@@ -244,9 +244,23 @@
 
         function getCustomAttribute() {
 
+            // find elements with attribiutes "data-customAttr"
+            var q5 = document.querySelectorAll("[data-customAttr]");
+            //console.log(q5);
+
+            // loop through elements
+            for (var g = 0; g < q5.length; g++) {
+                //console.log(q5[g]);
+
+                // get data-customAttr value
+                console.log("Value: " + q5[g].getAttribute("data-customAttr"));
+
+                // get element which contains data-customAttr
+                console.log("Element: " + q5[g].tagName);
+            }
         }
 
-        getCustomAttribute;
+        getCustomAttribute();
 
         /* 6. Sum Event
          * NOTE: Write unobtrusive Javascript
