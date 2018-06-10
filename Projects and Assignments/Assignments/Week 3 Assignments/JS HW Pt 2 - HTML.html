@@ -297,6 +297,7 @@
 
                 // Change content of element with id "sum" to added values 
                 q6_1.innerHTML = sum;
+                
 
                 //count++;
                 //console.log(count);
@@ -363,6 +364,55 @@
 
         (function quest8() {
             console.log("\n8. Favorite Color Event");
+
+            var q8 = document.forms["firstForm"].elements["favoriteColor"];
+            var oldcolor;
+            var newcolor;
+
+            //console.log(q8);
+
+            
+            for (var q = 0; q < q8.length; q++) {
+                q8[q].onclick = function () {
+                    //console.log(this.value);
+
+                    // if newcolor has a value
+                    if (newcolor != "") {
+                        oldcolor = newcolor;
+                        newcolor = this.value;
+
+                        // if oldcolor has a value
+                        if (oldcolor != undefined) {
+                            alert("So you like " + newcolor + " more than " + oldcolor + " now?");
+                            
+                        }
+                        // if oldcolor does not have a value
+                        else {
+                            alert("You like " + newcolor + ".");
+                        }
+                    }
+                    // if newcolor has no value yet
+                    else {
+                        newcolor = this.value;
+                    }
+
+                    var q8_1 = document.getElementsByTagName("input");
+                    //console.log(q8_1);
+                    for (var r = 0; r < q8_1.length; r++) {
+
+                        //console.log(q8_1[r].getAttribute("name"));
+                        if (q8_1[r].getAttribute("name") === "favoriteColor") {
+                            //console.log(q8_1[r].getAttribute("name"));
+                            q8_1[r].style.backgroundColor = newcolor;
+                            console.log(q8_1[r].style.backgroundColor);
+
+                        }
+                    }
+                }
+            }
+
+            
+
 
 
         })();
@@ -497,6 +547,19 @@
         (function quest12() {
             console.log("\n12. Walk the DOM");
 
+            var allNodes = document.querySelectorAll("html");
+
+            function walkTheDOM(node, func) {
+                
+            }
+
+            //console.log(allNodes);
+
+            for (var s = 0; s <= allNodes.length; s++) {
+                console.log(allNodes[s]);
+            } 
+           
+            //walkTheDOM();
         })();
 
     </script>
