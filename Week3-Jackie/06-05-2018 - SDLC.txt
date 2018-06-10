@@ -147,9 +147,10 @@ SCRUM MASTER
 * Does logistics work
 * Makes sure user stories are being tracked.
 
-
+Stakeholder is anyone who is a direct user, indirect user, manager of users, senior manager, operations staff, support, auditor, developers, etc who are working with directly or indirectly with the company project.
 
 USER STORIES
+* Stakeholders, domain experts, write user stories.
 * Project requirements are turned into user stories. 
 * Example:
 	- As a customer, I can log into my account.
@@ -158,6 +159,13 @@ USER STORIES
 	- As a player, I can load some file.
 * Stories are broken up into tasks.
 
+* As an employee, I want to be reimbursed for my ceritifications that I took to better myself and the company.
+* As an employee, I want to be reimbursed for my seminars....
+* As an employee, I want to be reimbursed for the courses I took...
+* As a supervisor, I want to approve reimbursement forms easily.
+* As a direct head, I want to approve reimbursement forms easily.
+* As an employee, I want to be updated with the status of my reimbursement request.
+* As a supervisor/head/benefit coordinator, I want to request for more documents or information from the employee requesting reimbursement.
 
 
 STORY POINTS	

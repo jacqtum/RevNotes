@@ -1,0 +1,6 @@
+
+Notes for JS
+
+
+document.readyState - to see if page is loaded.
+
