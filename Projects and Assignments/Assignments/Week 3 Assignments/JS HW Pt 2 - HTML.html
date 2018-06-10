@@ -323,21 +323,27 @@
 
         (function quest7() {
             console.log("\n7. Skills Event");
-            
+
             var q7 = document.getElementsByTagName("select");
 
-            console.log(q7);
-            console.log(q7.length);
-
-            //console.log(q7.children.length);
+            //console.log(q7);
+            //console.log(q7.length);
 
             
-            
+
             for (var k = 0; k < q7.length; k++) {
-                console.log(q7[0].getAttribute("name"));
+                
+                if (q7[k].getAttribute("name") === "skills") {
+                    
+                    q7[k].onchange = function skillAlert() {
+                        var skill = q7[k];
+                        
+                        alert("Are you sure " + skill + " is one of your skills?");
+                    }
+                }
             }
-            
         })();
+
         
            
 
@@ -355,12 +361,48 @@
          * the newly selected favoriteColor
          */
 
+        (function quest8() {
+            console.log("\n8. Favorite Color Event");
+
+
+        })();
+
+
         /* 9. Show/Hide Event
          * NOTE: Write unobtrusive Javascript
          * When user hovers over an employees name:
          * Hide the name if shown.
          * Show the name if hidden.
          */
+
+        (function quest9() {
+
+            console.log("\n9. Show/Hide Event");
+
+            var q9 = document.getElementsByClassName("empName");
+
+            q9[0].addEventListener("mouseover", function () { q9[0].style.visibility = "hidden"; }, false);
+            q9[0].addEventListener("mouseout", function () { q9[0].style.visibility = "visible"; }, false);
+
+            q9[1].addEventListener("mouseover", function () { q9[1].style.visibility = "hidden"; }, false);
+            q9[1].addEventListener("mouseout", function () { q9[1].style.visibility = "visible"; }, false);
+
+            q9[2].addEventListener("mouseover", function () { q9[2].style.visibility = "hidden"; }, false);
+            q9[2].addEventListener("mouseout", function () { q9[2].style.visibility = "visible"; }, false);
+
+            q9[3].addEventListener("mouseover", function () { q9[3].style.visibility = "hidden"; }, false);
+            q9[3].addEventListener("mouseout", function () { q9[3].style.visibility = "visible"; }, false);
+
+            q9[4].addEventListener("mouseover", function () { q9[4].style.visibility = "hidden"; }, false);
+            q9[4].addEventListener("mouseout", function () { q9[4].style.visibility = "visible"; }, false);
+
+            q9[5].addEventListener("mouseover", function () { q9[5].style.visibility = "hidden"; }, false);
+            q9[5].addEventListener("mouseout", function () { q9[5].style.visibility = "visible"; }, false);
+
+            
+        })();
+
+
 
         /* 10. Current Time
          * Regarding this element:
@@ -420,7 +462,7 @@
          */
 
         (function quest11() {
-            console.log("\11. Delay");
+            console.log("\n11. Delay");
 
             var q11 = document.getElementById("helloWorld");
 
@@ -451,6 +493,11 @@
          * Use recursion.
          * On each node, call func(node).
          */
+
+        (function quest12() {
+            console.log("\n12. Walk the DOM");
+
+        })();
 
     </script>
 </body>
