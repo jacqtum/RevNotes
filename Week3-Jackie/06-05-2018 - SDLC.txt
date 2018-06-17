@@ -119,7 +119,7 @@ IDEAS
 					\
 				  REVIEW AND ADJUST
 						\
-					ITERATION 2:
+					ITERATION 3:
 					 * Planning
 					 * Requirement Analysis
 					 * Designing

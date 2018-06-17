@@ -9,6 +9,14 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class ConnFactory {
+	
+	// singleton
+	//https://www.geeksforgeeks.org/singleton-class-java/
+	// static method getInstance()
+	// private constructor
+	// private static field
+	// one instance...points to same one
+	
 private static ConnFactory cf = new ConnFactory();
 	
 	private ConnFactory() {

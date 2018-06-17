@@ -14,11 +14,11 @@ ASYNCHRONOUS JAVASCRIPT AND JSON (BEcause not Using XML) (AJAX)
 * We don't want each of our HTTP REQUESTS waiting for each other to complete.
 
 * We can refresh certain elements without having to reload the page.
-	- The element already exists, but it does not show unless an event or interactionoccurs.
+	- The element already exists, but it does not show unless an event or interaction occurs.
 
 * AJAX uses a combination of:
 	- A browser built-in XMLHttpRequest object (to request data from a web server).
-	- JavaSCript and HTML DOM (to display or use the data)
+	- JavaScript and HTML DOM (to display or use the data)
 
 Front End
 	-Event: 

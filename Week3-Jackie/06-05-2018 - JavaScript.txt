@@ -23,9 +23,33 @@ JAVA VS JAVASCRIPT
 	
 * JavaScript is OOP in a weird way.
 
+
+OBJECTS
 * Objects are generic containers of property-value pairs.
 
 * Objects can contain other objects.
+
+* Objects are variables too, but can contain many values.
+
+* Inside objects, written as name:value pairs.
+
+* Objects are containers for named values called properties or methods.
+
+* Example:
+	var person = {
+		firstName:"Jacqueline",
+		lastName:"Tummala",
+		favoriteNumber:1,
+		eyeColor:"brown"
+	};
+	
+* Accessing object properties:
+	objectName.propertyName;
+	objectName["propertyName"];
+	
+	person.lastName;
+	
+
 
 FUNCTIONS
 * JS functions can be called before they are declared due to "hoisting".
