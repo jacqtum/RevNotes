@@ -1,0 +1,729 @@
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+QUIZ - Designing A Case Life Cycle
+
+Question 1- You are assigned to a team to develop a case life cycle design for an application. Why would you design the case life cycle?
+
+A: Ensure all team members have a common understanding of how a case is processed and resolved.
+
+Note: A case life cycle allows all project team members to visualize the work as a whole and easily define its parts.
+
+
+Question 2- You are developing a case life cycle for a human resources application. The first stage contains a single process named Collect Candidate Information. Which one of the following steps would you choose to include in the Collect Candidate Information process?
+
+A: Collect personal information
+
+Note: Collecting professional information is necessary to complete the goal of collecting candidate information.
+
+
+Question 3- You are adding steps to a process named Select Insurance Policy. Which one of the following steps would be named correctly?
+
+A: Confirm employee
+
+Note: This name describes both the action and where the action is directed. *(verb + for what will be acted upon)
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+QUIZ - ASSIGNING WORK
+
+Question 1- In a help desk ticket application the Respond to Ticket assignment can be handled by any help desk agent. To configure the assignment for routing you update the _____________?
+
+A: Step
+
+Note: You configure routing for an assignment for the step.
+
+
+Question 2- A loan origination case requires the loan application be routed to an underwriter for verification. Any underwriter in the department can complete the verification. How would you route the verification assignment?
+
+A: To a work queue
+
+Note: Routing the assignment to a work queue would allow any underwriter with access to the work queue to complete the verification.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+KNOWLEDGE CHECK - ENFORCING SERVICE LEVELS
+Q: You are designing an SLA for a mortgage request life cycle that includes a step in which a user collects the applicant's loan history. It is expected that the user completes this step within 24 hours when they receive the case. If the step is not completed within 48 hours, the case is considered late. What milestones and values do you use to support this requirement.
+
+A: You enter a value of 24 hours in the goal milestone, and enter a value of 48 hours in the deadline milestone.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+QUIZ - ENFORCING SERVICE LEVELS
+
+Question 1- The goal milestone in a service level defines:
+
+A: The amount of time in which the case or step should be completed
+
+Note: The goal milestone is the amount of time in which the business would like the case or step to be completed.
+
+
+Question 2- The primary purpose of a service level is to __________.
+
+A: Help ensure timely completion of assignments
+
+Note: Service Levels, also known as Service Level Agreements (SLAs), are used to ensure work is completed within the expected time intervals.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+QUIZ  - CREATING USER VIEWS
+
+Question 1- What three questions can you ask to help you plan user views? (Choose Three)
+
+A: 
+
+1) What fields do users need to see?
+
+Note: In order to complete the tasks, end-users enter information in fields on the forms.
+
+2) How will users enter values in those fields?
+
+Note: Use the appropriate display format for the data to be entered. This helps users complete their tasks with fewer errors.
+
+3) Can users modify the values or only read the values?
+
+Note: Knowing what each user must do to complete a specific task will help them complete the task with fewer errors.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+ QUIZ - REQUIREMENTS MANAGEMENT
+ 
+Question 1- Which statement demonstrates a well-written business objective?
+ 
+ A: Reduce inaccurate claims to less than 10 percent of all claims.
+ 
+ Note: A well-written business objective indicates a goal and a measure of success towards the goal.
+
+  
+  Question 2- Which statement demonstrates a well-written requirement?
+  
+  A: A user should be able to cancel an order at any time.
+  
+  Note: 
+  
+  * This statement describes processing needs that must be met for processing work and data in the application.
+  
+  * Requirements describe what the application will do. 
+  
+  
+  Question 3- Which statement demonstrates a well-written specification?
+  
+  A: If the complainant type is "Provider," then provider information must be populated during the Triage Stage in the Basic Research Step.
+  
+  Note: This statement describes how the system must perform.
+  
+  
+  Question 4- What is the difference between a requirement and specification?
+  
+  A: A requirement describes what the business need is, and specifications describe how the application will meet the business need.
+  
+  Note: This is the main distinction between requirements and specifications.
+  
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+QUIZ - MANAGING CASE LIFE CYCLE EXCEPTIONS
+
+Question 1- Alternate stages are used to __________.
+
+A:
+
+1. organize process steps that are not part of the normal course of events.
+
+Note: An alternate stage is used to model the out-of-sequence events in the life cycle of a case.
+
+2. define the tasks that users accomplish while the case is in the stage.
+
+Note: As with primary stages, alternate stages are used to organize process steps.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+KNOWLEDGE CHECK - ADDING OPTIONAL BUSINESS PROCESS EVENTS
+
+Q: What are the main differences between a local action and an optional process?
+
+A: Local actions are single tasks and return to the primary path of a case, whereas an optional process is a series of steps that is not required to return to the primary path of a case.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+QUIZ - ADDING OPTIONAL BUSINESS PROCESS EVENTS
+
+Question 1- A business process requirement states that users should be able to modify the shipping address at any time and not interrupt the primary case. Which of the following options is the best way to design for this requirement?
+
+A: Add a local action to the case type.
+
+Note: Adding a user action to the case type allows end users to choose when they want to modify the address and not take the case off the primary path.
+
+Question 2- Which requirement could be satisfied with a user action?
+
+A: Allow a user to transfer a case to another employee at any stage of the case.
+
+Note: Correct!Since the decision to transfer the case is left to the user, the case can be implemented as an optional process.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+QUIZ - SENDING CORRESPONDENCE
+
+Question 1- What three questions should you ask when creating a correspondence?
+
+A:
+
+1. Who is the user that receives the correspondence?
+
+Note: Knowing who the correspondence is going to is important.
+
+2. How will the correspondence be sent?
+
+Note: You will determine the medium in which the correspondence will be sent.
+
+3.When does the correspondence need to be sent?
+
+Note: You will determine in the case when to send the correspondence.
+
+
+Question 2- Which two statements identify why you should automate correspondence?
+
+A: 
+
+1. Automating correspondence allows for sending consistent information to users.
+
+Note: By defining the correspondence in a case, you can be assured that correspondence is sent for every case.
+
+2. Automating correspondence allows you to send timely communication.
+
+Note: By automating when a correspondence should be sent, you can send it to users when they need it.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+QUIZ - GUIDING USERS THROUGH A BUSINESS PROCESS
+
+Question 1- Adding instructions to a step _________.
+
+A: Describes to an end user what should be done in the step.
+
+Note: Instructions inform end users what to do next on a case at runtime.
+
+Question 2- A step in the case life cycle has a Set status value of Pending-Approval. When is the status of the case automatically updated?
+
+A: At the beginning of the step
+
+Note: When the Set status value is defined on a step, the status is set when the step is executed.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+KNOWLEDGE CHECK - DESIGNING COMPLEX PROCESS FLOWS
+
+Q: Flow rules represent a ____ in the case life cycle.
+
+A: process
+
+
+Q: Flow shapes represent ____.
+
+A: tasks to be completed as part of a business process.
+
+
+Q: Which standard flow shape creates a task in a work list or workbasket?
+
+A: Assignment
+
+
+Q: Which standard flow shape represents an automated system action?
+
+ A: Utility
+
+ 
+ Q: How many Start shapes can a flow rule contain?
+ 
+ A: One
+ 
+ 
+ Q: Smart shapres are _____.
+ 
+ A: pre-defined shapes configured to perform a specific task.
+ 
+ 
+ Q: Draft mode enables you to ______.
+ 
+ A: Save, and run a flow rule even if other referenced rules do not yet exist.
+ 
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+QUIZ  - DESIGNING COMPLEX PROCESS FLOWS
+
+Question 1- A connector is used to ____________.
+
+A:
+
+1. Identify an outcome of a decision.
+
+Note: Connectors are used to represent outcomes of an automated decision.
+
+2. Identify the order of events in a process.
+
+Note: Connectors are used to indicate the order of events in a process, from start to end.
+
+3. Indicate possible branches of a process.
+
+Note: By adding more than one connector to a shape, you allow a process to branch as required for case processing.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+QUIZ - PROCESS VISIBILITY THROUGH BUSINESS REPORTING
+
+Question 1- Business metrics are used to _________.
+
+A: 
+describe and measure what the organization's work is
+
+Note: Organizations use these business metrics to make informed decisions about improving its business performance.
+
+
+Question 2- The Report Browser allows users to ____.
+
+A: 
+
+1. Create Reports
+
+Note: You can create new reports using the Report Browser.
+
+2. Delete Reports
+
+Note: You can delete reports using the Report Browser.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+QUIZ - THE ROLE OF THE SYSTEM ARCHITECT
+
+Question 1- Which two tasks do system architects perform on a Pega project?
+
+A:
+
+1. Configure UI forms
+
+Note: System architects create user interfaces.
+
+2. Develop feature prototypes
+
+Note: System architects develop feature prototypes
+
+
+Question 2- On a Pega project, who is typically responsible for designing the application architecture?
+
+A: Lead System Architect
+
+Note: A Lead System Architect is typically responsible for designing the application architecture.
+
+
+Question 3- With whom does a system architect work to develop application specifications?
+
+A: Business architects
+
+Note: System architects work with business architects to develop specifications that describe elements of the application design.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+KNOWLEDGE CHECK - THE BUILDING BLOCKS OF A PEGA APPLICATION
+
+Q: What is the purpose of a rule in a Pega application?
+
+A: A rule is an instruction for describing a specific case behavior, such as a process or automated decision.
+
+
+Q: A ruleset version is identified with a string of three numbers. What do these three numbers indicate?
+
+A: The three numbers used to identify a ruleset version indicate the major version, minor version, and patch version of the ruleset.
+
+
+Q: What is the purpose of a class in a Pega application?
+
+A: A class organizes rules within an application. The position of a class within the class hierarchy determines the reusability of the rules in that class.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+QUIZ -  - THE BUILDING BLOCKS OF A PEGA APPLICATION
+
+Question 1- An application references a data element found in the Work- class. How is this rule inherited by the application?
+
+A: By applying directed inheritance.
+
+Note: irected inheritance is the only option that allows an application class to inherit rules defined for the Work- class.
+
+
+Question 2- Select the two items of information used to uniquely identify a rule.
+
+A:
+
+1. The type of the rule.
+
+Note: The type identifies the behavior modeled by the rule. The type allows you to differentiate between a process named Approval and a UI named Approval.
+
+2. The class of the rule.
+
+Note: The class is used to uniquely identify a rule.
+
+
+Question 3- A company provides two applications to its employees. One application is managed by the Accounting department, and allows employees to submit expense reports for reimbursement. The second application is managed by the IT department, and allows employees to submit support tickets for IT-related issues.
+
+A: Check the inheritance path to determine if an appropriate data element is already available.
+
+Note: Verify that no appropriate data element already exists and is usable by the application, before you create one.
+
+
+Question 4- You check out a rule to update it. While the rule is checked out, another developer decides to test a case type by creating and processing the case. What happens when the application attempts to use the rule you checked out?
+
+A: The application ignores the checked-out version and uses the previous version in the application ruleset.
+
+Note: Checking out a rule does not prevent an application from running the rule. Checking out a rule only prevents system architects from updating the rule until you check in the rule.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+QUIZ - ACCESSING APPLICATIONS
+
+Question 1- Which type of record identifies the application that a user opens when logging in to Designer Studio?
+
+A: Access group
+
+Note: he access group record identifies the privileges extended to a group of users for a specific application.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+KNOWLEDGE CHECK - ASSESSING GUARDRAIL COMPLIANCE
+
+Q: What is the purpose of the compliance score for an application?
+
+A: The compliance score provides a quantifiable assessment of application quality by indicating the amount and severity of rule warnings in an application.
+
+
+Q: The compliance score for an application is 85. Is the application ready to be deployed to users?
+
+A: A compliance score of 85 indicates that the application requires review before deployment to users. Warnings should be reviewed and addressed to raise the compliance score to 90 or greater.
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
